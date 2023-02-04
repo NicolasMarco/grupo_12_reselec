@@ -26,6 +26,9 @@ A continuacion, se detallan algunos de los productos ofrecidos:
 Mi nombre es Nicolás Agustín Marco, me encuentro cursando el tercer año de Ingenieria Informatica en la Universidad Nacional de la Matanza. Actualmente me encuentro trabajando como tecnico electronico en una empresa que se dedica a diseñar equipos para diversas empresas. Mi objetivo con el curso es profundizar mis conocimientos en programacion para poder seguir creciendo laboralmente.
 </p>
 
+<br>
+<br>
+
 <h4> SITIOS QUE SIRVIERON DE INSPIRACION: </H4>
 
 <h6> https://pensagro.com/ </h6>
