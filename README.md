@@ -3,7 +3,7 @@
 
 <p> 
 
-Reselec es una empresa que suma la experiencia de mas de 20 años en electrónica y resistencias electricas. Los productos fabricados son desarrollados por completo en nuestra empresa.
+Reselec es una empresa que cuenta con mas de 20 años de experiencia en electrónica y resistencias electricas. Los productos fabricados son desarrollados por completo en nuestra empresa.
 
 A continuacion, se detallan algunos de los productos ofrecidos:
 
