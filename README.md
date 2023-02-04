@@ -18,6 +18,9 @@ A continuacion, se detallan algunos de los productos ofrecidos:
     <li> Termocuplas </li>
 </ul>
 
+<br>
+<br>
+
 <h4> INTEGRANTES DEL EQUIPO: </H4>
 
 <h5> Nicolás Agustín Marco </h5>
