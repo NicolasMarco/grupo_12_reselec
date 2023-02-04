@@ -10,12 +10,12 @@ A continuacion, se detallan algunos de los productos ofrecidos:
 </p>
 
 <ul>
-    <li> Pirometros digitales <li>
-    <li> Resistencias electricas <li>
-    <li> Cables para alta temperatura y compensados <li>
-    <li> Fichas y borneras de conexion <li>
-    <li> Resistencias electricas <li>
-    <li> Termocuplas <li>
+    <li> Pirometros digitales </li>
+    <li> Resistencias electricas </li>
+    <li> Cables para alta temperatura y compensados </li>
+    <li> Fichas y borneras de conexion </li>
+    <li> Resistencias electricas </li>
+    <li> Termocuplas </li>
 </ul>
 
 
