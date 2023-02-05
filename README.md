@@ -29,6 +29,12 @@ A continuacion, se detallan algunos de los productos ofrecidos:
 Mi nombre es Nicolás Agustín Marco, me encuentro cursando el tercer año de Ingenieria Informatica en la Universidad Nacional de la Matanza. Actualmente me encuentro trabajando como tecnico electronico en una empresa que se dedica a diseñar y fabricar equipos para diversas empresas. Mi objetivo con el curso es profundizar mis conocimientos en programacion para poder seguir creciendo laboralmente.
 </p>
 
+<h5> Mariano Gabriel Marco </h5>
+
+<p>
+Soy Mariano Marco, curso 5to año de Ingeniería en Electrónica en la UTN, y tengo un emprendimiento de diseño y fabricación de equipos eletrónicos, algunos propios y otros para terceros. Desde hace varios años programo microcontroladores y comencé a programar páginas web y servidores principalmente para conectar los dispositivos que diseño (IoT). Mi idea con el curso es obtener buenas prácticas de programación, nuevas herramientas y profesionalizar mis desarrollos.
+</p>
+
 <br>
 <br>
 
