@@ -19,7 +19,6 @@ A continuacion, se detallan algunos de los productos ofrecidos:
 </ul>
 
 <br>
-<br>
 
 <h4> INTEGRANTES DEL EQUIPO: </H4>
 
@@ -35,7 +34,6 @@ Mi nombre es Nicolás Agustín Marco, me encuentro cursando el tercer año de In
 Soy Mariano Marco, curso 5to año de Ingeniería en Electrónica en la UTN, y tengo un emprendimiento de diseño y fabricación de equipos eletrónicos, algunos propios y otros para terceros. Desde hace varios años programo microcontroladores y comencé a programar páginas web y servidores principalmente para conectar los dispositivos que diseño (IoT). Mi idea con el curso es obtener buenas prácticas de programación, nuevas herramientas y profesionalizar mis desarrollos.
 </p>
 
-<br>
 <br>
 
 <h4> SITIOS QUE SIRVIERON DE INSPIRACION: </H4>
