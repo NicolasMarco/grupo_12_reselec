@@ -34,6 +34,12 @@ Mi nombre es Nicolás Agustín Marco, me encuentro cursando el tercer año de In
 Soy Mariano Marco, curso 5to año de Ingeniería en Electrónica en la UTN, y tengo un emprendimiento de diseño y fabricación de equipos eletrónicos, algunos propios y otros para terceros. Desde hace varios años programo microcontroladores y comencé a programar páginas web y servidores principalmente para conectar los dispositivos que diseño (IoT). Mi idea con el curso es obtener buenas prácticas de programación, nuevas herramientas y profesionalizar mis desarrollos.
 </p>
 
+<h5> Abel Cornejo </h5>
+
+<p>
+Mi nombre es Abel Cornejo. Nací en Salta, Argentina. Estudié business Finance and Management en la Universidad de La Sierra, California. Mi objetivo con el curso es aprender a programar y adquirir nuevas herramientas que me permitan seguir desarrollándome profesionalmente. 
+</p>
+
 <br>
 
 <h4> SITIOS QUE SIRVIERON DE INSPIRACION: </H4>
