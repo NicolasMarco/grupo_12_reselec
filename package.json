@@ -1,0 +1,27 @@
+{
+  "name": "grupo_12_reselec",
+  "version": "1.0.0",
+  "description": "PROYECTO INTEGRADOR - GRUPO 12",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "nodemon src/app.js",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolasMarco/grupo_12_reselec.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicolasMarco/grupo_12_reselec/issues"
+  },
+  "homepage": "https://github.com/NicolasMarco/grupo_12_reselec#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
