@@ -1,1 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.logoHeader {
+    width: 50%;
+    height: 50%;
+}
+
+.imagenLogoHeader {
+    width: 100%;
+    height: 100%;
+}
+.enlacesHeader {
+    display: none;
+}
