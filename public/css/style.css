@@ -5,7 +5,7 @@
 }
 
 a:-webkit-any-link {
-    color: -webkit-link;
+    color: none;
     cursor: pointer;
     text-decoration: none;
 }
@@ -129,7 +129,7 @@ p {
     font-family: 'Roboto' , sans-serif;
     text-align: center;
     padding: 10px;
-    width: 300px;
+    width: 90%;
     margin: auto;
 }
 
@@ -143,24 +143,25 @@ p {
     border-width: thin;
     border-color: #cecaca;
     padding: 10px;
-    width: 300px;
+    width: 90%;
     margin: auto;
 }
 
 .productosDestacados {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     padding-bottom: 10px;
-    width: 275px;
+    width: 90%;
     margin: auto;
 }
 
 .enlaceProducto {
     display: block;
-    width: 100%;
-    height: 300px;
+    width: 90%;
+    height: 325px;
     margin-bottom: 10px;
     box-shadow: 0px 0px 10px rgb(207, 206, 206);
     padding: 10px;
@@ -216,9 +217,10 @@ p {
 .serviciosOfrecidos {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     padding: 10px;
+    width: 90%;
+    margin: auto;
 }
 
 .cuadroServicio {
@@ -226,7 +228,7 @@ p {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    width: 275px;
+    width: 85%;
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -272,7 +274,7 @@ p {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    width: 300px;
+    width: 85%;
     margin: auto;
     border-top: solid;
     border-width: thin;
@@ -311,5 +313,121 @@ p {
     padding: 5px;
     color: #636363;
 }
+
+@media (min-width: 460px) {
+    
+    .productosDestacados {
+        justify-content: space-around;
+    }
+    .enlaceProducto {
+        width: 45%;
+        height: 250px;
+    }
+}
+
+@media (min-width: 580px) {
+    
+    .enlaceProducto {
+        width: 45%;
+        height: 300px;
+    }
+
+    .cuadroServicio {
+        width: 70%;
+    }
+}
+
+@media (min-width: 769px) {
+    
+    .burgerMenu {
+        display: none;
+    }
+
+    .enlaceNavBar {
+        display: block;
+    }
+
+    .logoHeader {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagenLogoHeader {
+        width: 170px;
+    }
+
+    .barraNavegacion {
+        width: 70%;
+    }
+
+    .enlaceNavBar {
+        font-family: 'Roboto' , sans-serif;
+        font-size: 14px;
+        color: #636363;
+    }
+}
+
+@media (min-width: 980px) {
+    
+    .barraNavegacion {
+        width: 50%;
+        justify-content: flex-end;
+    }
+
+    .enlaceNavBar {
+        margin-right: 15px;
+    }
+
+    .enlaceBusqueda {
+        margin-right: 15px;
+    }
+
+    .enlaceCarritoCompras {
+        margin-right: 15px;
+    }
+
+    .sliderImagenes {
+        height: 250px;
+    }
+
+    .flechaIzquierda {
+        top: 100px;
+    }
+    
+    .flechaDerecha {
+        top: 100px;
+    }
+
+    .tituloDestacados {
+        padding: 30px 20px 20px 20px;
+    }
+
+    .productosDestacados {
+        width: 80%;
+        justify-content: space-between;
+    }
+
+    .enlaceProducto {
+        width: 22%;
+        height: 350px;
+    }
+
+    .tituloServicios {
+        border: none;
+    }
+
+    .serviciosOfrecidos {
+        width: 80%;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    .cuadroServicio {
+        width: 30%;
+    }
+
+
+}
+
 
 
