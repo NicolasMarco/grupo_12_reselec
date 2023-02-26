@@ -346,6 +346,18 @@ p {
 
 @media (min-width: 460px) {
     
+    .sliderImagenes {
+        height: 200px;
+    }
+
+    .flechaIzquierda {
+        top: 75px;
+    }
+    
+    .flechaDerecha {
+        top: 75px;
+    }
+
     .productosDestacados {
         justify-content: space-around;
     }
@@ -454,6 +466,18 @@ p {
         color: #636363;
     }
 
+    .sliderImagenes {
+        height: 275px;
+    }
+
+    .flechaIzquierda {
+        top: 112.5px;
+    }
+    
+    .flechaDerecha {
+        top: 112.5px;
+    }
+
     .encabezadoProductos {
         max-width: 720px;
         height: 50px;
@@ -535,6 +559,18 @@ p {
         max-width: 960px;
     }
 
+    .sliderImagenes {
+        height: 300px;
+    }
+
+    .flechaIzquierda {
+        top: 125px;
+    }
+    
+    .flechaDerecha {
+        top: 125px;
+    }
+
     .encabezadoProductos {
         max-width: 960px;
         height: 60px;
@@ -568,6 +604,11 @@ p {
     .contenidoFooter {
         max-width: 960px;
     }
+
+    .logosRedesSociales {
+        justify-content: space-around;
+        padding: 0px 60px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -577,15 +618,17 @@ p {
     }
 
     .sliderImagenes {
-        height: 300px;
+        height: 350px;
+        max-width: 1600px;
+        margin: auto;
     }
 
     .flechaIzquierda {
-        top: 125px;
+        top: 150px;
     }
     
     .flechaDerecha {
-        top: 125px;
+        top: 150px;
     }
 
     .encabezadoProductos {
