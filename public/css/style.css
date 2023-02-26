@@ -15,13 +15,6 @@ body {
     background-color: #fff;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    background-color: #fff;
-}
-
 h3 {
     display: block;
     font-size: 1.17em;
@@ -47,6 +40,14 @@ p {
     margin-block-end: 0px;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+}
+
+.contenidoHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
 }
 
 .logoHeader {
@@ -285,18 +286,23 @@ p {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    width: 85%;
+    max-width: 324px;
     margin: auto;
-    border-top: solid;
-    border-width: thin;
-    border-color: #cecaca;
+    border-top: 1px solid #eee;
+}
+
+.datosContacto {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 .tituloFooter {
     font-family: 'Roboto' , sans-serif;
     font-size: 15px;
     color: #636363;
-    padding: 10px;
+    padding: 10px 10px 5px 10px;
 }
 
 .lineaTextoFooter {
@@ -392,30 +398,54 @@ p {
     .serviciosOfrecidos {
         max-width: 450px;
     }
+
+    .contenidoFooter {
+        max-width: 450px;
+    }
 }
 
 @media (min-width: 768px) {
-    
-    .burgerMenu {
-        display: none;
+
+    .contenidoHeader {
+        max-width: 720px;
+        justify-content: space-between;
+        margin: auto;
     }
 
-    .enlaceNavBar {
-        display: block;
+    .burgerMenu {
+        display: none;
     }
 
     .logoHeader {
         width: 30%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
+
+    .barraNavegacion {
+        justify-content: flex-end;
+    }
+
+    .enlaceNavBar {
+        padding: 10px;
+    }
+
+    .enlaceBusqueda {
+        padding: 10px;
+    }
+
+    .enlaceCarritoCompras {
+        padding: 10px;
+    }
+
+
+    .enlaceNavBar {
+        display: block;
     }
 
     .imagenLogoHeader {
         width: 170px;
-    }
-
-    .barraNavegacion {
-        width: 70%;
     }
 
     .enlaceNavBar {
@@ -469,10 +499,42 @@ p {
     .cuadroServicio {
         width: 30%;
     }
+
+    .contenidoFooter {
+        max-width: 720px;
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    .datosContacto {
+        order: 1;
+        width: 33%;
+    }
+
+    .textoDerechosFooter {
+        order: 2;
+        width: 33%;
+        text-align: center;
+    }
+
+    .logosRedesSociales {
+        order: 3;
+        width: 33%;
+        justify-content: space-evenly;
+    }
+
+    .logoRedSocial {
+        font-size: 25px;
+    }
+
 }
 
 @media (min-width: 992px) {
     
+    .contenidoHeader {
+        max-width: 960px;
+    }
+
     .encabezadoProductos {
         max-width: 960px;
         height: 60px;
@@ -502,25 +564,16 @@ p {
     .serviciosOfrecidos {
         max-width: 960px;
     }
+
+    .contenidoFooter {
+        max-width: 960px;
+    }
 }
 
 @media (min-width: 1200px) {
     
-    .barraNavegacion {
-        width: 50%;
-        justify-content: flex-end;
-    }
-
-    .enlaceNavBar {
-        margin-right: 15px;
-    }
-
-    .enlaceBusqueda {
-        margin-right: 15px;
-    }
-
-    .enlaceCarritoCompras {
-        margin-right: 15px;
+    .contenidoHeader {
+        max-width: 1140px;
     }
 
     .sliderImagenes {
@@ -570,6 +623,14 @@ p {
     }
     .cuadroServicio {
         width: 30%;
+    }
+
+    .contenidoFooter {
+        max-width: 1140px;
+    }
+
+    .logoRedSocial {
+        font-size: 28px;
     }
 }
 
