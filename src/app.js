@@ -21,7 +21,11 @@ app.get("/productDetail" , (req , res) => {
 
 });
 
+<<<<<<< HEAD
 /*
+=======
+*/
+>>>>>>> nicolas
 
 app.get("/productCart" , (req , res) => {
     
@@ -30,6 +34,7 @@ app.get("/productCart" , (req , res) => {
 
 });
 
+/*
 app.get("/register" , (req , res) => {
     
     const rutaCompleta = path.join(__dirname , "/views/register.html");
