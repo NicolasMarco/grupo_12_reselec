@@ -12,20 +12,12 @@ app.get("/" , (req , res) => {
 
 });
 
-
-
 app.get("/productDetail" , (req , res) => {
     
     const rutaCompleta = path.join(__dirname , "/views/productDetail.html");
     res.sendFile(rutaCompleta);
 
 });
-
-<<<<<<< HEAD
-/*
-=======
-*/
->>>>>>> nicolas
 
 app.get("/productCart" , (req , res) => {
     
@@ -34,7 +26,7 @@ app.get("/productCart" , (req , res) => {
 
 });
 
-/*
+
 app.get("/register" , (req , res) => {
     
     const rutaCompleta = path.join(__dirname , "/views/register.html");
@@ -48,8 +40,6 @@ app.get("/login" , (req , res) => {
     res.sendFile(rutaCompleta);
 
 });
-
-*/
 
 const port = process.env.PORT || 3000;
 
