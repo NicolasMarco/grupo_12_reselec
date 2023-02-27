@@ -12,7 +12,7 @@ app.get("/" , (req , res) => {
 
 });
 
-/*
+
 
 app.get("/productDetail" , (req , res) => {
     
@@ -21,6 +21,7 @@ app.get("/productDetail" , (req , res) => {
 
 });
 
+/*
 
 app.get("/productCart" , (req , res) => {
     
