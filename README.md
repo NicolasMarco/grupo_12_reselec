@@ -40,6 +40,12 @@ Soy Mariano Marco, curso 5to año de Ingeniería en Electrónica en la UTN, y te
 Mi nombre es Abel Cornejo. Nací en Salta, Argentina. Estudié business Finance and Management en la Universidad de La Sierra, California. Mi objetivo con el curso es aprender a programar y adquirir nuevas herramientas que me permitan seguir desarrollándome profesionalmente. 
 </p>
 
+<h5> Gaspar Cordero Duhalde </h5>
+
+<p>
+Me llamo Gaspar Cordero Duhalde, tengo 22 años y me encuentro cursando mi cuarto año de la carrera de Derecho en la Universidad de Buenos Aires. Me desarrollo profesionalmente como Escribiente Auxiliar en el Juzgado Nacional de Primera Instancia en lo Civil y Comercial Federal N° 7 e inicié el curso con el fin de tener conocimientos en un area distinta a la que acostumbro y ampliar mi abanico de posibilidades laborales.
+</p>
+
 <br>
 
 <h4> SITIOS QUE SIRVIERON DE INSPIRACION: </H4>
