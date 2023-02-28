@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+header {
+    border-bottom: 1px solid #eee;
+}
+
+footer {
+    border-top: 1px solid #eee;
+}
+
 a:-webkit-any-link {
     color: none;
     cursor: pointer;
@@ -100,7 +108,6 @@ p {
     align-items: center;
     max-width: 324px;
     margin: auto;
-    border-top: 1px solid #eee;
 }
 
 .datosContacto {
@@ -156,6 +163,16 @@ p {
     font-size: 20px;
 }
 
+.productosCarritoCC {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 324px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
 .detalleProductoCC {
     display: flex;
     position: relative;
@@ -163,11 +180,23 @@ p {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    max-width: 324px;
-    height: 400px;
-    margin: auto;
+    width: 100%;
     border: 1px solid #ccc;
-    margin-bottom: 10px;
+}
+
+.nombreYPrecioCC {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerInformacionCC {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .tituloCC {
@@ -176,14 +205,19 @@ p {
     font-family: 'Roboto' , sans-serif;
     text-align: center;
     padding: 10px;
-    width: 90%;
-    margin: auto;
+    width: 100%;
     font-weight: lighter;
 }
 
+.containerImagenProductoCC {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .imagenProductoCC {
-    height: 50%;
-    width: 80%;
+    width: 100%;
     padding: 10px;
 }
 
@@ -227,7 +261,7 @@ p {
     border-top: 1px solid #ccc;
     width: 65%;
     position: absolute;
-    bottom: 103px;
+    bottom: 98px;
     z-index: 1;
     margin: auto;
 }
@@ -247,13 +281,11 @@ p {
 
 .signoMenosCC {
     width: 33%;
-    height: 100%;
     color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 12px;
-    border-right: 1px solid #ccc;
 }
 
 .cantidadCC {
@@ -264,18 +296,18 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
 }
 
 
 .signoMasCC {
     width: 33%;
-    height: 100%;
     color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 12px;
-    border-left: 1px solid #ccc;
 }
 
 .subtotalCC {
@@ -303,7 +335,6 @@ p {
     max-width: 324px;
     margin: auto;
     border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
 }
 
 .tituloFinalizarCompraCC {
@@ -336,6 +367,13 @@ p {
     font-family: 'Roboto' , sans-serif;
 }
 
+.segundaParteFormularioCC {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .textAreaComentariosCC {
     width: 100%;
     resize: none;
@@ -366,13 +404,27 @@ p {
 }
 
 @media (min-width: 460px) {
+    
     .contenidoFooter {
         max-width: 450px;
+    }
+
+    .productosCarritoCC {
+        max-width: 380px;
+    }
+    
+    .finalizarCompraCC {
+        max-width: 380px;
+    }
+
+    .containerImagenProductoCC {
+        width: 50%;
     }
 }
 
 @media (min-width: 768px) {
-    
+
+
     .contenidoHeader {
         max-width: 720px;
         justify-content: space-between;
@@ -448,6 +500,41 @@ p {
         font-size: 25px;
     }
 
+    .productosCarritoCC {
+        max-width: 650px;
+    }
+    
+    .finalizarCompraCC {
+        max-width: 650px;
+        
+    }
+
+    .tituloCC {
+        display: flex;
+        align-self: flex-start;
+        margin: 0px;
+        padding: 10px 0px 10px 0px;
+    }
+
+    .containerImagenProductoCC {
+        width: 30%;
+    }
+
+    .lineaEsteticaCC {
+        width: 50%;
+    }
+
+    .tituloFinalizarCompraCC {
+        display: flex;
+        align-self: flex-start;
+        margin: 0px;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .segundaParteFormularioCC {
+        width: 100%;
+    }
+
 }
 
 @media (min-width: 992px) {
@@ -465,12 +552,108 @@ p {
         padding: 0px 60px;
     }
 
+    .productosCarritoCC {
+        max-width: 960px;
+        
+    }
+    
+    .finalizarCompraCC {
+        max-width: 960px;
+        padding-bottom: 20px;  
+    }
+
+    .detalleProductoCC {
+        flex-direction: row;
+        height: 142px;
+    }
+
+    .containerImagenProductoCC {
+        width: 20%;
+        padding: 10px;
+    }
+
+    .imagenProductoCC {
+        width: 120px;
+        padding: 10px;
+    }
+
+    .nombreYPrecioCC {
+        width: 50%;
+        align-items: flex-start;
+        align-self: flex-start;
+        padding: 10px;
+        padding-left: 20px;
+        height: 100%;
+        border-right: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+    }
+
+    .nombreProductoCC {
+        padding-bottom: 10px;
+    }
+
+    .containerInformacionCC {
+        width: 30%;
+        height: 100%;
+        
+        justify-content: center
+    }
+
+    .textoQuitarCC {
+        font-size: 16px;
+    }
+
+    .cruzQuitarCC {
+        font-size: 16px;
+    }
+
+    .lineaEsteticaCC {
+        width: 20%;
+        bottom: 102px;
+    }
+
+    .formProductCartCC {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .primerParteFormularioCC {
+        width: 48%;
+    }
+
+    .segundaParteFormularioCC {
+        width: 48%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .textAreaComentariosCC {
+        height: 136px;
+        margin-bottom: 20px;
+    }
+
+    .buttonProductCartCC {
+        width: 50%;
+        margin-bottom: 0px;
+    }
+
+    footer {
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        width:100%;
+     }
 }
 
 @media (min-width: 1200px) {
+
     
     .contenidoHeader {
         max-width: 1140px;
+        
     }
 
     .contenidoFooter {
@@ -481,6 +664,14 @@ p {
         font-size: 28px;
     }
 
+    .productosCarritoCC {
+        max-width: 1140px;
+        padding-top: 15px;
+    }
+    
+    .finalizarCompraCC {
+        max-width: 1140px;
+    }
 }
 
 
