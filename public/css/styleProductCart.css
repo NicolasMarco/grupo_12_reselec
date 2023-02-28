@@ -158,13 +158,16 @@ p {
 
 .detalleProductoCC {
     display: flex;
+    position: relative;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     max-width: 324px;
-    height: 325px;
+    height: 400px;
     margin: auto;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
 }
 
 .tituloCC {
@@ -175,17 +178,19 @@ p {
     padding: 10px;
     width: 90%;
     margin: auto;
+    font-weight: lighter;
 }
 
 .imagenProductoCC {
     height: 50%;
     width: 80%;
+    padding: 10px;
 }
 
 .nombreProductoCC {
-    font-size: 18px;
-    font-weight: normal;
-    color: #636363;
+    font-size: 20px;
+    font-weight: bold;
+    color:  rgb(73, 70, 70);
     font-family: 'Roboto' , sans-serif;
     padding: 5px;
 }
@@ -194,7 +199,7 @@ p {
     color: #636363;
     font-weight: normal;
     font-family: 'Roboto' , sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     padding: 5px;
 }
 
@@ -202,6 +207,161 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 5px;
+}
+
+.cruzQuitarCC {
+    color: #cc0000;
+    font-size: 13px;
+    padding: 5px;
+}
+
+.textoQuitarCC {
+    font-family: 'Roboto' , sans-serif;
+    color: #cc0000;
+    font-size: 13px;
+    padding: 5px 5px 5px 0px;
+}
+
+.lineaEsteticaCC {
+    border-top: 1px solid #ccc;
+    width: 65%;
+    position: absolute;
+    bottom: 103px;
+    z-index: 1;
+    margin: auto;
+}
+
+.aumentarCantidadCC {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    border: 1px solid #ccc;
+    background-color: rgb(244, 242, 242);
+    padding: 1px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.signoMenosCC {
+    width: 33%;
+    height: 100%;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border-right: 1px solid #ccc;
+}
+
+.cantidadCC {
+    width: 33%;
+    height: 100%;
+    font-family: 'Roboto' , sans-serif;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.signoMasCC {
+    width: 33%;
+    height: 100%;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border-left: 1px solid #ccc;
+}
+
+.subtotalCC {
+    color: #636363;
+    font-weight: normal;
+    font-family: 'Roboto' , sans-serif;
+    font-size: 14px;
+    padding: 10px 5px 0px 5px;
+}
+
+.precioSubtotalCC {
+    color: #1e912e;
+    font-weight: lighter;
+    font-family: 'Roboto' , sans-serif;
+    font-size: 18px;
+    padding: 5px 5px 5px 5px;
+}
+
+.finalizarCompraCC {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 324px;
+    margin: auto;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.tituloFinalizarCompraCC {
+    font-size: 20px;
+    color:  rgb(73, 70, 70);
+    font-family: 'Roboto' , sans-serif;
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+    font-weight: lighter;
+}
+
+.formProductCartCC {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.inputProductCartCC {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc; 
+    color: #636363;
+    font-weight: normal;
+    font-family: 'Roboto' , sans-serif;
+}
+
+.textAreaComentariosCC {
+    width: 100%;
+    resize: none;
+    border: 1px solid #ccc; 
+    color: #636363;
+    font-weight: normal;
+    font-family: 'Roboto' , sans-serif;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.buttonProductCartCC {
+    width: 80%;
+    height: 35px;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: 'Roboto' , sans-serif;
+    border: 1px solid #cc0000;
+    color:white;
+    background-color: #cc0000;
+    margin-bottom: 20px;
+}
+
+.logoButtonCC {
+    font-size: 16px;
     padding: 5px;
 }
 

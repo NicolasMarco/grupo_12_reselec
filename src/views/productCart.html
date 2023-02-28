@@ -45,11 +45,55 @@
                 <h4 class = "textoQuitarCC">QUITAR</h4>
             </a>
             <div class = "lineaEsteticaCC"></div>
-            <div class = "aumentarCantidad">
-                <div class = "signoMenosCC"> <i class="fa-solid fa-minus"></i> </div>
+            <div class = "aumentarCantidadCC">
+                <a class = "signoMenosCC" href="#"> <i class="fa-solid fa-minus"></i> </a>
                 <div class = "cantidadCC"> <p>1</p> </div>
-                <div class = "signoMasCC"> <i class="fa-solid fa-plus"></i> </div>
+                <a class = "signoMasCC" href="#"> <i class="fa-solid fa-plus"></i> </a>
             </div>
+            <h4 class = "subtotalCC">Subtotal</h4>
+            <h4 class = "precioSubtotalCC">$15000</h4>
+        </div>
+
+        
+        <div class = "finalizarCompraCC">
+            <h3 class = "tituloFinalizarCompraCC"> FINALIZAR COMPRA </h3>
+            <form class = "formProductCartCC" action = "/" method = "GET"> 
+
+                <select class = "inputProductCartCC" name = "formaDePago" required> 
+                    <option value = "disabled"> FORMA DE PAGO </option>
+                    <option value = "efectivo"> EFECTIVO </option>
+                    <option value = "transferencia"> TRANSFERENCIA Ó DEPOSITO BANCARIO</option>
+                </select>
+
+                <select class = "inputProductCartCC" type="text" placeholder="CONDICION IVA" name = "condicionIva" id = "usuario" required>
+                    <option value = "disabled"> CONDICION IVA </option>
+                    <option value = "responsableInscripto"> RESPONSABLE INSCRIPTO </option>
+                    <option value = "monotributo"> MONOTRIBUTO </option>
+                    <option value = "ivaExento"> IVA EXENTO </option>
+                    <option value = "consumidorFinal"> CONSUMIDOR FINAL </option>
+                </select>
+
+                <input class = "inputProductCartCC" type="text" placeholder="NOMBRE Y APELLIDO" name = "nombreYApellido" required minlength="5"> </input>
+                <input class = "inputProductCartCC" type="text" placeholder="CUIT/DOCUMENTO" name = "cuitODni" required minlength="8"> </input>
+                <input class = "inputProductCartCC" type="email" placeholder="E-MAIL" name = "email" required minlength="5"> </input>
+                <input class = "inputProductCartCC" type="tel" placeholder="TELEFONO" name = "telefono" required minlength="10"> </input>
+                
+                <select class = "inputProductCartCC" type="text" placeholder="FORMA DE ENVIO" name = "formaDePago" required> 
+                    <option value = "disabled"> FORMA DE ENVIO </option>
+                    <option value = "retiraEnLocal"> RETIRA EN LOCAL </option>
+                    <option value = "envioDomicilio"> ENVIO A DOMICILIO </option>
+                    <option value = "envioCorreo"> ENVIO A SUCURSAL CORREO </option>
+                    <option value = "envioTransporte"> ENVIO POR TRANSPORTE </option>
+                </select>
+
+                <textarea class = "textAreaComentariosCC" type="text" placeholder="COMENTARIOS" name = "comentarios"></textarea>
+                
+                <button type = "submit" class = "buttonProductCartCC" > 
+                    FINALIZAR PEDIDO
+                    <i class="logoButtonCC fa-sharp fa-solid fa-cart-shopping"></i> 
+                </button>
+
+            </form>
         </div>
         
 
