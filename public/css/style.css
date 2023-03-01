@@ -15,6 +15,10 @@ body {
     background-color: #fff;
 }
 
+footer {
+    border-top: 1px solid #eee;
+}
+
 h3 {
     display: block;
     font-size: 1.17em;
@@ -288,7 +292,6 @@ p {
     align-items: center;
     max-width: 324px;
     margin: auto;
-    border-top: 1px solid #eee;
 }
 
 .datosContacto {
@@ -613,6 +616,10 @@ p {
 
 @media (min-width: 1200px) {
     
+    header {
+        border-bottom: 1px solid #eee;
+    }
+
     .contenidoHeader {
         max-width: 1140px;
     }
