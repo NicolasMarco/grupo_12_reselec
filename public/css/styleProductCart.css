@@ -640,12 +640,7 @@ p {
         margin-bottom: 0px;
     }
 
-    footer {
-        position:fixed;
-        left:0px;
-        bottom:0px;
-        width:100%;
-     }
+    
 }
 
 @media (min-width: 1200px) {
@@ -672,6 +667,19 @@ p {
     .finalizarCompraCC {
         max-width: 1140px;
     }
+
+    
 }
+
+@media (min-height: 800px) {
+    
+    footer {
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        width:100%;
+     }
+}
+
 
 
