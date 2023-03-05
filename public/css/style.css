@@ -100,7 +100,7 @@ p {
 .sliderImagenes {
     position: relative;
     width: 100%;
-    height: 150px;
+    height: 125px;
 }
 
 .imagenSlider {
@@ -111,7 +111,7 @@ p {
 .flechaIzquierda {
     display: flex;
     position: absolute;
-    top: 50px;
+    top: 37.5px;
     left: 0px;
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.3);
@@ -124,7 +124,7 @@ p {
 .flechaDerecha {
     display: flex;
     position: absolute;
-    top: 50px;
+    top: 37.5px;
     right: 0px;
     background-color: rgba(0, 0, 0, 0.3);
     width: 50px;
@@ -380,15 +380,15 @@ p {
 @media (min-width: 460px) {
     
     .sliderImagenes {
-        height: 200px;
+        height: 175px;
     }
 
     .flechaIzquierda {
-        top: 75px;
+        top: 62.5px;
     }
     
     .flechaDerecha {
-        top: 75px;
+        top: 62.5px;
     }
 
     .productosDestacados {
@@ -523,15 +523,15 @@ p {
     }
 
     .sliderImagenes {
-        height: 275px;
+        height: 225px;
     }
 
     .flechaIzquierda {
-        top: 112.5px;
+        top: 87.5px;
     }
     
     .flechaDerecha {
-        top: 112.5px;
+        top: 87.5px;
     }
 
     .encabezadoProductos {
@@ -620,15 +620,17 @@ p {
     }
 
     .sliderImagenes {
-        height: 300px;
+        height: 275px;
+        width: 95%;
+        margin: auto;
     }
 
     .flechaIzquierda {
-        top: 125px;
+        top: 132.5px;
     }
     
     .flechaDerecha {
-        top: 125px;
+        top: 132.5px;
     }
 
     .encabezadoProductos {
@@ -686,17 +688,17 @@ p {
     }
 
     .sliderImagenes {
-        height: 350px;
+        height: 300px;
         max-width: 1600px;
         margin: auto;
     }
 
     .flechaIzquierda {
-        top: 150px;
+        top: 125px;
     }
     
     .flechaDerecha {
-        top: 150px;
+        top: 125px;
     }
 
     .encabezadoProductos {
