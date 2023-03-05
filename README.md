@@ -80,4 +80,10 @@ Visitamos esta pagina, ya que es una de las principales empresas del rubro en Bu
 Esta pagina fue elegida ya que es uno de los principales E-commerce a nivel mundial, por lo tanto, es un gran referente para el sitio.
 </p>
 
+<h4> TABLERO DE TRABAJO - TRELLO: </H4>
+
+<p>
+https://trello.com/w/grupo_12_reselec
+</p>
+
 
