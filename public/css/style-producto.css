@@ -1,80 +1,87 @@
 .prod-container {
-    border-color: red;
-    border-width: 5px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 90%;
+    margin: auto;
 }
 
 .prod-izquierda {
-    border-color: red;
-    border-width: 5px;
+    align-items: center;
+    justify-content: center;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-direction: column;
     width: 90%;
-}
-.prod-img-principal {
-    border-color: red;
-    border-width: 5px;
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgb(207, 206, 206);
+    padding-top: 15px;
 }
 .prod-img-adicional {
-    border-color: red;
-    border-width: 5px;
-    display: flex;
-    flex-wrap: nowrap;
+    height: 50px;
 }
-.prod-img-adicional1 {
-    border-color: red;
-    border-width: 5px;
+.prod-container-img-principal {
     display: flex;
-    flex-wrap: nowrap;
-    width: 20%;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
 }
-.prod-img-adicional2 {
-    border-color: red;
-    border-width: 5px;
-    display: flex;
-    flex-wrap: nowrap;
-    width: 20%;
+.prod-img-principal {
+    height: 200px;
 }
-.prod-img-adicional3 {
-    border-color: red;
-    border-width: 5px;
+.prod-img-adicionales {
+    flex-direction: row;
     display: flex;
-    flex-wrap: nowrap;
-    width: 20%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
 }
-.prod-img-adicional4 {
-    border-color: red;
-    border-width: 5px;
+
+.prod-container-img-adicional {
+    align-items: center;
+    justify-content: center;
+    height: 100px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 20%;
 }
 
 .prod-derecha {
-    border-color: red;
-    border-width: 5px;
+
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     width: 90%;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 15px;
 }
 
+
 .prod-descripcion {
-    border-color: red;
-    border-width: 5px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    font-family: 'Roboto' , sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.prod-tituloRelacionados {
+    font-size: 15px;
+    color:  rgb(73, 70, 70);
+    font-family: 'Roboto' , sans-serif;
+    text-align: left;
+    padding: 0px;
+    width: 90%;
+    margin: auto 0px;
+    margin-bottom: 0px;
 }
 
 .prod-relacionados {
     border-color: red;
     border-width: 5px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 @media (min-width: 460px) {
