@@ -224,15 +224,9 @@ footer {
 }
 
 .prod-button:hover {
-    width: 33%;
     color: #ffffff;
     background-color: #cc0000;
     border-color: #cc0000;
-    border-width: 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
 }
 
 .prod-seleccionCantidad {
