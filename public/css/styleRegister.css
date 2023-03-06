@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+header {
+    border-bottom: 1px solid #eee;
+}
+
+.register-containerRegistro {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 324px;
+    margin: auto;
+}
+
+.register-tituloRegistro {
+    font-size: 20px;
+    color:  rgb(73, 70, 70);
+    font-family: 'Roboto' , sans-serif;
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+    font-weight: lighter;
+}
+
+.register-formRegistro {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.register-input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc; 
+    color: #636363;
+    font-weight: normal;
+    font-family: 'Roboto' , sans-serif;
+    height: 38px;
+}
+
+.register-primerParteFormulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-SegundaParteFormulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-buttonFinalizar {
+    width: 60%;
+    height: 35px;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: 'Roboto' , sans-serif;
+    border: 1px solid #cc0000;
+    color:white;
+    background-color: #cc0000;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.register-logoButton {
+    font-size: 14px;
+    padding: 5px;
+}
+
+@media (min-width: 460px) {
+
+    .register-containerRegistro {
+        max-width: 380px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .register-containerRegistro {
+        max-width: 650px;
+        
+    }
+
+    .register-tituloRegistro {
+        display: flex;
+        align-self: flex-start;
+        margin: 0px;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .register-buttonFinalizar {
+        width: 50%;
+        font-size: 16px;
+    }
+    
+    .register-logoButton {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    
+    .register-containerRegistro {
+        max-width: 960px;  
+        margin-bottom: 20px;
+    }
+
+    .register-formRegistro {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+    }
+
+    .register-primerParteFormulario {
+        width: 48%;
+        margin-bottom: 10px;
+    }
+
+    .register-SegundaParteFormulario {
+        width: 48%;
+        margin-bottom: 10px;
+    }
+
+    .register-buttonFinalizar {
+        width: 40%;
+        margin: auto;
+    }
+
+    footer {
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        width:100%;
+     }
+    
+}
+
+@media (min-width: 1200px) {
+    
+    .register-containerRegistro {
+        max-width: 1140px;
+    }
+
+}

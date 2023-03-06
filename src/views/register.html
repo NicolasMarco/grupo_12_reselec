@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/styleRegister.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Reselec</title>
+</head>
+<body>
+    <header>
+
+        <div class = "contenidoHeader">
+            <a class = "burgerMenu" href="#"> <i class="logoBurger fa-sharp fa-solid fa-bars"></i> </a>
+        
+            <a class = "logoHeader" href="/">
+                <img class = "imagenLogoHeader" src="/images/ReselecLogoHeader.png">
+            </a>
+        
+                
+            <div class = "barraNavegacion">
+                <a class = "enlaceNavBar" href="/">HOME</a>
+                <a class = "enlaceNavBar" href="/productDetail">PRODUCTOS</a>
+                <a class = "enlaceNavBar" href="#">INGRESA</a>
+                <a class = "enlaceNavBar" href="/register">REGISTRATE</a>
+                <a class = "enlaceBusqueda" href="#"> <i class="logoBusqueda fa-solid fa-magnifying-glass"> </i></a>
+                <a class = "enlaceCarritoCompras" href="/productCart"> <i class="logoCarrito fa-sharp fa-solid fa-cart-shopping"></i> </a>
+            </div>
+        </div>
+    
+    </header>
+
+    <main>
+        
+        <div class = "register-containerRegistro">
+            <h3 class = "register-tituloRegistro"> REGISTRATE </h3>
+            <form class = "register-formRegistro" action = "/" method = "GET"> 
+
+                <div class = "register-primerParteFormulario">
+
+                    <input class = "register-input" type="text" placeholder="USUARIO" name = "usuario" required minlength="5"> </input>
+                    <input class = "register-input" type="password" placeholder="CONTRASEÑA" name = "contraseña" required minlength="5"> </input>
+                    <input class = "register-input" type="password" placeholder="REPETIR CONTRASEÑA" name = "contraseña" required minlength="5"> </input>
+                    <input class = "register-input" type="text" placeholder="NOMBRE" name = "nombre" required minlength="5"> </input>
+                    <input class = "register-input" type="text" placeholder="APELLIDO" name = "apellido" required minlength="5"> </input>
+                    <input class = "register-input" type="text" placeholder="DNI" name = "dni" required minlength="7"> </input>
+                    <input class = "register-input" type="tel" placeholder="TELEFONO" name = "telefono" required minlength="10"> </input>
+
+                </div>
+
+                <div class = "register-SegundaParteFormulario">
+                    
+                    <select class = "register-input" name = "provincia" required> 
+                        <option value = "disabled"> PROVINCIA </option>
+                        <option value = "gba"> BUENOS AIRES (GBA) </option>
+                        <option value = "caba"> BUENOS AIRES (CABA) </option>
+                        <option value = "catamarca"> CATAMARCA </option>
+                        <option value = "chaco"> CHACO </option>
+                        <option value = "chubut"> CHUBUT </option>
+                        <option value = "cordoba"> CORDOBA </option>
+                        <option value = "corrientes"> CORRIENTES </option>
+                        <option value = "entreRios"> ENTRE RÍOS </option>
+                        <option value = "formosa"> FORMOSA </option>
+                        <option value = "jujuy"> JUJUY </option>
+                        <option value = "laPampa"> LA PAMPA </option>
+                        <option value = "laRioja"> LA RIOJA </option>
+                        <option value = "mendoza"> MENDOZA </option>
+                        <option value = "misiones"> MISIONES </option>
+                        <option value = "neuquen"> NEUQUÉN </option>
+                        <option value = "rioNegro"> RIO NEGRO </option>
+                        <option value = "salta"> SALTA </option>
+                        <option value = "sanJuan"> SAN JUAN </option>
+                        <option value = "sanLuis"> SAN LUIS </option>
+                        <option value = "santaCruz"> SANTA CRUZ </option>
+                        <option value = "santaFe"> SANTA FE </option>
+                        <option value = "santiagoDelEstero"> SANTIAGO DEL ESTERO </option>
+                        <option value = "tierraDelFuego"> TIERRA DEL FUEGO </option>
+                        <option value = "tucuman"> TUCUMÁN </option>
+                    </select>
+
+                    <input class = "register-input" type="text" placeholder="PARTIDO" name = "partido" required minlength="5"> </input>
+                    <input class = "register-input" type="text" placeholder="LOCALIDAD" name = "localidad" required minlength="5"> </input>
+                    <input class = "register-input" type="text" placeholder="CODIGO POSTAL" name = "codigoPostal" required minlength="4" maxlength="4"> </input>
+                    <input class = "register-input" type="text" placeholder="CALLE Y NUMERO" name = "calleYNumero" required minlength="5"> </input>
+                    <input class = "register-input" type="text" placeholder="ENTRE CALLES" name = "entreCalles" required minlength="5"> </input>
+                    
+                    <select class = "register-input" name = "tipoDeUsuario" required> 
+                        <option value = "disabled"> TIPO DE USUARIO </option>
+                        <option value = "consumidorFinal"> CONSUMIDOR FINAL </option>
+                        <option value = "empresa"> EMPRESA </option>
+                    </select>
+
+                </div>
+
+                <button type = "submit" class = "register-buttonFinalizar"> 
+                    FINALIZAR REGISTRO
+                    <i class="register-logoButton fa-solid fa-id-card"></i>
+                </button>
+                
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class = "contenidoFooter">
+            
+            <div class = "datosContacto">
+                <h4 class = "tituloFooter">CONTACTANOS</h4>
+            
+                <div class = "lineaTextoFooter">
+                    <i class="logoFooter fa-brands fa-whatsapp"></i>
+                    <p class = "textoLineaFooter">54 9 11 5661-0726</p>
+                </div>
+    
+                <div class = "lineaTextoFooter">
+                    <i class="logoFooter fa-solid fa-house"></i>
+                    <p class = "textoLineaFooter">Ituzaingó - Buenos Aires</p>
+                </div>
+                
+                <div class = "lineaTextoFooter">
+                    <i class="logoFooter fa-solid fa-envelope"></i>
+                    <p class = "textoLineaFooter">contacto@reselec.com.ar</p>
+                </div>
+            </div>
+
+            <div class = "logosRedesSociales">
+                <a href="#" class = "enlaceRedSocial"><i class="logoRedSocial fa-brands fa-facebook"></i></a>
+                <a href="#" class = "enlaceRedSocial"><i class="logoRedSocial fa-brands fa-instagram"></i></a>
+                <a href="#" class = "enlaceRedSocial"><i class="logoRedSocial fa-brands fa-youtube"></i></a>
+            </div>
+
+            <p class = "textoDerechosFooter"> Copyright © 2006-2023 Reselec S.A.S </p>
+        </div>
+    </footer>
+
+</body>
+</html>
