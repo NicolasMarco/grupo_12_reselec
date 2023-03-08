@@ -1,9 +1,12 @@
 const express = require ("express");
 const path = require ("path");
+const rutaHome = require("./routes/home.js");
 
 const app = express();
 
 app.use(express.static("public"));
+
+app.use("/",rutaHome);
 
 app.get("/" , (req , res) => {
     
