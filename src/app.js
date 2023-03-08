@@ -1,49 +1,46 @@
 const express = require ("express");
 const path = require ("path");
-const rutaHome = require("./routes/home.js");
-
 const app = express();
+
+//Configuramos el motor de plantilals
+
+app.set("view engine" , "ejs");
 
 app.use(express.static("public"));
 
+//Configuramos donde se encuentran las vistas
+
+app.set("views",path.resolve(__dirname, "views"));
+
+
+//Metodos para mostrar las vistas
+
+//Vista Home
+const rutaHome = require("./routes/homeRouter.js");
+
 app.use("/",rutaHome);
 
-app.get("/" , (req , res) => {
-    
-    const rutaCompleta = path.join(__dirname , "/views/index.html");
-    res.sendFile(rutaCompleta);
+//Vista detalle del producto
+const rutaProductDetail = require ("./routes/productDetailRouter.js");
 
-});
+app.use("/productDetail",rutaProductDetail);
 
-app.get("/productDetail" , (req , res) => {
-    
-    const rutaCompleta = path.join(__dirname , "/views/productDetail.html");
-    res.sendFile(rutaCompleta);
+//Vista carrito de compras
+const rutaProductCart = require("./routes/productCartRouter.js");
 
-});
+app.use("/productCart",rutaProductCart);
 
-app.get("/productCart" , (req , res) => {
-    
-    const rutaCompleta = path.join(__dirname , "/views/productCart.html");
-    res.sendFile(rutaCompleta);
+//Vista registro
+const rutaRegister = require("./routes/registerRouter.js");
 
-});
+app.use("/register",rutaRegister);
 
+//Vista login
+const rutaLogin = require("./routes/loginRouter.js");
 
-app.get("/register" , (req , res) => {
-    
-    const rutaCompleta = path.join(__dirname , "/views/register.html");
-    res.sendFile(rutaCompleta);
+app.use("/login",rutaLogin);
 
-});
-
-app.get("/login" , (req , res) => {
-    
-    const rutaCompleta = path.join(__dirname , "/views/login.html");
-    res.sendFile(rutaCompleta);
-
-});
-
+//Configuracion puerto
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
