@@ -46,3 +46,8 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log("Servidor funcionando en el puerto " + port) ;
 });
+
+//Vista Listado de Productos
+const rutaListadoProductos = require("./routes/listadoProductosRouter.js");
+
+app.use("/listadoProductos",rutaListadoProductos);

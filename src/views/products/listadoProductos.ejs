@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% const nombreEstilo = "style-ListadoProductos.css" %>
+<%- include('../partials/head.ejs' , {nombreHojaEstilos: nombreEstilo}) %>
+
+<body>
+
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+        
+        <div class = "encabezadoProductos">
+            <h3 class = "tituloDestacados">Listado de productos</h3>
+        </div>
+
+        <%- include('../partials/productosDestacados.ejs') %>
+
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+    
+</body>
+
+
+</html>
