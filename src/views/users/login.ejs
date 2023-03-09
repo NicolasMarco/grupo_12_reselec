@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% const nombreEstilo = "style-Login.css" %>
+<%- include('../partials/head.ejs' , {nombreHojaEstilos: nombreEstilo}) %>
+
+<body>
+    <header>
+
+        <div class = "contenidoHeader">
+
+            <a class = "logoHeader" href="/">
+                <img class = "imagenLogoHeader" src="/images/ReselecLogoHeader.png">
+            </a>
+        
+        </div>
+    
+    </header>
+
+    <main>
+        <div class="login-fondo">
+            <div class="login-container">
+                <div class = "login-container-bienvenido">
+                    <h3 class = "login-bienvenido"><i class="fa-solid fa-users"></i></h3>
+                </div>
+                <form action="/" method="post" class="login-form">
+                    <div class="login-control-formulario">
+                        <input type="text" name="usuario" placeholder="Nombre de Usuario" required class="login-control">
+                    </div>
+                    <div class="login-control-formulario">
+                        <input type="text" name="password" placeholder="Contraseña" required class="login-control">
+                    </div>
+                    <a href="#" value="" class="login-olvidado">OLVIDO SU CONTRASEÑA?</a>
+                    <button type="submit" class="login-enviar">INGRESAR</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+    
+</body>
+</html>

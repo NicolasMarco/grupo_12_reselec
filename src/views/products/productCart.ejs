@@ -1,35 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styleProductCart.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Reselec</title>
-</head>
-<body>
-    <header>
 
-        <div class = "contenidoHeader">
-            <a class = "burgerMenu" href="#"> <i class="logoBurger fa-sharp fa-solid fa-bars"></i> </a>
-        
-            <a class = "logoHeader" href="/">
-                <img class = "imagenLogoHeader" src="/images/ReselecLogoHeader.png">
-            </a>
-        
-                
-            <div class = "barraNavegacion">
-                <a class = "enlaceNavBar" href="/">HOME</a>
-                <a class = "enlaceNavBar" href="/productDetail">PRODUCTOS</a>
-                <a class = "enlaceNavBar" href="/login">INGRESA</a>
-                <a class = "enlaceNavBar" href="/register">REGISTRATE</a>
-                <a class = "enlaceBusqueda" href="#"> <i class="logoBusqueda fa-solid fa-magnifying-glass"> </i></a>
-                <a class = "enlaceCarritoCompras" href="/productCart"> <i class="logoCarrito fa-sharp fa-solid fa-cart-shopping"></i> </a>
-            </div>
-        </div>
-    
-    </header>
+<% const nombreEstilo = "style-ProductCart.css" %>
+<%- include('../partials/head.ejs' , {nombreHojaEstilos: nombreEstilo}) %>
+
+<body>
+    <%- include('../partials/header.ejs') %>
 
     <main>
         
@@ -123,37 +99,7 @@
 
     </main>
 
-    <footer>
-        <div class = "contenidoFooter">
-            
-            <div class = "datosContacto">
-                <h4 class = "tituloFooter">CONTACTANOS</h4>
-            
-                <div class = "lineaTextoFooter">
-                    <i class="logoFooter fa-brands fa-whatsapp"></i>
-                    <p class = "textoLineaFooter">54 9 11 5661-0726</p>
-                </div>
-    
-                <div class = "lineaTextoFooter">
-                    <i class="logoFooter fa-solid fa-house"></i>
-                    <p class = "textoLineaFooter">Ituzaingó - Buenos Aires</p>
-                </div>
-                
-                <div class = "lineaTextoFooter">
-                    <i class="logoFooter fa-solid fa-envelope"></i>
-                    <p class = "textoLineaFooter">contacto@reselec.com.ar</p>
-                </div>
-            </div>
-
-            <div class = "logosRedesSociales">
-                <a href="#" class = "enlaceRedSocial"><i class="logoRedSocial fa-brands fa-facebook"></i></a>
-                <a href="#" class = "enlaceRedSocial"><i class="logoRedSocial fa-brands fa-instagram"></i></a>
-                <a href="#" class = "enlaceRedSocial"><i class="logoRedSocial fa-brands fa-youtube"></i></a>
-            </div>
-
-            <p class = "textoDerechosFooter"> Copyright © 2006-2023 Reselec S.A.S </p>
-        </div>
-    </footer>
+    <%- include('../partials/footer.ejs') %>
     
 </body>
 </html>

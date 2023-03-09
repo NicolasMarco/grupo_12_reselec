@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+footer {
+    border-top: 1px solid #eee;
+}
+
+a:-webkit-any-link {
+    color: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contenidoFooter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    max-width: 324px;
+    margin: auto;
+}
+
+.datosContacto {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tituloFooter {
+    font-family: 'Roboto' , sans-serif;
+    font-size: 15px;
+    color: #636363;
+    padding: 10px 10px 5px 10px;
+}
+
+.lineaTextoFooter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px;
+}
+
+.textoLineaFooter {
+    font-family: 'Roboto' , sans-serif;
+    font-size: 14px;
+    margin-left: 8px;
+    color: #636363;
+}
+
+.logoFooter {
+    color: #636363;
+    font-size: 17px;
+}
+
+.textoDerechosFooter {
+    font-family: 'Roboto' , sans-serif;
+    font-size: 13px;
+    padding: 5px;
+    color: #636363;
+}
+
+.logosRedesSociales {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    padding: 10px;
+}
+
+.logoRedSocial {
+    color: #636363;
+    font-size: 20px;
+}
+
+@media (min-width: 460px) {
+
+    .contenidoFooter {
+        max-width: 450px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .contenidoFooter {
+        max-width: 720px;
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    .datosContacto {
+        order: 1;
+        width: 33%;
+    }
+
+    .textoDerechosFooter {
+        order: 2;
+        width: 33%;
+        text-align: center;
+    }
+
+    .logosRedesSociales {
+        order: 3;
+        width: 33%;
+        justify-content: space-evenly;
+    }
+
+    .logoRedSocial {
+        font-size: 25px;
+    }
+
+}
+
+@media (min-width: 992px) {
+    
+    .contenidoFooter {
+        max-width: 960px;
+    }
+
+    .logosRedesSociales {
+        justify-content: space-around;
+        padding: 0px 60px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .contenidoFooter {
+        max-width: 1140px;
+    }
+
+    .logoRedSocial {
+        font-size: 28px;
+    }
+
+}
