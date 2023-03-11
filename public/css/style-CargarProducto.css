@@ -1,0 +1,78 @@
+header {
+    border-bottom: 1px solid #eee;
+}
+
+footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width:100%;
+ }
+
+.carga-edicion-containerForm {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 324px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.carga-edicion-titulo {
+    font-size: 20px;
+    color:  rgb(73, 70, 70);
+    font-family: 'Roboto' , sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+.carga-edicion-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carga-edicion-containerInputImagen {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid rgb(221, 218, 218);
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+    padding: 5px 0px 5px 0px;
+}
+
+.carga-edicion-input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc; 
+    color: #636363;
+    font-weight: normal;
+    font-family: 'Roboto' , sans-serif;
+    height: 38px;
+}
+
+.carga-edicion-labelCargarImagen {
+    font-weight: bold;
+    font-size: 13px;
+    font-family: 'Roboto' , sans-serif;
+    color: #8a8383;
+    padding: 0px 0px 5px 0px;
+}
+
+.carga-edicion-buttonFinalizar {
+    width: 45%;
+    height: 35px;
+    font-weight: normal;
+    font-size: 13px;
+    font-family: 'Roboto' , sans-serif;
+    border: 1px solid #cc0000;
+    color:white;
+    background-color: #cc0000;
+    border-radius: 15px;
+}
