@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<% const nombreEstilo = "style-CargarProducto.css" %>
+<%- include('../partials/head.ejs' , {nombreHojaEstilos: nombreEstilo}) %>
+
+<body>
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+        <div class = "carga-edicion-containerForm">
+            <h3 class = "carga-edicion-titulo"> Cargar Producto </h3>
+            
+            <form class = "carga-edicion-form" action = "/" method = "GET">
+                <input class = "carga-edicion-input" type="text" placeholder="NOMBRE DEL PRODUCTO" name = "nombreProducto" required minlength="5"> </input>
+                <input class = "carga-edicion-input" type="text" placeholder="DESCRIPCION" name = "descripcionProducto" required minlength="5"> </input>
+                <div class = "carga-edicion-containerInputImagen">
+                    <label for="cargarImagen">Imagen del producto: </label>
+                    <input class = "carga-edicion-input" id = "cargarImagen" type="file" name = "imagenProducto" required></input>
+                </div>
+                <select class = "carga-edicion-input" name = "categoria" required> 
+                    <option value = "disabled"> CATEGORIA </option>
+                    <option value="productoDestacado"> PRODUCTO DESTACADO </option>
+                    <option value="productoResistencia"> RESISTENCIA </option>
+                    <option value="productoPirometro"> PIROMETRO </option>
+                    <option value="productoAccesorio"> ACCESORIO </option>
+                </select>
+                <input class = "carga-edicion-input" type="text" placeholder="APELLIDO" name = "apellido" required minlength="5"> </input>
+            </form>
+        </div>
+        
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

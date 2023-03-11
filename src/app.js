@@ -51,3 +51,13 @@ app.listen(port, () => {
 const rutaListadoProductos = require("./routes/listadoProductosRouter.js");
 
 app.use("/listadoProductos",rutaListadoProductos);
+
+//Vista Cargar producto
+const rutaCargarProducto = require("./routes/cargarProductoRouter.js");
+
+app.use("/cargarProducto",rutaCargarProducto);
+
+//Vista Editar producto
+const rutaEditarProducto = require("./routes/editarProductoRouter.js");
+
+app.use("/editarProducto",rutaEditarProducto);
