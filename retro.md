@@ -16,7 +16,7 @@ Si bien consideramos que lo anterior fue positivo, tambien consideramos que aun 
 
 <p>
 
-En el segundo sprint nuevamente pudimos conseguir terminar todas las consignas en tiempo y forma. Quedamos muy conformes con la entrega, ya que pudimos plasmar en el proyecto lo que habiamos pensado desde un principio. Nos dividimos bien las tareas, y no hubo problemas de comunicacion en el grupo.
+En el segundo sprint nuevamente logramos terminar todas las consignas en tiempo y forma. Quedamos muy conformes con la entrega, ya que pudimos plasmar en el proyecto lo que habiamos pensado desde un principio. Nos dividimos bien las tareas, y no hubo problemas de comunicacion en el grupo.
 
 Para futuros sprints, tenemos que implementar mejoras, por ejemplo, creemos que debemos hacer una reunion corta cada 5 dias para que todos comentemos como nos esta yendo con nuestras tareas, y que no haya sorpresas al momento de entregar el trabajo.
 Ademas, decidimos hacer una reunion para dividrnos las tareas de cada uno de los sprints en cuanto hayamos terminado el anterior, para aprovechar al maximo los dias disponibles que tenemos para realizarlos.
