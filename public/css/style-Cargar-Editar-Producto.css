@@ -47,7 +47,7 @@ footer {
 }
 
 .carga-edicion-input {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 10px;
     width: 100%;
     border: 1px solid #ccc; 
@@ -61,12 +61,12 @@ footer {
     font-weight: bold;
     font-size: 13px;
     font-family: 'Roboto' , sans-serif;
-    color: #8a8383;
-    padding: 0px 0px 5px 0px;
+    color: #6e6a6a;
+    padding: 5px 0px 5px 0px;
 }
 
 .carga-edicion-buttonFinalizar {
-    width: 45%;
+    width: 42%;
     height: 35px;
     font-weight: normal;
     font-size: 13px;
@@ -74,5 +74,41 @@ footer {
     border: 1px solid #cc0000;
     color:white;
     background-color: #cc0000;
-    border-radius: 15px;
+}
+
+@media (min-width: 460px) {
+
+    .carga-edicion-containerForm {
+        max-width: 380px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .carga-edicion-containerForm {
+        max-width: 650px;
+    }
+
+    .carga-edicion-titulo {
+       text-align: left;
+       padding: 10px 0px;
+    }
+
+    .carga-edicion-buttonFinalizar {
+        width: 30%;
+    }
+    
+}
+
+@media (min-width: 992px) {
+    
+    .carga-edicion-containerForm {
+        margin-top: 20px;
+    }
+
+    .carga-edicion-buttonFinalizar {
+        width: 25%;
+    }
+
 }

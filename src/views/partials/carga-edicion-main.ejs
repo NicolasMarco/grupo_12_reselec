@@ -1,0 +1,26 @@
+<div class = "carga-edicion-containerForm">
+            <h3 class = "carga-edicion-titulo"> <%= datosInclude[0] %> </h3>
+            
+            <form class = "carga-edicion-form" action = "/" method = "GET">
+                <input class = "carga-edicion-input" type="text" placeholder="NOMBRE DEL PRODUCTO" name = "nombreProducto" required minlength="5"> </input>
+                <input class = "carga-edicion-input" type="text" placeholder="DESCRIPCION" name = "descripcionProducto" required minlength="5"> </input>
+                <input class = "carga-edicion-input" type="text" placeholder="PRECIO" name = "precio" required> </input>
+                <select class = "carga-edicion-input" name = "categoria" required> 
+                    <option value = "disabled"> CATEGORIA </option>
+                    <option value="productoDestacado"> PRODUCTO DESTACADO </option>
+                    <option value="productoResistencia"> RESISTENCIA </option>
+                    <option value="productoPirometro"> PIROMETRO </option>
+                    <option value="productoAccesorio"> ACCESORIO </option>
+                </select>
+
+                <div class = "carga-edicion-containerInputImagen">
+                    <label class = "carga-edicion-labelCargarImagen" for="cargarImagen"> Imagen del producto </label>
+                    <input class = "carga-edicion-input" id = "cargarImagen" type="file" name = "imagenProducto" required></input>
+                </div>
+
+                <button type = "submit" class = "carga-edicion-buttonFinalizar"> 
+                    <%= datosInclude[1] %>
+                </button>
+
+            </form>
+</div>

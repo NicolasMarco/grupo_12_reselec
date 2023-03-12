@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     
-<% const nombreEstilo = "style-EditarProducto.css" %>
+<% const nombreEstilo = "style-Cargar-Editar-Producto.css" %>
 <%- include('../partials/head.ejs' , {nombreHojaEstilos: nombreEstilo}) %>
 
 <body>
     <%- include('../partials/header.ejs') %>
 
     <main>
-
+        
+        <% const datosInclude = ["Editar Producto" , "EDITAR PRODUCTO"] %>
+        <%- include('../partials/carga-edicion-main.ejs' , {datosInclude}) %>
+        
     </main>
 
     <%- include('../partials/footer.ejs') %>
