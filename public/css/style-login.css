@@ -51,6 +51,7 @@ footer {
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #cc0000;
+    transition: box-shadow 0.5s;
 }
 
 .login-fondo {
@@ -68,7 +69,7 @@ footer {
 
 .login-control:focus 
 {
-    outline: none /* Removes the border when the input is clicked */
+    outline: none;
 }
 
 .login-control:hover
@@ -103,12 +104,11 @@ footer {
 
 .login-enviar:hover
 {
-    background-color: #cc0000;
+    background-color: #636363;
+    border-color: #636363;
     color: #ffffff;
-    border-color: #cc0000;
     border-width: 1px;
     border-style: solid;
-    box-shadow: 0px 0px 10px #cc0000;
 }
 
 .login-container-bienvenido {
