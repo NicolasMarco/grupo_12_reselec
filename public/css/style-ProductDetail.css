@@ -284,12 +284,10 @@ footer {
 }
 
 @media (min-width: 768px) {
-    footer {
-        position:fixed;
-        left:0px;
-        bottom:0px;
-        width:100%;
-     }
+
+    main {
+        padding-bottom: 20px;
+    }
 
     .prod-container-tituloProducto {
         margin: 20px;
@@ -401,6 +399,8 @@ footer {
     }
 }
 @media (min-width: 1200px) {
+    
+    
     .prod-container {
         width: 60%;
     }
