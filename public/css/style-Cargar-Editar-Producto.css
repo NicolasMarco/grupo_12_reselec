@@ -84,14 +84,15 @@ header {
 }
 
 .carga-edicion-buttonFinalizar {
-    width: 42%;
-    height: 35px;
+    width: 100px;
+    height: 30px;
     font-weight: normal;
     font-size: 13px;
     font-family: 'Roboto' , sans-serif;
     border: 1px solid #cc0000;
     color:white;
     background-color: #cc0000;
+    border-radius: 5px;
 }
 
 .carga-edicion-buttonFinalizar:hover {
@@ -117,10 +118,6 @@ header {
        text-align: left;
        padding: 10px 0px;
     }
-
-    .carga-edicion-buttonFinalizar {
-        width: 30%;
-    }
     
 }
 
@@ -128,10 +125,6 @@ header {
     
     .carga-edicion-containerForm {
         margin-top: 20px;
-    }
-
-    .carga-edicion-buttonFinalizar {
-        width: 25%;
     }
 
 }

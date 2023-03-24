@@ -154,6 +154,37 @@ p {
     text-align: center;
 }
 
+.prod-container-formEdicion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.prod-form-editar {
+    margin-bottom: 10px;
+}
+
+.prod-button-enviar {
+    width: 100px;
+    height: 30px;
+    font-weight: normal;
+    font-size: 13px;
+    font-family: 'Roboto' , sans-serif;
+    border: 1px solid #cc0000;
+    color:white;
+    background-color: #cc0000;
+    border-radius: 5px;
+}
+
+.prod-button-enviar:hover {
+    background-color: #636363;
+    border-color: #636363;
+}
+
 @media (min-width: 460px) {
     
     .encabezadoProductos {
@@ -272,6 +303,10 @@ p {
 
     .nombreProducto {
         font-size: 17px;
+    }
+
+    .prod-container-formEdicion {
+        padding-top: 10px;
     }
 
 }

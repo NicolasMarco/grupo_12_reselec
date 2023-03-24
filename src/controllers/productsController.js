@@ -21,8 +21,8 @@ const productsController = {
         res.render("products/productDetail");
     },
     
-    cargarProducto: function(req,res) {
-        res.render("products/cargarProducto");
+    agregarProducto: function(req,res) {
+        res.render("products/agregarProducto");
     }
 };
 
