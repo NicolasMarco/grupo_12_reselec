@@ -9,8 +9,45 @@
 
     <main>
         
-        <% const datosInclude = ["Cargar Producto" , "CARGAR PRODUCTO"] %>
-        <%- include('../partials/carga-edicion-main.ejs' , {datosInclude}) %>
+        <div class = "carga-edicion-containerForm">
+            <h3 class = "carga-edicion-titulo"> Cargar producto </h3>
+            
+            <form class = "carga-edicion-form" action = "/products" method = "POST">
+                <input class = "carga-edicion-input" type="text" placeholder="NOMBRE DEL PRODUCTO" name = "nombre" required minlength="5"> </input>
+                <input class = "carga-edicion-input" type="text" placeholder="PRECIO" name = "precio" required> </input>
+                <select class = "carga-edicion-input" name = "categoria" required> 
+                    <option value = "disabled"> CATEGORIA </option>
+                    <option value="destacado"> PRODUCTO DESTACADO </option>
+                    <option value="ultimaVisita"> ULTIMA VISITA </option>
+                </select>
+                <select class = "carga-edicion-input" name = "tipoEquipo" required> 
+                    <option value = "disabled"> TIPO DE EQUIPO </option>
+                    <option value = "Resistencia"> RESISTENCIA </option>
+                    <option value= "Medicion"> MEDICION </option>
+                    <option value= "Conexion"> CONEXION </option>
+                </select>
+
+                <textarea class = "carga-edicion-textArea" type="text" placeholder="DESCRIPCION" name = "descripcion"></textarea>
+
+                <div class = "carga-edicion-containerInputImagen">
+                    <label class = "carga-edicion-labelCargarImagen" for="cargarImagen"> Imagen principal </label>
+                    <input class = "carga-edicion-input" id = "cargarImagen" type="file" name = "imagen" required></input>
+                </div>
+
+                <div class = "carga-edicion-containerInputImagen">
+                    <label class = "carga-edicion-labelCargarImagen" for="cargarImagen"> Imagenes secundarias </label>
+                    <input class = "carga-edicion-input" id = "cargarImagen" type="file" name = "imagen2"></input>
+                    <input class = "carga-edicion-input" id = "cargarImagen" type="file" name = "imagen3"></input>
+                    <input class = "carga-edicion-input" id = "cargarImagen" type="file" name = "imagen4"></input>
+                    <input class = "carga-edicion-input" id = "cargarImagen" type="file" name = "imagen5"></input>
+                </div>
+
+                <button type = "submit" class = "carga-edicion-buttonFinalizar"> 
+                    CARGAR PRODUCTO
+                </button>
+
+            </form>
+</div>
         
     </main>
 

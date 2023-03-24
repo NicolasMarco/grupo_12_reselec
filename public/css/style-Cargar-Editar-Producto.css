@@ -2,13 +2,6 @@ header {
     border-bottom: 1px solid #eee;
 }
 
-footer {
-    position:fixed;
-    left:0px;
-    bottom:0px;
-    width:100%;
- }
-
 .carga-edicion-containerForm {
     display: flex;
     flex-wrap: wrap;
@@ -71,7 +64,7 @@ footer {
     font-weight: normal;
     font-family: 'Roboto' , sans-serif;
     height: 100px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 10px;
     transition: box-shadow 0.5s;
     outline: none;
