@@ -14,7 +14,29 @@
             <h3 class = "tituloDestacados">Listado de productos</h3>
         </div>
 
-        <%- include('../partials/productosDestacados.ejs') %>
+        <section class = "productosDestacados">
+            
+            <% productos.forEach((producto) => { %>
+
+            <a class = "enlaceProducto" href="/products/productDetail">
+                <article class = "cuadroProducto">
+                    <img class = "imagenProducto" src="/images/<%= producto.imagen %>" alt="">
+                    <div class = "lineaEsteticaProducto"></div>
+                    <div class = "datosProducto">
+                        <h4 class = "nombreProducto"> <%= producto.nombre %> </h4>
+                        <div class = "descripcionProducto">
+                            <p class = textoDescripcion><%= producto.descripcion %></p>
+                        </div>
+                        <div class = "precioProducto">
+                            <p class = "textoPrecio"> $<%= producto.precio %> </p>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <% }) %>
+        
+        </section>
 
     </main>
 
