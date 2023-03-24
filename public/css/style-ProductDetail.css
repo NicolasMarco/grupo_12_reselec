@@ -1,11 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+*{
+    box-sizing: border-box;
+}
+
 header {
     border-bottom: 1px solid #eee;
 }
 
+body {
+    margin: 0px;
+    min-height: 100vh;
+    padding-bottom: 182px;
+    position: relative;
+}
+
 footer {
-    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .prod-container {
@@ -286,11 +299,16 @@ footer {
 @media (min-width: 768px) {
 
     main {
-        padding-bottom: 20px;
+        
+    }
+
+    body {
+        padding-bottom: 135px;
     }
 
     .prod-container-tituloProducto {
-        margin: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
         width: 100%;
         align-content: center;
         justify-content: center;
