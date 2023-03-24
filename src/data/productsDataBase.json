@@ -1,0 +1,81 @@
+[
+    {
+     "id": 1,
+     "nombre": "Pirometro Digital",
+     "precio": 45000,
+     "categoria": "destacados",
+     "caracteristicas" : ["Controlador de Temperatura Digital","Medidas: 48x96","Termocupla J y K"],
+     "descripcion": "Pirometro digital de dos salidas",
+     "imagen": "Pirometro.jpg"
+    },
+
+    {
+        "id": 2,
+        "nombre": "Resistencia Plana",
+        "precio": 20000,
+        "categoria": "destacados",
+        "caracteristicas" : ["Fabricada con acero inoxidable","Medidas: 300x200","Salida con casquillos"],
+        "descripcion": "Resistencia calefactora plana",
+        "imagen": "Plana.jpg"
+    },
+    
+    {
+        "id": 3,
+        "nombre": "Resistencia Plana",
+        "precio": 25000,
+        "categoria": "destacados",
+        "caracteristicas" : ["Fabricada con acero inoxidable","Medidas: 300x200","Salida con casquillos"],
+        "descripcion": "Resistencia calefactora plana",
+        "imagen": "PlanaConAgujeros.jpg"
+    },
+
+    {
+        "id": 4,
+        "nombre": "Suncho Estandar",
+        "precio": 30000,
+        "categoria": "destacados",
+        "caracteristicas" : ["Fabricada con acero inoxidable","Medidas: Ø100x60","Salida con tornillos"],
+        "descripcion": "Suncho de acero inxoidable",
+        "imagen": "Suncho.jpg"
+    },
+
+    {
+        "id": 5,
+        "nombre": "Borneras Ceramicas",
+        "precio": 10000,
+        "categoria": "destacados",
+        "caracteristicas" : ["Fabricadas con ceramica","Medidas: 30x30","Gran resistencia al calor"],
+        "descripcion": "Borneras ceramicas bipolares",
+        "imagen": "BornerasCeramicas.jpg"
+    },
+
+    {
+        "id": 6,
+        "nombre": "Relé Estado Sólido",
+        "precio": 20000,
+        "categoria": "destacados",
+        "caracteristicas" : ["24-480VAC","3-32VDC","Medidas: 30x30"],
+        "descripcion": "Relé de estado solido SSR 40 DA",
+        "imagen": "RelayEstadoSolido.jpg"
+    },
+
+    {
+        "id": 7,
+        "nombre": "Cable \"J\"",
+        "precio": 5000,
+        "categoria": "destacados",
+        "caracteristicas" : ["Cable resistente para termocuplas","Medidas: 10m","Termocupla J y K"],
+        "descripcion": "Cable compensado tipo J",
+        "imagen": "CableJ.jpg"
+    },
+
+    {
+        "id": 8,
+        "nombre": "Termocuplas",
+        "precio": 22000,
+        "categoria": "destacados",
+        "caracteristicas" : ["Tipo J, K y S","Medidas: 2m","Miden hasta 400° con precision"],
+        "descripcion": "Termocuplas tipo J, K y S",
+        "imagen": "Termocuplas.jpg"
+    }
+]
