@@ -88,6 +88,17 @@
                 </div>
             </div>
         </section>
+
+        <div class="prod-container-formEdicion">
+            <form class = "prod-form-editar" action="/products/editarProducto" method="GET">
+                <button class = "prod-button-enviar" type = "submit">EDITAR</button>
+            </form>
+
+            <form class = "prod-form-borrar" action="/products?_method=DELETE" method="POST">
+                <button class = "prod-button-enviar" type = "submit">BORRAR</button>
+            </form>
+        </div>
+        
     </main>
 
     <%- include('../partials/footer.ejs') %>

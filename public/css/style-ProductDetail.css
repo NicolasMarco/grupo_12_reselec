@@ -24,7 +24,7 @@ footer {
 .prod-container {
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
+    max-width: 340px;
     margin: auto;
 }
 .prod-container-tituloProducto {
@@ -262,9 +262,44 @@ footer {
     padding: 5px;
 }
 
+.prod-container-formEdicion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.prod-form-editar {
+    margin-bottom: 10px;
+}
+
+.prod-form-borrar {
+    margin-bottom: 10px;
+}
+
+.prod-button-enviar {
+    width: 100px;
+    height: 30px;
+    font-weight: normal;
+    font-size: 13px;
+    font-family: 'Roboto' , sans-serif;
+    border: 1px solid #cc0000;
+    color:white;
+    background-color: #cc0000;
+    border-radius: 5px;
+}
+
+.prod-button-enviar:hover {
+    background-color: #636363;
+    border-color: #636363;
+}
+
 @media (min-width: 460px) {
     .prod-container {
-        width: 70%;
+        max-width: 440px;
     }
     .prod-img-principal {
         height: 280px;
@@ -298,10 +333,6 @@ footer {
 
 @media (min-width: 768px) {
 
-    main {
-        
-    }
-
     body {
         padding-bottom: 135px;
     }
@@ -323,7 +354,7 @@ footer {
     }
 
     .prod-container {
-        width: 80%;
+        max-width: 740px;
         margin-bottom: 10px;
         box-shadow: 0px 0px 10px rgb(207, 206, 206);
     }
@@ -404,28 +435,53 @@ footer {
     .prod-button {
         width: 45%;
     }
+    
+    .prod-container-formEdicion {
+        flex-direction: row;
+        justify-content: flex-end;
+        max-width: 740px;
+        margin: auto;
+    }
+
+    .prod-form-editar {
+        margin-bottom: 0px;
+        margin-right: 10px;
+    }
+    
+    .prod-form-borrar {
+        margin-bottom: 0px;
+        margin-left: 10px;
+    }
 }
 @media (min-width: 992px) {
     .prod-container {
-        width: 70%;
+        max-width: 960px;
     }
     .prod-seleccionCantidad {
         width: 40%;
     }
     .prod-button {
         width: 40%;
+    }
+
+    .prod-container-formEdicion {
+        max-width: 960px;
     }
 }
 @media (min-width: 1200px) {
     
     
     .prod-container {
-        width: 60%;
+        max-width: 1050px;
     }
     .prod-seleccionCantidad {
         width: 35%;
     }
     .prod-button {
         width: 35%;
+    }
+
+    .prod-container-formEdicion {
+        max-width: 1050px;
     }
 }
