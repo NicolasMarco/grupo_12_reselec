@@ -298,7 +298,7 @@ p {
 
     .productosDestacados {
         max-width: 960px;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     .nombreProducto {
@@ -332,7 +332,6 @@ p {
 
     .productosDestacados {
         max-width: 1140px;
-        justify-content: space-between;
     }
 
     .enlaceProducto {

@@ -5,10 +5,6 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, '../public')));
 
-//Configuramos el motor de plantillas
-
-
-
 //Configuramos donde se encuentran las vistas
 
 app.set("view engine" , "ejs");

@@ -12,12 +12,12 @@
         <div class = "carga-edicion-containerForm">
             <h3 class = "carga-edicion-titulo"> Agregar producto </h3>
             
-            <form class = "carga-edicion-form" action = "/products" method = "POST">
+            <form class = "carga-edicion-form" action = "/products" method = "post" enctype="multipart/form-data">
                 <input class = "carga-edicion-input" type="text" placeholder="NOMBRE DEL PRODUCTO" name = "nombre" required minlength="5"> </input>
                 <input class = "carga-edicion-input" type="text" placeholder="PRECIO" name = "precio" required> </input>
                 <select class = "carga-edicion-input" name = "categoria" required> 
                     <option value = "disabled"> CATEGORIA </option>
-                    <option value="destacado"> PRODUCTO DESTACADO </option>
+                    <option value="destacados"> PRODUCTO DESTACADO </option>
                     <option value="ultimaVisita"> ULTIMA VISITA </option>
                 </select>
                 <select class = "carga-edicion-input" name = "tipoEquipo" required> 
@@ -27,19 +27,23 @@
                     <option value= "Conexion"> CONEXION </option>
                 </select>
 
+                <input class = "carga-edicion-input" type="text" placeholder="CARACTERISTICA" name = "caracteristicaUno" required> </input>
+                <input class = "carga-edicion-input" type="text" placeholder="CARACTERISTICA" name = "caracteristicaDos" required> </input>
+                <input class = "carga-edicion-input" type="text" placeholder="CARACTERISTICA" name = "caracteristicaTres" required> </input>
+
                 <textarea class = "carga-edicion-textArea" type="text" placeholder="DESCRIPCION" name = "descripcion"></textarea>
 
                 <div class = "carga-edicion-containerInputImagen">
-                    <label class = "carga-edicion-labelCargarImagen" for="cargarImagen"> Imagen principal </label>
-                    <input class = "carga-edicion-input" id = "cargarImagen" type="file" name = "imagen" required></input>
+                    <label class = "carga-edicion-labelCargarImagen" for="imagen"> Imagen principal </label>
+                    <input class = "carga-edicion-input" id = "imagenPrincipal" type="file" name = "imagenPrincipal" required></input>
                 </div>
 
                 <div class = "carga-edicion-containerInputImagen">
-                    <label class = "carga-edicion-labelCargarImagen" for="cargarImagen"> Imagenes secundarias </label>
-                    <input class = "carga-edicion-input" id = "cargarImagen" type="file" name = "imagen2"></input>
-                    <input class = "carga-edicion-input" id = "cargarImagen" type="file" name = "imagen3"></input>
-                    <input class = "carga-edicion-input" id = "cargarImagen" type="file" name = "imagen4"></input>
-                    <input class = "carga-edicion-input" id = "cargarImagen" type="file" name = "imagen5"></input>
+                    <label class = "carga-edicion-labelCargarImagen" for="imagenSecundaria1"> Imagenes secundarias </label>
+                    <input class = "carga-edicion-input" id = "imagenSecundaria1" type="file" name = "imagenSecundaria1"></input>
+                    <input class = "carga-edicion-input" id = "imagenSecundaria2" type="file" name = "imagenSecundaria2"></input>
+                    <input class = "carga-edicion-input" id = "imagenSecundaria3" type="file" name = "imagenSecundaria3"></input>
+                    <input class = "carga-edicion-input" id = "imagenSecundaria4" type="file" name = "imagenSecundaria4"></input>
                 </div>
 
                 <button type = "submit" class = "carga-edicion-buttonFinalizar"> 
