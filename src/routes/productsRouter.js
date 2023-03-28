@@ -26,6 +26,6 @@ router.get("/editarProducto" , productsController.editarProducto);
 //Carrito de compras
 router.get("/productCart" , productsController.productCart);
 //Detalle de producto
-router.get("/productDetail" , productsController.productDetail);
+router.get("/productDetail/:id/" , productsController.productDetail);
 
 module.exports = router;
