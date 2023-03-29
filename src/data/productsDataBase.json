@@ -12,10 +12,10 @@
   ],
   "descripcion": "Pirometro digital de dos salidas",
   "imagen": "Pirometro.jpg",
-  "imagen2": "",
-  "imagen3": "",
-  "imagen4": "",
-  "imagen5": ""
+  "imagen2": "Pirometro.jpg",
+  "imagen3": "Pirometro.jpg",
+  "imagen4": "Pirometro.jpg",
+  "imagen5": "Pirometro.jpg"
  },
  {
   "id": 2,
@@ -30,10 +30,10 @@
   ],
   "descripcion": "Resistencia calefactora plana",
   "imagen": "Plana.jpg",
-  "imagen2": "",
-  "imagen3": "",
-  "imagen4": "",
-  "imagen5": ""
+  "imagen2": "Plana.jpg",
+  "imagen3": "Plana.jpg",
+  "imagen4": "Plana.jpg",
+  "imagen5": "Plana.jpg"
  },
  {
   "id": 3,
@@ -48,10 +48,10 @@
   ],
   "descripcion": "Resistencia calefactora plana",
   "imagen": "PlanaConAgujeros.jpg",
-  "imagen2": "",
-  "imagen3": "",
-  "imagen4": "",
-  "imagen5": ""
+  "imagen2": "PlanaConAgujeros.jpg",
+  "imagen3": "PlanaConAgujeros.jpg",
+  "imagen4": "PlanaConAgujeros.jpg",
+  "imagen5": "PlanaConAgujeros.jpg"
  },
  {
   "id": 4,
@@ -66,10 +66,10 @@
   ],
   "descripcion": "Suncho de acero inxoidable",
   "imagen": "Suncho.jpg",
-  "imagen2": "",
-  "imagen3": "",
-  "imagen4": "",
-  "imagen5": ""
+  "imagen2": "Suncho.jpg",
+  "imagen3": "Suncho.jpg",
+  "imagen4": "Suncho.jpg",
+  "imagen5": "Suncho.jpg"
  },
  {
   "id": 5,
@@ -84,10 +84,10 @@
   ],
   "descripcion": "Borneras ceramicas bipolares",
   "imagen": "BornerasCeramicas.jpg",
-  "imagen2": "",
-  "imagen3": "",
-  "imagen4": "",
-  "imagen5": ""
+  "imagen2": "BornerasCeramicas.jpg",
+  "imagen3": "BornerasCeramicas.jpg",
+  "imagen4": "BornerasCeramicas.jpg",
+  "imagen5": "BornerasCeramicas.jpg"
  },
  {
   "id": 6,
@@ -102,10 +102,10 @@
   ],
   "descripcion": "Relé de estado solido SSR 40 DA",
   "imagen": "RelayEstadoSolido.jpg",
-  "imagen2": "",
-  "imagen3": "",
-  "imagen4": "",
-  "imagen5": ""
+  "imagen2": "RelayEstadoSolido.jpg",
+  "imagen3": "RelayEstadoSolido.jpg",
+  "imagen4": "RelayEstadoSolido.jpg",
+  "imagen5": "RelayEstadoSolido.jpg"
  },
  {
   "id": 7,
@@ -120,10 +120,10 @@
   ],
   "descripcion": "Cable compensado tipo J",
   "imagen": "CableJ.jpg",
-  "imagen2": "",
-  "imagen3": "",
-  "imagen4": "",
-  "imagen5": ""
+  "imagen2": "CableJ.jpg",
+  "imagen3": "CableJ.jpg",
+  "imagen4": "CableJ.jpg",
+  "imagen5": "CableJ.jpg"
  },
  {
   "id": 8,
@@ -138,9 +138,9 @@
   ],
   "descripcion": "Termocuplas tipo J, K y S",
   "imagen": "Termocuplas.jpg",
-  "imagen2": "",
-  "imagen3": "",
-  "imagen4": "",
-  "imagen5": ""
+  "imagen2": "Termocuplas.jpg",
+  "imagen3": "Termocuplas.jpg",
+  "imagen4": "Termocuplas.jpg",
+  "imagen5": "Termocuplas.jpg"
  }
 ]
