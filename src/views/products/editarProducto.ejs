@@ -10,7 +10,7 @@
     <main>
         
         <div class = "carga-edicion-containerForm">
-            <h3 class = "carga-edicion-titulo"> Editar producto: <%= productToEdit.nombre %> </h3>
+            <h3 class = "carga-edicion-titulo"> Editar producto: <%= producto.nombre %> </h3>
             
             <form class = "carga-edicion-form" action="/products/editarProducto/<%= producto.id %>?_method=PATCH" method = "POST" enctype="multipart/form-data">
                 <input class = "carga-edicion-input" type="text" value="<%= producto.nombre %>" name = "nombre" required minlength="5"> </input>

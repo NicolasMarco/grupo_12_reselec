@@ -18,9 +18,9 @@
   "imagen5": "Pirometro.jpg"
  },
  {
-  "id": 2,
+  "id": "2",
   "nombre": "Resistencia Plana",
-  "precio": 20000,
+  "precio": 2099,
   "categoria": "destacados",
   "tipoEquipo": "Resistencia",
   "caracteristicas": [
@@ -72,22 +72,22 @@
   "imagen5": "Suncho.jpg"
  },
  {
-    "id": 5,
-    "nombre": "Borneras Ceramicas",
-    "precio": 10000,
-    "categoria": "destacados",
-    "tipoEquipo": "Conexion",
-    "caracteristicas": [
-     "Fabricadas con ceramica",
-     "Medidas: 30x30",
-     "Gran resistencia al calor"
-    ],
-    "descripcion": "Borneras ceramicas bipolares",
-    "imagen": "BornerasCeramicas.jpg",
-    "imagen2": "BornerasCeramicas.jpg",
-    "imagen3": "BornerasCeramicas.jpg",
-    "imagen4": "BornerasCeramicas.jpg",
-    "imagen5": "BornerasCeramicas.jpg"
+  "id": 5,
+  "nombre": "Borneras Ceramicas",
+  "precio": 10000,
+  "categoria": "destacados",
+  "tipoEquipo": "Conexion",
+  "caracteristicas": [
+   "Fabricadas con ceramica",
+   "Medidas: 30x30",
+   "Gran resistencia al calor"
+  ],
+  "descripcion": "Borneras ceramicas bipolares",
+  "imagen": "BornerasCeramicas.jpg",
+  "imagen2": "BornerasCeramicas.jpg",
+  "imagen3": "BornerasCeramicas.jpg",
+  "imagen4": "BornerasCeramicas.jpg",
+  "imagen5": "BornerasCeramicas.jpg"
  },
  {
   "id": 6,
@@ -142,4 +142,5 @@
   "imagen3": "Termocuplas.jpg",
   "imagen4": "Termocuplas.jpg",
   "imagen5": "Termocuplas.jpg"
- }]
+ }
+]
