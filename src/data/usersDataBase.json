@@ -1,0 +1,24 @@
+[
+    {
+     "id": "1",
+     "nombre": "Nicolás",
+     "apellido": "Marco",
+     "email": "nicolasmarco841@gmail.com",
+     "contraseña": "123456",
+     "categoria": "Administrador",
+     "telefono": "1156781234",
+     "imagen": "Pirometro.jpg"
+    },
+
+    {
+        "id": "2",
+        "nombre": "Mariano",
+        "apellido": "Marco",
+        "email": "mariano268@gmail.com",
+        "contraseña": "123456",
+        "categoria": "Administrador",
+        "telefono": "1112345678",
+        "imagen": "Pirometro.jpg"
+    }
+    
+]
