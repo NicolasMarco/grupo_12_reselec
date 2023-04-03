@@ -2,7 +2,7 @@
  {
   "id": "1",
   "nombre": "Pirometro Digital",
-  "precio": 46000,
+  "precio": 45000,
   "categoria": "destacados",
   "tipoEquipo": "Medicion",
   "caracteristicas": [
@@ -72,22 +72,22 @@
   "imagen5": "Suncho.jpg"
  },
  {
-  "id": 5,
-  "nombre": "Borneras Ceramicas",
-  "precio": 10000,
-  "categoria": "destacados",
-  "tipoEquipo": "Conexion",
-  "caracteristicas": [
-   "Fabricadas con ceramica",
-   "Medidas: 30x30",
-   "Gran resistencia al calor"
-  ],
-  "descripcion": "Borneras ceramicas bipolares",
-  "imagen": "BornerasCeramicas.jpg",
-  "imagen2": "BornerasCeramicas.jpg",
-  "imagen3": "BornerasCeramicas.jpg",
-  "imagen4": "BornerasCeramicas.jpg",
-  "imagen5": "BornerasCeramicas.jpg"
+    "id": 5,
+    "nombre": "Borneras Ceramicas",
+    "precio": 10000,
+    "categoria": "destacados",
+    "tipoEquipo": "Conexion",
+    "caracteristicas": [
+     "Fabricadas con ceramica",
+     "Medidas: 30x30",
+     "Gran resistencia al calor"
+    ],
+    "descripcion": "Borneras ceramicas bipolares",
+    "imagen": "BornerasCeramicas.jpg",
+    "imagen2": "BornerasCeramicas.jpg",
+    "imagen3": "BornerasCeramicas.jpg",
+    "imagen4": "BornerasCeramicas.jpg",
+    "imagen5": "BornerasCeramicas.jpg"
  },
  {
   "id": 6,
@@ -126,21 +126,21 @@
   "imagen5": "CableJ.jpg"
  },
  {
-    "id": 8,
-    "nombre": "Termocuplas",
-    "precio": 22000,
-    "categoria": "destacados",
-    "tipoEquipo": "Medicion",
-    "caracteristicas": [
-     "Tipo J, K y S",
-     "Medidas: 2m",
-     "Miden hasta 400° con precision"
-    ],
-    "descripcion": "Termocuplas tipo J, K y S",
-    "imagen": "Termocuplas.jpg",
-    "imagen2": "Termocuplas.jpg",
-    "imagen3": "Termocuplas.jpg",
-    "imagen4": "Termocuplas.jpg",
-    "imagen5": "Termocuplas.jpg"
-   }
+  "id": 8,
+  "nombre": "Termocuplas",
+  "precio": 22000,
+  "categoria": "destacados",
+  "tipoEquipo": "Medicion",
+  "caracteristicas": [
+   "Tipo J, K y S",
+   "Medidas: 2m",
+   "Miden hasta 400° con precision"
+  ],
+  "descripcion": "Termocuplas tipo J, K y S",
+  "imagen": "Termocuplas.jpg",
+  "imagen2": "Termocuplas.jpg",
+  "imagen3": "Termocuplas.jpg",
+  "imagen4": "Termocuplas.jpg",
+  "imagen5": "Termocuplas.jpg"
+ }
 ]

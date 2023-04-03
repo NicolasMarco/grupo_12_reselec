@@ -22,13 +22,13 @@ router.get("/" , productsController.index);
 router.get("/agregarProducto" , productsController.agregarProducto);
 router.post("/" , upload.any("productImage") , productsController.guardarProducto);
 //Editar producto
-router.get("/editarProducto/:id/" , productsController.editarProducto);
-router.patch("/editarProducto/:id/", upload.any("productImage"), productsController.patchProducto);
+router.get("/editarProducto/:id" , productsController.editarProducto);
+router.patch("/editarProducto/:id", upload.any("productImage"), productsController.patchProducto);
 //Borrar producto
 router.delete("/delete/:id" , productsController.borrarProducto); 
 //Carrito de compras
 router.get("/productCart" , productsController.productCart);
 //Detalle de producto
-router.get("/productDetail/:id/" , productsController.productDetail);
+router.get("/productDetail/:id" , productsController.productDetail);
 
 module.exports = router;
