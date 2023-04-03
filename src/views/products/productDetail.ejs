@@ -36,12 +36,10 @@
                         <div>
                             <h3 class = "prod-tituloRelacionados">Características:</h3><br>
                             <p>
-                                <i class="prod-icon-descripcion far fa-arrow-alt-circle-right"></i> <%= producto.caracteristicas[0] %><br>
-                                <i class="prod-icon-descripcion far fa-arrow-alt-circle-right"></i> <%= producto.caracteristicas[1] %><br>
-                                <i class="prod-icon-descripcion far fa-arrow-alt-circle-right"></i> <%= producto.caracteristicas[2] %><br>
-                                <i class="prod-icon-descripcion far fa-arrow-alt-circle-right"></i> <%= producto.caracteristicas[3] %><br>
-                                <i class="prod-icon-descripcion far fa-arrow-alt-circle-right"></i> <%= producto.caracteristicas[4] %><br>
-                                <i class="prod-icon-descripcion far fa-arrow-alt-circle-right"></i> <%= producto.caracteristicas[5] %><br>
+                                <% for( let i = 0; i < producto.caracteristicas.length; i++ ) { %>
+                                    <i class="prod-icon-descripcion far fa-arrow-alt-circle-right"></i> <%= producto.caracteristicas[i] %><br>
+                                <% } %>
+
                             </p>
                         </div>
                     </div>
