@@ -22,7 +22,8 @@ router.get("/" , productsController.index);
 router.get("/agregarProducto" , productsController.agregarProducto);
 router.post("/" , upload.any("productImage") , productsController.guardarProducto);
 //Editar producto
-router.get("/editarProducto" , productsController.editarProducto);
+router.get("/editarProducto/:id" , productsController.editarProducto);
+router.patch("/editarProducto/:id" , productsController.updateProducto);
 //Carrito de compras
 router.get("/productCart" , productsController.productCart);
 //Detalle de producto
