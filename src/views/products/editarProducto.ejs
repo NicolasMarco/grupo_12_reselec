@@ -12,7 +12,7 @@
         <div class = "carga-edicion-containerForm">
             <h3 class = "carga-edicion-titulo"> Editar producto </h3>
             
-            <form class = "carga-edicion-form" action="/products/editarProducto/<%= producto.id %>?_method=PATCH" method = "patch">
+            <form class = "carga-edicion-form" action="/products/editarProducto/<%= producto.id %>?_method=PATCH" method = "POST" enctype="multipart/form-data">
                 <input class = "carga-edicion-input" type="text" value="<%= producto.nombre %>" name = "nombre" required minlength="5"> </input>
                 <input class = "carga-edicion-input" type="text" value="<%= producto.precio %>" name = "precio" required> </input>
                 <select class = "carga-edicion-input" name = "categoria" selected = "<%= producto.categoria %>" required> 
@@ -35,15 +35,15 @@
 
                 <div class = "carga-edicion-containerInputImagen">
                     <label class = "carga-edicion-labelCargarImagen" for="imagen"> Imagen principal </label>
-                    <input class = "carga-edicion-input" id = "imagenPrincipal" type="file" name = "imagenPrincipal" value ="/images/<%= producto.imagen %>"  required></input>
+                    <input class = "carga-edicion-input" id = "imagenPrincipal" type="file" name = "imagenPrincipal"></input>
                 </div>
 
                 <div class = "carga-edicion-containerInputImagen">
                     <label class = "carga-edicion-labelCargarImagen" for="imagenSecundaria1"> Imagenes secundarias </label>
-                    <input class = "carga-edicion-input" id = "imagenSecundaria1" type="file" name = "imagenSecundaria1" value ="/images/<%= producto.imagen2 %>"></input>
-                    <input class = "carga-edicion-input" id = "imagenSecundaria2" type="file" name = "imagenSecundaria2" value ="/images/<%= producto.imagen3 %>"></input>
-                    <input class = "carga-edicion-input" id = "imagenSecundaria3" type="file" name = "imagenSecundaria3" value ="/images/<%= producto.imagen4 %>"></input>
-                    <input class = "carga-edicion-input" id = "imagenSecundaria4" type="file" name = "imagenSecundaria4" value ="/images/<%= producto.imagen5 %>"></input>
+                    <input class = "carga-edicion-input" id = "imagenSecundaria1" type="file" name = "imagenSecundaria1"></input>
+                    <input class = "carga-edicion-input" id = "imagenSecundaria2" type="file" name = "imagenSecundaria2"></input>
+                    <input class = "carga-edicion-input" id = "imagenSecundaria3" type="file" name = "imagenSecundaria3"></input>
+                    <input class = "carga-edicion-input" id = "imagenSecundaria4" type="file" name = "imagenSecundaria4"></input>
                 </div>
 
                 <button type = "submit" class = "carga-edicion-buttonFinalizar"> 

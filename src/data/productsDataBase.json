@@ -1,8 +1,8 @@
 [
  {
-  "id": 1,
+  "id": "1",
   "nombre": "Pirometro Digital",
-  "precio": 45000,
+  "precio": 46000,
   "categoria": "destacados",
   "tipoEquipo": "Medicion",
   "caracteristicas": [
