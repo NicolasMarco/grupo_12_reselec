@@ -23,3 +23,11 @@ Ademas, decidimos hacer una reunion para dividrnos las tareas de cada uno de los
 
 Mas alla de las mejoras que debemos implementar, estamos muy contentos con el trabajo realizado hasta el momento.
 </p>
+
+<h2> SPRINT N°3: </H2>
+
+<p>
+
+En el tercer sprint implementamos muchas cosas que habiamos pensado en el sprint N°2. Nos dividimos las tareas apenas el sprint fue lanzado, y comenzamos a realizarlo lo antes posible. Esto nos permitio terminar las consignas bastante tiempo antes del plazo de entrega, y ademas poder utilizar los dias restantes para mejorar cosas que teniamos pensadas que no tenian que ver con la consigna del sprint en particular. Para proximos sprints vamos a implementar la misma metodologia.
+
+</p>

@@ -334,7 +334,7 @@ footer {
 @media (min-width: 768px) {
 
     body {
-        padding-bottom: 135px;
+        padding-bottom: 137px;
     }
 
     .prod-container-tituloProducto {
@@ -441,6 +441,7 @@ footer {
         justify-content: flex-end;
         max-width: 740px;
         margin: auto;
+        margin-bottom: 10px;
     }
 
     .prod-form-editar {

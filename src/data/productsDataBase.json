@@ -1,6 +1,6 @@
 [
  {
-  "id": 1,
+  "id": "1",
   "nombre": "Pirometro Digital",
   "precio": 45000,
   "categoria": "destacados",
@@ -72,22 +72,22 @@
   "imagen5": "Suncho.jpg"
  },
  {
-  "id": 5,
-  "nombre": "Borneras Ceramicas",
-  "precio": 10000,
-  "categoria": "destacados",
-  "tipoEquipo": "Conexion",
-  "caracteristicas": [
-   "Fabricadas con ceramica",
-   "Medidas: 30x30",
-   "Gran resistencia al calor"
-  ],
-  "descripcion": "Borneras ceramicas bipolares",
-  "imagen": "BornerasCeramicas.jpg",
-  "imagen2": "BornerasCeramicas.jpg",
-  "imagen3": "BornerasCeramicas.jpg",
-  "imagen4": "BornerasCeramicas.jpg",
-  "imagen5": "BornerasCeramicas.jpg"
+    "id": 5,
+    "nombre": "Borneras Ceramicas",
+    "precio": 10000,
+    "categoria": "destacados",
+    "tipoEquipo": "Conexion",
+    "caracteristicas": [
+     "Fabricadas con ceramica",
+     "Medidas: 30x30",
+     "Gran resistencia al calor"
+    ],
+    "descripcion": "Borneras ceramicas bipolares",
+    "imagen": "BornerasCeramicas.jpg",
+    "imagen2": "BornerasCeramicas.jpg",
+    "imagen3": "BornerasCeramicas.jpg",
+    "imagen4": "BornerasCeramicas.jpg",
+    "imagen5": "BornerasCeramicas.jpg"
  },
  {
   "id": 6,
