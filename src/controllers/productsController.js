@@ -100,6 +100,23 @@ const productsController = {
 
 		res.redirect("/products");
 
+    },
+
+    borrarProducto: function(req,res) {
+        const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        
+        let id = req.params.id;
+
+        let productosFinales = productos.filter((producto) => {
+            return producto.id != id;
+        });
+
+        let productosJSON = JSON.stringify(productosFinales, null, " ");
+
+        fs.writeFileSync(productsFilePath , productosJSON);
+        
+
+		res.redirect("/products");
     }
 
     

@@ -89,7 +89,7 @@
                 <button class = "prod-button-enviar" type = "submit">EDITAR</button>
             </form>
 
-            <form class = "prod-form-borrar" action="/products?_method=DELETE" method="POST">
+            <form class = "prod-form-borrar" action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
                 <button class = "prod-button-enviar" type = "submit">BORRAR</button>
             </form>
         </div>
