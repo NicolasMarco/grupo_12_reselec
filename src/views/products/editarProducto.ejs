@@ -12,38 +12,38 @@
         <div class = "carga-edicion-containerForm">
             <h3 class = "carga-edicion-titulo"> Editar producto </h3>
             
-            <form class = "carga-edicion-form" action="/products/?_method=PATCH" method="POST">
-                <input class = "carga-edicion-input" type="text" placeholder="NOMBRE DEL PRODUCTO" name = "nombre" required minlength="5"> </input>
-                <input class = "carga-edicion-input" type="text" placeholder="PRECIO" name = "precio" required> </input>
-                <select class = "carga-edicion-input" name = "categoria" required> 
-                    <option value = "disabled"> CATEGORIA </option>
-                    <option value="destacados"> PRODUCTO DESTACADO </option>
-                    <option value="ultimaVisita"> ULTIMA VISITA </option>
+            <form class = "carga-edicion-form" action="/products/editarProducto/<%= producto.id %>?_method=PATCH" method = "patch">
+                <input class = "carga-edicion-input" type="text" value="<%= producto.nombre %>" name = "nombre" required minlength="5"> </input>
+                <input class = "carga-edicion-input" type="text" value="<%= producto.precio %>" name = "precio" required> </input>
+                <select class = "carga-edicion-input" name = "categoria" selected = "<%= producto.categoria %>" required> 
+                    <option value = "disabled" <% if (producto.categoria == "disabled") { %> selected <% } %>> CATEGORIA </option>
+                    <option value = "destacados" <% if (producto.categoria == "destacados") { %> selected <% } %>> PRODUCTO DESTACADO</option>
+                    <option value = "ultimaVisita" <% if (producto.categoria == "ultimaVisita") {%> selected <% } %>> ULTIMA VISITA </option>
                 </select>
                 <select class = "carga-edicion-input" name = "tipoEquipo" required> 
-                    <option value = "disabled"> TIPO DE EQUIPO </option>
-                    <option value = "Resistencia"> RESISTENCIA </option>
-                    <option value= "Medicion"> MEDICION </option>
-                    <option value= "Conexion"> CONEXION </option>
+                    <option value = "disabled" <% if (producto.tipoEquipo == "disabled") {%> selected <% } %>> TIPO DE EQUIPO </option>
+                    <option value = "Resistencia" <% if (producto.tipoEquipo == "Resistencia") {%> selected <% } %>> RESISTENCIA </option>
+                    <option value= "Medicion" <% if (producto.tipoEquipo == "Medicion") {%> selected <% } %>> MEDICION </option>
+                    <option value= "Conexion" <% if (producto.tipoEquipo == "Conexion") {%> selected <% } %>> CONEXION </option>
                 </select>
 
-                <input class = "carga-edicion-input" type="text" placeholder="CARACTERISTICA" name = "caracteristicaUno" required> </input>
-                <input class = "carga-edicion-input" type="text" placeholder="CARACTERISTICA" name = "caracteristicaDos" required> </input>
-                <input class = "carga-edicion-input" type="text" placeholder="CARACTERISTICA" name = "caracteristicaTres" required> </input>
+                <input class = "carga-edicion-input" type="text" value="<%= producto.caracteristicas[0] %>" name = "caracteristicaUno" required> </input>
+                <input class = "carga-edicion-input" type="text" value="<%= producto.caracteristicas[1] %>" name = "caracteristicaDos" required> </input>
+                <input class = "carga-edicion-input" type="text" value="<%= producto.caracteristicas[2] %>" name = "caracteristicaTres" required> </input>
 
-                <textarea class = "carga-edicion-textArea" type="text" placeholder="DESCRIPCION" name = "descripcion"></textarea>
+                <textarea class = "carga-edicion-textArea" type="text" placeholder="<%= producto.descripcion %>" name = "descripcion"></textarea>
 
                 <div class = "carga-edicion-containerInputImagen">
                     <label class = "carga-edicion-labelCargarImagen" for="imagen"> Imagen principal </label>
-                    <input class = "carga-edicion-input" id = "imagenPrincipal" type="file" name = "imagenPrincipal" required></input>
+                    <input class = "carga-edicion-input" id = "imagenPrincipal" type="file" name = "imagenPrincipal" value ="/images/<%= producto.imagen %>"  required></input>
                 </div>
 
                 <div class = "carga-edicion-containerInputImagen">
                     <label class = "carga-edicion-labelCargarImagen" for="imagenSecundaria1"> Imagenes secundarias </label>
-                    <input class = "carga-edicion-input" id = "imagenSecundaria1" type="file" name = "imagenSecundaria1"></input>
-                    <input class = "carga-edicion-input" id = "imagenSecundaria2" type="file" name = "imagenSecundaria2"></input>
-                    <input class = "carga-edicion-input" id = "imagenSecundaria3" type="file" name = "imagenSecundaria3"></input>
-                    <input class = "carga-edicion-input" id = "imagenSecundaria4" type="file" name = "imagenSecundaria4"></input>
+                    <input class = "carga-edicion-input" id = "imagenSecundaria1" type="file" name = "imagenSecundaria1" value ="/images/<%= producto.imagen2 %>"></input>
+                    <input class = "carga-edicion-input" id = "imagenSecundaria2" type="file" name = "imagenSecundaria2" value ="/images/<%= producto.imagen3 %>"></input>
+                    <input class = "carga-edicion-input" id = "imagenSecundaria3" type="file" name = "imagenSecundaria3" value ="/images/<%= producto.imagen4 %>"></input>
+                    <input class = "carga-edicion-input" id = "imagenSecundaria4" type="file" name = "imagenSecundaria4" value ="/images/<%= producto.imagen5 %>"></input>
                 </div>
 
                 <button type = "submit" class = "carga-edicion-buttonFinalizar"> 
