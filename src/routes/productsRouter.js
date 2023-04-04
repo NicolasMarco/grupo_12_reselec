@@ -23,7 +23,7 @@ router.get("/agregarProducto" , productsController.agregarProducto);
 router.post("/" , upload.any("productImage") , productsController.guardarProducto);
 //Editar producto
 router.get("/editarProducto/:id" , productsController.editarProducto);
-router.patch("/editarProducto/:id", upload.any("productImage"), productsController.patchProducto);
+router.patch("/editarProducto/:id", upload.any("productImage"), productsController.updateProducto);
 //Borrar producto
 router.delete("/delete/:id" , productsController.borrarProducto); 
 //Carrito de compras

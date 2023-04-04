@@ -20,11 +20,11 @@
  {
   "id": "2",
   "nombre": "Resistencia Plana",
-  "precio": 2099,
+  "precio": 2500,
   "categoria": "destacados",
   "tipoEquipo": "Resistencia",
   "caracteristicas": [
-   "Fabricada con acero inoxidable",
+   "Fabricada en acero inoxidable",
    "Medidas: 300x200",
    "Salida con casquillos"
   ],
@@ -126,21 +126,21 @@
   "imagen5": "CableJ.jpg"
  },
  {
-  "id": 8,
-  "nombre": "Termocuplas",
-  "precio": 22000,
-  "categoria": "destacados",
-  "tipoEquipo": "Medicion",
-  "caracteristicas": [
-   "Tipo J, K y S",
-   "Medidas: 2m",
-   "Miden hasta 400° con precision"
-  ],
-  "descripcion": "Termocuplas tipo J, K y S",
-  "imagen": "Termocuplas.jpg",
-  "imagen2": "Termocuplas.jpg",
-  "imagen3": "Termocuplas.jpg",
-  "imagen4": "Termocuplas.jpg",
-  "imagen5": "Termocuplas.jpg"
- }
+    "id": 8,
+    "nombre": "Termocuplas",
+    "precio": 22000,
+    "categoria": "destacados",
+    "tipoEquipo": "Medicion",
+    "caracteristicas": [
+     "Tipo J, K y S",
+     "Medidas: 2m",
+     "Miden hasta 400° con precision"
+    ],
+    "descripcion": "Termocuplas tipo J, K y S",
+    "imagen": "Termocuplas.jpg",
+    "imagen2": "Termocuplas.jpg",
+    "imagen3": "Termocuplas.jpg",
+    "imagen4": "Termocuplas.jpg",
+    "imagen5": "Termocuplas.jpg"
+   }
 ]
