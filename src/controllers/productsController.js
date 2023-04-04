@@ -39,6 +39,56 @@ const productsController = {
     //Guardado de producto nuevo
     guardarProducto: function(req,res) {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        
+        let imagenPrincipal = "";
+        let imagenSecundaria1 = "";
+        let imagenSecundaria2 = "";
+        let imagenSecundaria3 = "";
+        let imagenSecundaria4 = ""
+
+        if (req.files[0]) {
+            if (req.files[0].fieldname == "imagenPrincipal") {
+                imagenPrincipal = req.files[0].filename;
+            } else if (req.files[0].fieldname == "imagenSecundaria1") {
+                imagenSecundaria1 = req.files[0].filename;
+            } else if (req.files[0].fieldname == "imagenSecundaria2") {
+                imagenSecundaria2 = req.files[0].filename;
+            } else if (req.files[0].fieldname == "imagenSecundaria3") {
+                imagenSecundaria3 = req.files[0].filename;
+            } else if (req.files[0].fieldname == "imagenSecundaria4") {
+                imagenSecundaria4 = req.files[0].filename;
+            }
+
+            if (req.files[1]) {
+                if (req.files[1].fieldname == "imagenSecundaria1") {
+                    imagenSecundaria1 = req.files[1].filename;
+                } else if (req.files[1].fieldname == "imagenSecundaria2") {
+                    imagenSecundaria2 = req.files[1].filename;
+                } else if (req.files[1].fieldname == "imagenSecundaria3") {
+                    imagenSecundaria3 = req.files[1].filename;
+                } else if (req.files[1].fieldname == "imagenSecundaria4") {
+                    imagenSecundaria4 = req.files[1].filename;
+                }
+
+                if (req.files[2]) {
+                    if (req.files[2].fieldname == "imagenSecundaria2") {
+                        imagenSecundaria2 = req.files[2].filename;
+                    } else if (req.files[2].fieldname == "imagenSecundaria3") {
+                        imagenSecundaria3 = req.files[2].filename;
+                    } else if (req.files[2].fieldname == "imagenSecundaria4") {
+                        imagenSecundaria4 = req.files[2].filename;
+                    }
+
+                    if (req.files[3]) {
+                        if (req.files[3].fieldname == "imagenSecundaria3") {
+                            imagenSecundaria3 = req.files[3].filename;
+                        } else if (req.files[3].fieldname == "imagenSecundaria4") {
+                            imagenSecundaria4 = req.files[3].filename;
+                        }
+                    }
+                }
+            }
+        }
 
         let productoACargar =  {
             id: (productos[productos.length-1].id + 1),
@@ -48,11 +98,11 @@ const productsController = {
             tipoEquipo: req.body.tipoEquipo,
             caracteristicas : [req.body.caracteristicaUno , req.body.caracteristicaDos , req.body.caracteristicaTres],
             descripcion: req.body.descripcion,
-            imagen: req.files[0].filename,
-            imagen2: req.files[1] ? req.files[1].filename : req.files[0].filename,
-            imagen3: req.files[2] ? req.files[2].filename : req.files[0].filename,
-            imagen4: req.files[3] ? req.files[3].filename : req.files[0].filename,
-            imagen5: req.files[4] ? req.files[4].filename : req.files[0].filename
+            imagen: imagenPrincipal,
+            imagen2: imagenSecundaria1 == "" ? imagenPrincipal : imagenSecundaria1,
+            imagen3: imagenSecundaria2 == "" ? imagenPrincipal : imagenSecundaria2,
+            imagen4: imagenSecundaria3 == "" ? imagenPrincipal : imagenSecundaria3,
+            imagen5: imagenSecundaria4 == "" ? imagenPrincipal : imagenSecundaria4
         };
 
         productos.push(productoACargar);
@@ -75,6 +125,56 @@ const productsController = {
             return producto.id == id;
         });
 
+        let imagenPrincipal = productWithoutEdit.imagen;
+        let imagenSecundaria1 = productWithoutEdit.imagen2;
+        let imagenSecundaria2 = productWithoutEdit.imagen3;
+        let imagenSecundaria3 = productWithoutEdit.imagen4;
+        let imagenSecundaria4 = productWithoutEdit.imagen5;
+
+        if (req.files[0]) {
+            if (req.files[0].fieldname == "imagenPrincipal") {
+                imagenPrincipal = req.files[0].filename;
+            } else if (req.files[0].fieldname == "imagenSecundaria1") {
+                imagenSecundaria1 = req.files[0].filename;
+            } else if (req.files[0].fieldname == "imagenSecundaria2") {
+                imagenSecundaria2 = req.files[0].filename;
+            } else if (req.files[0].fieldname == "imagenSecundaria3") {
+                imagenSecundaria3 = req.files[0].filename;
+            } else if (req.files[0].fieldname == "imagenSecundaria4") {
+                imagenSecundaria4 = req.files[0].filename;
+            }
+
+            if (req.files[1]) {
+                if (req.files[1].fieldname == "imagenSecundaria1") {
+                    imagenSecundaria1 = req.files[1].filename;
+                } else if (req.files[1].fieldname == "imagenSecundaria2") {
+                    imagenSecundaria2 = req.files[1].filename;
+                } else if (req.files[1].fieldname == "imagenSecundaria3") {
+                    imagenSecundaria3 = req.files[1].filename;
+                } else if (req.files[1].fieldname == "imagenSecundaria4") {
+                    imagenSecundaria4 = req.files[1].filename;
+                }
+
+                if (req.files[2]) {
+                    if (req.files[2].fieldname == "imagenSecundaria2") {
+                        imagenSecundaria2 = req.files[2].filename;
+                    } else if (req.files[2].fieldname == "imagenSecundaria3") {
+                        imagenSecundaria3 = req.files[2].filename;
+                    } else if (req.files[2].fieldname == "imagenSecundaria4") {
+                        imagenSecundaria4 = req.files[2].filename;
+                    }
+
+                    if (req.files[3]) {
+                        if (req.files[3].fieldname == "imagenSecundaria3") {
+                            imagenSecundaria3 = req.files[3].filename;
+                        } else if (req.files[3].fieldname == "imagenSecundaria4") {
+                            imagenSecundaria4 = req.files[3].filename;
+                        }
+                    }
+                }
+            }
+        }
+
         let productoEditado =  {
             id: id,
             nombre: req.body.nombre,
@@ -83,12 +183,14 @@ const productsController = {
             tipoEquipo: req.body.tipoEquipo,
             caracteristicas : [req.body.caracteristicaUno , req.body.caracteristicaDos , req.body.caracteristicaTres],
             descripcion: req.body.descripcion ? req.body.descripcion : productWithoutEdit.descripcion,
-            imagen: req.files[0] ? req.files[0].filename : productWithoutEdit.imagen,
-            imagen2: req.files[1] ? req.files[1].filename : productWithoutEdit.imagen2,
-            imagen3: req.files[2] ? req.files[2].filename : productWithoutEdit.imagen3,
-            imagen4: req.files[3] ? req.files[3].filename : productWithoutEdit.imagen4,
-            imagen5: req.files[4] ? req.files[4].filename : productWithoutEdit.imagen5
+            imagen: imagenPrincipal,
+            imagen2: imagenSecundaria1,
+            imagen3: imagenSecundaria2,
+            imagen4: imagenSecundaria3,
+            imagen5: imagenSecundaria4
         };
+
+        console.log(imagenPrincipal , imagenSecundaria1 , imagenSecundaria2 , imagenSecundaria3 , imagenSecundaria4);
 
         let indice = productos.findIndex((producto) => {
             return producto.id == id;
