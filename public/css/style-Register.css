@@ -57,13 +57,6 @@ header {
     align-items: center;
 }
 
-.register-SegundaParteFormulario {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .register-buttonFinalizar {
     width: 60%;
     height: 35px;
@@ -88,6 +81,24 @@ header {
     padding: 5px;
 }
 
+.register-labelCargarImagen {
+    font-weight: bold;
+    font-size: 13px;
+    font-family: 'Roboto' , sans-serif;
+    color: #6e6a6a;
+    padding: 5px 0px 5px 0px;
+}
+
+.register-containerFileInput {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    border-top: 1px solid rgb(221, 218, 218);
+    margin-top: 10px;
+}
+
 @media (min-width: 460px) {
 
     .register-containerRegistro {
@@ -99,7 +110,7 @@ header {
 @media (min-width: 768px) {
 
     .register-containerRegistro {
-        max-width: 650px;
+        max-width: 600px;
         
     }
 
@@ -121,33 +132,6 @@ header {
 }
 
 @media (min-width: 992px) {
-    
-    .register-containerRegistro {
-        max-width: 960px;  
-        margin-bottom: 20px;
-    }
-
-    .register-formRegistro {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        
-    }
-
-    .register-primerParteFormulario {
-        width: 48%;
-        margin-bottom: 10px;
-    }
-
-    .register-SegundaParteFormulario {
-        width: 48%;
-        margin-bottom: 10px;
-    }
-
-    .register-buttonFinalizar {
-        width: 40%;
-        margin: auto;
-    }
 
     footer {
         position:fixed;
@@ -156,12 +140,4 @@ header {
         width:100%;
      }
     
-}
-
-@media (min-width: 1200px) {
-    
-    .register-containerRegistro {
-        max-width: 1140px;
-    }
-
 }

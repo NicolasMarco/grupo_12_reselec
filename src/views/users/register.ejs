@@ -11,62 +11,22 @@
         
         <div class = "register-containerRegistro">
             <h3 class = "register-tituloRegistro"> REGISTRO </h3>
-            <form class = "register-formRegistro" action = "/" method = "GET"> 
+            <form class = "register-formRegistro" action = "/users/login" method = "post"  enctype="multipart/form-data"> 
 
                 <div class = "register-primerParteFormulario">
 
                     <input class = "register-input" type="text" placeholder="USUARIO" name = "usuario" required minlength="5"> </input>
                     <input class = "register-input" type="password" placeholder="CONTRASEÑA" name = "contraseña" required minlength="5"> </input>
-                    <input class = "register-input" type="password" placeholder="REPETIR CONTRASEÑA" name = "contraseña" required minlength="5"> </input>
+                    <input class = "register-input" type="password" placeholder="REPETIR CONTRASEÑA" name = "contraseñaRepetida" required minlength="5"> </input>
                     <input class = "register-input" type="text" placeholder="NOMBRE" name = "nombre" required minlength="5"> </input>
                     <input class = "register-input" type="text" placeholder="APELLIDO" name = "apellido" required minlength="5"> </input>
-                    <input class = "register-input" type="text" placeholder="DNI" name = "dni" required minlength="7"> </input>
+                    <input class = "register-input" type="email" placeholder="EMAIL" name = "email" required minlength="5"> </input>
                     <input class = "register-input" type="tel" placeholder="TELEFONO" name = "telefono" required minlength="10"> </input>
-
-                </div>
-
-                <div class = "register-SegundaParteFormulario">
-                    
-                    <select class = "register-input" name = "provincia" required> 
-                        <option value = "disabled"> PROVINCIA </option>
-                        <option value = "gba"> BUENOS AIRES (GBA) </option>
-                        <option value = "caba"> BUENOS AIRES (CABA) </option>
-                        <option value = "catamarca"> CATAMARCA </option>
-                        <option value = "chaco"> CHACO </option>
-                        <option value = "chubut"> CHUBUT </option>
-                        <option value = "cordoba"> CORDOBA </option>
-                        <option value = "corrientes"> CORRIENTES </option>
-                        <option value = "entreRios"> ENTRE RÍOS </option>
-                        <option value = "formosa"> FORMOSA </option>
-                        <option value = "jujuy"> JUJUY </option>
-                        <option value = "laPampa"> LA PAMPA </option>
-                        <option value = "laRioja"> LA RIOJA </option>
-                        <option value = "mendoza"> MENDOZA </option>
-                        <option value = "misiones"> MISIONES </option>
-                        <option value = "neuquen"> NEUQUÉN </option>
-                        <option value = "rioNegro"> RIO NEGRO </option>
-                        <option value = "salta"> SALTA </option>
-                        <option value = "sanJuan"> SAN JUAN </option>
-                        <option value = "sanLuis"> SAN LUIS </option>
-                        <option value = "santaCruz"> SANTA CRUZ </option>
-                        <option value = "santaFe"> SANTA FE </option>
-                        <option value = "santiagoDelEstero"> SANTIAGO DEL ESTERO </option>
-                        <option value = "tierraDelFuego"> TIERRA DEL FUEGO </option>
-                        <option value = "tucuman"> TUCUMÁN </option>
-                    </select>
-
-                    <input class = "register-input" type="text" placeholder="PARTIDO" name = "partido" required minlength="5"> </input>
-                    <input class = "register-input" type="text" placeholder="LOCALIDAD" name = "localidad" required minlength="5"> </input>
-                    <input class = "register-input" type="text" placeholder="CODIGO POSTAL" name = "codigoPostal" required minlength="4" maxlength="4"> </input>
-                    <input class = "register-input" type="text" placeholder="CALLE Y NUMERO" name = "calleYNumero" required minlength="5"> </input>
-                    <input class = "register-input" type="text" placeholder="ENTRE CALLES" name = "entreCalles" required minlength="5"> </input>
-                    
-                    <select class = "register-input" name = "tipoDeUsuario" required> 
-                        <option value = "disabled"> TIPO DE USUARIO </option>
-                        <option value = "consumidorFinal"> CONSUMIDOR FINAL </option>
-                        <option value = "empresa"> EMPRESA </option>
-                    </select>
-
+                    <div class = "register-containerFileInput">
+                        <label class = "register-labelCargarImagen" for="imagen"> Imagen usuario </label>
+                        <input class = "register-input" id = "imagenUsuario" type="file" name = "imagenUsuario"></input>
+                    </div>
+                    <input class = "register-input" type="password" placeholder="CONTRASEÑA ADMINISTRADOR" name = "contraseñaRepeitda" minlength="5"> </input>
                 </div>
 
                 <button type = "submit" class = "register-buttonFinalizar"> 

@@ -1,24 +1,34 @@
 [
-    {
-     "id": "1",
-     "nombre": "Nicolás",
-     "apellido": "Marco",
-     "email": "nicolasmarco841@gmail.com",
-     "contraseña": "123456",
-     "categoria": "Administrador",
-     "telefono": "1156781234",
-     "imagen": "Pirometro.jpg"
-    },
-
-    {
-        "id": "2",
-        "nombre": "Mariano",
-        "apellido": "Marco",
-        "email": "mariano268@gmail.com",
-        "contraseña": "123456",
-        "categoria": "Administrador",
-        "telefono": "1112345678",
-        "imagen": "Pirometro.jpg"
-    }
-    
+ {
+  "id": 1,
+  "usuario": "nicolasmarco841",
+  "contraseña": "123456",
+  "nombre": "Nicolás",
+  "apellido": "Marco",
+  "email": "nicolasmarco841@gmail.com",
+  "telefono": "1156781234",
+  "imagen": "Pirometro.jpg",
+  "administrador": true
+ },
+ {
+  "id": 2,
+  "usuario": "mariano268",
+  "contraseña": "123456",
+  "nombre": "Mariano",
+  "apellido": "Marco",
+  "email": "mariano268@gmail.com",
+  "telefono": "1112345678",
+  "imagen": "Pirometro.jpg",
+  "administrador": true
+ },
+ {
+  "id": 3,
+  "usuario": "DiegoMarco856",
+  "nombre": "Diego Hernan",
+  "apellido": "Marco",
+  "email": "diegomarco@hotmail.com.ar",
+  "telefono": "1156610726",
+  "imagen": "imagenUsuario-1681353465168.jpg",
+  "administrador": true
+ }
 ]
