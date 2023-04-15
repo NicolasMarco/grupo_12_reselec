@@ -4,6 +4,19 @@ header {
     border-bottom: 1px solid #eee;
 }
 
+body {
+    margin: 0px;
+    min-height: 100vh;
+    padding-bottom: 182px;
+    position: relative;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 .register-containerRegistro {
     display: flex;
     flex-wrap: wrap;
@@ -109,6 +122,10 @@ header {
 
 @media (min-width: 768px) {
 
+    body {
+        padding-bottom: 137px;
+    }
+
     .register-containerRegistro {
         max-width: 600px;
         
@@ -129,15 +146,4 @@ header {
     .register-logoButton {
         font-size: 16px;
     }
-}
-
-@media (min-width: 992px) {
-
-    footer {
-        position:fixed;
-        left:0px;
-        bottom:0px;
-        width:100%;
-     }
-    
 }
