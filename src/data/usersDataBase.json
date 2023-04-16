@@ -2,7 +2,7 @@
  {
   "id": 1,
   "usuario": "nicolasmarco841",
-  "contraseña": "123456",
+  "password": "123456",
   "nombre": "Nicolás",
   "apellido": "Marco",
   "email": "nicolasmarco841@gmail.com",
@@ -13,7 +13,7 @@
  {
   "id": 2,
   "usuario": "mariano268",
-  "contraseña": "123456",
+  "password": "123456",
   "nombre": "Mariano",
   "apellido": "Marco",
   "email": "mariano268@gmail.com",

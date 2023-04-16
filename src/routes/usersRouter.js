@@ -5,13 +5,31 @@ const path = require("path");
 const { body } = require("express-validator");
 
 const validations = [
-    body("usuario").notEmpty().withMessage("* El campo usuario debe estar completo"),
-    body("contraseña").notEmpty().withMessage("* El campo contraseña debe estar completo"),
-    body("contraseñaRepetida").notEmpty().withMessage("* Debes volver a ingresar la contraseña"),
+    body("usuario").notEmpty().withMessage("* El campo usuario debe estar completo").bail().isAlphanumeric().withMessage("* El nombre de usuario solo puede contener letras o numeros"),
+    body("password").notEmpty().withMessage("* El campo contraseña debe estar completo"),
+    body("passwordRepetida").notEmpty().withMessage("* Debes volver a ingresar la contraseña").bail().
+    custom((value , { req }) => {
+        let passwordOriginal = req.body.password;
+        let passwordRepetida = req.body.passwordRepetida;
+
+        if (passwordOriginal && passwordOriginal !== passwordRepetida) {
+            throw new Error("* Las contraseñas no coinciden");
+        }
+
+        return true;
+    }),
     body("nombre").notEmpty().withMessage("* El campo nombre debe estar completo"),
     body("apellido").notEmpty().withMessage("* El campo apellido debe estar completo"),
-    body("email").notEmpty().withMessage("* El campo email debe estar completo"),
-    body("telefono").notEmpty().withMessage("* El campo telefono debe estar completo")
+    body("email").notEmpty().withMessage("* El campo email debe estar completo").bail().isEmail().withMessage("* El formato del email es invalido"),
+    body("telefono").notEmpty().withMessage("* El campo telefono debe estar completo"),
+    body("passwordAdmin").custom((value , { req }) => {
+        let passwordIngresada = req.body.passwordAdmin;
+        if (passwordIngresada && passwordIngresada !== "123456") {
+            throw new Error("* Las contraseña de administrador ingresada no es correcta");
+        }
+
+        return true;
+    })
 ];
 
 let storage = multer.diskStorage({
@@ -29,6 +47,6 @@ const upload = multer({storage : storage});
 router.get("/login" , usersController.login);
 router.get("/register" ,  usersController.getRegister);
 
-router.post("/login" ,upload.single("imagenUsuario"), validations , usersController.userRegister);
+router.post("/register" ,upload.single("imagenUsuario"), validations , usersController.userRegister);
 
 module.exports = router;

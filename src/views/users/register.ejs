@@ -11,7 +11,7 @@
         
         <div class = "register-containerRegistro">
             <h3 class = "register-tituloRegistro"> REGISTRO </h3>
-            <form class = "register-formRegistro" action = "/users/login" method = "post"  enctype="multipart/form-data"> 
+            <form class = "register-formRegistro" action = "/users/register" method = "post"  enctype="multipart/form-data"> 
 
                 <div class = "register-primerParteFormulario">
 
@@ -21,16 +21,16 @@
                             <h3 class = "register-textoError"><%= errors.usuario.msg %></h3>
                         </div>
                     <% } %>
-                    <input class = "register-input" type="password" placeholder="CONTRASEÑA" name = "contraseña" value = "<%= locals.oldData ? oldData.contraseña : null %>"> </input>
-                    <% if (locals.errors && errors.contraseña) {%>
+                    <input class = "register-input" type="password" placeholder="CONTRASEÑA" name = "password"> </input>
+                    <% if (locals.errors && errors.password) {%>
                         <div class = "register-contenedorError">
-                            <h3 class = "register-textoError"><%= errors.contraseña.msg %></h3>
+                            <h3 class = "register-textoError"><%= errors.password.msg %></h3>
                         </div>
                     <% } %>
-                    <input class = "register-input" type="password" placeholder="REPETIR CONTRASEÑA" name = "contraseñaRepetida" value = "<%= locals.oldData ? oldData.contraseñaRepetida : null %>"> </input>
-                    <% if (locals.errors && errors.contraseñaRepetida) {%>
+                    <input class = "register-input" type="password" placeholder="REPETIR CONTRASEÑA" name = "passwordRepetida"> </input>
+                    <% if (locals.errors && errors.passwordRepetida) {%>
                         <div class = "register-contenedorError">
-                            <h3 class = "register-textoError"><%= errors.contraseñaRepetida.msg %></h3>
+                            <h3 class = "register-textoError"><%= errors.passwordRepetida.msg %></h3>
                         </div>
                     <% } %>
                     <input class = "register-input" type="text" placeholder="NOMBRE" name = "nombre" value = "<%= locals.oldData ? oldData.nombre : null %>"> </input>
@@ -45,7 +45,7 @@
                             <h3 class = "register-textoError"><%= errors.apellido.msg %></h3>
                         </div>
                     <% } %>
-                    <input class = "register-input" type="email" placeholder="EMAIL" name = "email" value = "<%= locals.oldData ? oldData.email : null %>"> </input>
+                    <input class = "register-input" type="text" placeholder="EMAIL" name = "email" value = "<%= locals.oldData ? oldData.email : null %>"> </input>
                     <% if (locals.errors && errors.email) {%>
                         <div class = "register-contenedorError">
                             <h3 class = "register-textoError"><%= errors.email.msg %></h3>
@@ -61,7 +61,12 @@
                         <label class = "register-labelCargarImagen" for="imagen"> Imagen usuario </label>
                         <input class = "register-input" id = "imagenUsuario" type="file" name = "imagenUsuario"></input>
                     </div>
-                    <input class = "register-input" type="password" placeholder="CONTRASEÑA ADMINISTRADOR" name = "contraseñaAdmin"> </input>
+                    <input class = "register-input" type="password" placeholder="CONTRASEÑA ADMINISTRADOR" name = "passwordAdmin"> </input>
+                    <% if (locals.errors && errors.passwordAdmin) {%>
+                        <div class = "register-contenedorError">
+                            <h3 class = "register-textoError"><%= errors.passwordAdmin.msg %></h3>
+                        </div>
+                    <% } %>
                 </div>
 
                 <button type = "submit" class = "register-buttonFinalizar"> 

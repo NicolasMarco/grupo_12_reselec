@@ -23,16 +23,18 @@ const usersController = {
                 oldData: req.body
             });
         }
+
+
         let usuarioACargar =  {
             id: (usuarios[usuarios.length-1].id + 1),
             usuario: req.body.usuario,
-            contraseña: req.body.contraseña,
+            password: req.body.contraseña,
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             email: req.body.email,
             telefono: req.body.telefono,
             imagen: req.file ? req.file.filename : "default.png",
-            administrador: true
+            administrador: req.body.passwordAdmin ? true : false
         };
 
         usuarios.push(usuarioACargar);
