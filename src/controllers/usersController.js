@@ -3,6 +3,7 @@ const path = require('path');
 
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const { validationResult } = require("express-validator");
+const bcryptjs = require("bcryptjs");
 
 const usersController = {
     login: (req,res) => {
@@ -24,11 +25,50 @@ const usersController = {
             });
         }
 
+        let usuarioExistente = usuarios.find((usuario) => {
+            return (usuario.email == req.body.email || usuario.usuario == req.body.usuario);
+        });
 
+        if (usuarioExistente) {
+            if (usuarioExistente.email == req.body.email && usuarioExistente.usuario == req.body.usuario) {
+                return res.render("users/register" , {
+                    errors: {
+                        email: {
+                            msg: "* El email ingresado ya esta registrado"
+                        },
+                        usuario: {
+                            msg: "* El usuario ingresado ya esta registrado"
+                        }
+                    },
+                    oldData: req.body
+                });
+            } else if (usuarioExistente.email == req.body.email) {
+                return res.render("users/register" , {
+                    errors: {
+                        email: {
+                            msg: "* El email ingresado ya esta registrado"
+                        }
+                    },
+                    oldData: req.body
+                });
+            } else {
+                return res.render("users/register" , {
+                    errors: {
+                        usuario: {
+                            msg: "* El usuario ingresado ya esta registrado"
+                        }
+                    },
+                    oldData: req.body
+                }); 
+            }
+        }
+
+        let contraseñaEncriptada = bcryptjs.hashSync(req.body.password,10);
+    
         let usuarioACargar =  {
-            id: (usuarios[usuarios.length-1].id + 1),
+            id: usuarios.length > 0 ? (usuarios[usuarios.length-1].id + 1) : 1,
             usuario: req.body.usuario,
-            password: req.body.contraseña,
+            password: contraseñaEncriptada,
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             email: req.body.email,
