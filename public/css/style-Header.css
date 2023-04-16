@@ -44,10 +44,13 @@ p {
 
 .contenidoHeader {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 10px;
     background-color: #fff;
+    max-width: 100%;
+    margin: auto;
 }
 
 .logoHeader {
@@ -62,9 +65,10 @@ p {
 
 .barraNavegacion {
     display: flex;
-    width: 25%;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    padding-left: 10px;
 }
 
 .logoBusqueda {
@@ -83,9 +87,10 @@ p {
 
 .burgerMenu {
     display: flex;
-    width: 25%;
     justify-content: center;
     align-items: center;
+    padding-right: 10px;
+    width: 85.25px;
 }
 
 .logoBurger {
@@ -93,8 +98,48 @@ p {
     font-size: 25px;
 }
 
+.enlaceBusqueda {
+    padding-right: 5px;
+}
+
+.containerUsuario {
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.containerIconoUsuario {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.logoUsuario {
+    font-size: 14px;
+    color: #636363;
+}
+
+.textoUsuario {
+    font-family: 'Roboto' , sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: #636363;
+}
+
 @media (min-width: 768px) {
 
+    .containerUsuario {
+        display: flex;
+    }
     .contenidoHeader {
         max-width: 720px;
         justify-content: space-between;
@@ -117,7 +162,7 @@ p {
     }
 
     .enlaceNavBar {
-        padding: 10px;
+        padding: 5px;
     }
 
     .enlaceBusqueda {
@@ -126,6 +171,10 @@ p {
 
     .enlaceCarritoCompras {
         padding: 10px;
+    }
+
+    .enlaceBusqueda {
+        display: block;
     }
 
 
@@ -139,9 +188,16 @@ p {
     .imagenLogoHeader {
         width: 170px;
     }
+
+    .containerUsuario {
+        flex-direction: row;
+    }
 }
 
 @media (min-width: 992px) {
+    .enlaceNavBar {
+        padding: 10px;
+    }
 
     .contenidoHeader {
         max-width: 960px;

@@ -9,6 +9,14 @@
     
             
         <div class = "barraNavegacion">
+            <% if (nombreUsuario != "") { %>
+                <div class = "containerUsuario">
+                    <div class = "containerIconoUsuario">
+                        <i class="logoUsuario fa-solid fa-user"></i>
+                    </div>
+                    <h3 class = "textoUsuario"><%= nombreUsuario %></h3>
+                </div>
+            <% } %>
             <a class = "enlaceNavBar" href="/">HOME</a>
             <a class = "enlaceNavBar" href="/products">PRODUCTOS</a>
             <a class = "enlaceNavBar" href="/users/login">INGRESA</a>
@@ -16,6 +24,7 @@
             <a class = "enlaceBusqueda" href="#"> <i class="logoBusqueda fa-solid fa-magnifying-glass"> </i></a>
             <a class = "enlaceCarritoCompras" href="/products/productCart"> <i class="logoCarrito fa-sharp fa-solid fa-cart-shopping"></i> </a>
         </div>
+        
     </div>
 
 </header>

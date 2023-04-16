@@ -23,13 +23,19 @@
                 <div class = "login-container-bienvenido">
                     <h3 class = "login-bienvenido"><i class="fa-solid fa-users"></i></h3>
                 </div>
-                <form action="/" method="post" class="login-form">
+
+                <form class="login-form" action="/users/login" method="post">
                     <div class="login-control-formulario">
-                        <input type="text" name="usuario" placeholder="Nombre de Usuario" required class="login-control">
+                        <input type="text" placeholder="Nombre de Usuario" class="login-control" name="usuario" value = "<%= locals.oldData ? oldData.usuario : null %>"> </input>
                     </div>
                     <div class="login-control-formulario">
-                        <input type="text" name="password" placeholder="Contraseña" required class="login-control">
+                        <input type="password" placeholder="Contraseña" class="login-control" name="password"> </input>
                     </div>
+                    <% if (locals.errors && errors.password) {%>
+                        <div class = "register-contenedorError">
+                            <h3 class = "register-textoError"><%= errors.password.msg %></h3>
+                        </div>
+                    <% } %>
                     <a href="#" value="" class="login-olvidado">OLVIDO SU CONTRASEÑA?</a>
                     <button type="submit" class="login-enviar">INGRESAR</button>
                 </form>

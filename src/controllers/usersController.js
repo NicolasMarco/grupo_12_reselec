@@ -7,11 +7,55 @@ const bcryptjs = require("bcryptjs");
 
 const usersController = {
     login: (req,res) => {
-        res.render("users/login");
+        res.render("users/login")
+    },
+
+    loginUser: (req,res) => {
+        const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+        
+        let usuarioIngresado = usuarios.find((usuario) => {
+            return (usuario.usuario == req.body.usuario);
+        });
+        
+        
+        if (usuarioIngresado) {
+            let compararContraseña = bcryptjs.compareSync(req.body.password , usuarioIngresado.password);
+            if (compararContraseña) {
+                delete usuarioIngresado.password;
+                req.session.usuarioLoggeado = usuarioIngresado;
+                res.redirect("/");
+            } else {
+                return res.render("users/login" , {
+                    errors: {
+                        password: {
+                            msg: "* La contraseña es incorrecta"
+                        }
+                    },
+                    oldData: req.body
+                });
+            }
+        
+        } else {
+            return res.render("users/login" , {
+                errors: {
+                    password: {
+                        msg: "* El usuario ingresado no esta registrado"
+                    }
+                },
+                oldData: req.body
+            });
+        }
     },
 
     getRegister: (req,res) => {
-        res.render("users/register");
+        let nombreUsuario = "";
+
+        if (req.session.usuarioLoggeado) {
+            nombreUsuario = req.session.usuarioLoggeado.usuario;
+        }
+
+        res.render("users/register" , {nombreUsuario});
     },
 
     userRegister: (req,res) => {

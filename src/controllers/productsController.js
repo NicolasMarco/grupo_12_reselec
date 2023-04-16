@@ -7,7 +7,14 @@ const productsController = {
     //Todos los productos
     index: (req,res) => {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render("products/listadoProductos" , {productos});
+        
+        let nombreUsuario = "";
+        
+        if (req.session.usuarioLoggeado) {
+            nombreUsuario = req.session.usuarioLoggeado.usuario;
+        }
+
+        res.render("products/listadoProductos" , {productos , nombreUsuario});
     },
     //Edicion de producto
     editarProducto: (req,res) => {
@@ -16,25 +23,50 @@ const productsController = {
         const productToSend = productos.find (product => {
             return product.id == id
         })
-        res.render("products/editarProducto", {producto: productToSend});
+
+        let nombreUsuario = "";
+
+        if (req.session.usuarioLoggeado) {
+            nombreUsuario = req.session.usuarioLoggeado.usuario;
+        }
+
+        res.render("products/editarProducto", {producto: productToSend , nombreUsuario});
     },
    
     //Carrito de compras
     productCart: (req,res) => {
-        res.render("products/productCart");
+        let nombreUsuario = "";
+
+        if (req.session.usuarioLoggeado) {
+            nombreUsuario = req.session.usuarioLoggeado.usuario;
+        }
+
+        res.render("products/productCart" , {nombreUsuario});
     },
     //Detalle de producto
     productDetail: (req,res) => {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         let id = req.params.id;
+        let nombreUsuario = "";
         const productToSend = productos.find (producto => {
             return producto.id == id
         })
-        res.render("products/productDetail", {producto: productToSend});
+
+        if (req.session.usuarioLoggeado) {
+            nombreUsuario = req.session.usuarioLoggeado.usuario;
+        }
+
+        res.render("products/productDetail", {producto: productToSend , nombreUsuario});
     },
     //Agregar producto nuevo
     agregarProducto: function(req,res) {
-        res.render("products/agregarProducto");
+        let nombreUsuario = "";
+
+        if (req.session.usuarioLoggeado) {
+            nombreUsuario = req.session.usuarioLoggeado.usuario;
+        }
+        
+        res.render("products/agregarProducto" , {nombreUsuario});
     },
     //Guardado de producto nuevo
     guardarProducto: function(req,res) {

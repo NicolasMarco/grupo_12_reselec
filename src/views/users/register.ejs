@@ -5,13 +5,13 @@
 <%- include('../partials/head.ejs' , {nombreHojaEstilos: nombreEstilo}) %>
 
 <body>
-    <%- include('../partials/header.ejs') %>
+    <%- include('../partials/header.ejs' , {nombreUsuario : nombreUsuario}) %>
 
     <main>
         
         <div class = "register-containerRegistro">
             <h3 class = "register-tituloRegistro"> REGISTRO </h3>
-            <form class = "register-formRegistro" action = "/users/register" method = "post"  enctype="multipart/form-data"> 
+            <form class = "register-formRegistro" action = "/users/register" method = "POST"  enctype="multipart/form-data"> 
 
                 <div class = "register-primerParteFormulario">
 
