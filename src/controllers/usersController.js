@@ -61,11 +61,13 @@ const usersController = {
     userRegister: (req,res) => {
         const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
         const resultValidation = validationResult(req);
+        let nombreUsuario = "";
 
         if (resultValidation.errors.length > 0) {
             return res.render("users/register" , {
                 errors: resultValidation.mapped() , 
-                oldData: req.body
+                oldData: req.body, 
+                nombreUsuario
             });
         }
 
