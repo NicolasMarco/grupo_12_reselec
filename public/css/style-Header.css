@@ -112,10 +112,10 @@ p {
 }
 
 .containerIconoUsuario {
-    border: 1px solid black;
+    border: 1px solid #636363;
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
+    width: 26px;
+    height: 26px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,7 +130,7 @@ p {
 
 .textoUsuario {
     font-family: 'Roboto' , sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
     color: #636363;
 }
@@ -201,6 +201,10 @@ p {
 
     .contenidoHeader {
         max-width: 960px;
+    }
+
+    .textoUsuario {
+        font-size: 14px;
     }
 
 }

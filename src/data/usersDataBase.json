@@ -2,10 +2,10 @@
  {
   "id": 1,
   "usuario": "nicolasmarco841",
-  "password": "$2a$10$oQrUUZjm.3yubSoTJzFuXO2mdyVb2SNt1wgkcIGQ7fmzM00caXp2i",
+  "password": "$2a$10$gfM79IrlDN9nQMN/kbxBbunntY2MTM92zJVnGRQ2MWAzpqp6sB8gK",
   "nombre": "Nicolás Agustín",
   "apellido": "Marco",
-  "email": "nicolasmarco841@gmail.com",
+  "email": "Nicolasmarco841@gmail.com",
   "telefono": "1156610726",
   "imagen": "default.png",
   "administrador": true
