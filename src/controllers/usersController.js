@@ -110,7 +110,7 @@ const usersController = {
         }
 
         let contraseñaEncriptada = bcryptjs.hashSync(req.body.password,10);
-    
+        
         let usuarioACargar =  {
             id: usuarios.length > 0 ? (usuarios[usuarios.length-1].id + 1) : 1,
             usuario: req.body.usuario,

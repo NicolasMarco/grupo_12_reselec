@@ -3,6 +3,7 @@ const router = express.Router();
 const multer = require ("multer");
 const path = require("path");
 const { body } = require("express-validator");
+const guestMiddleware = require("../middlewares/routes/guestMiddleware")
 
 const validations = [
     body("usuario").notEmpty().withMessage("* El campo usuario debe estar completo").bail().isAlphanumeric().withMessage("* El nombre de usuario solo puede contener letras o numeros"),
@@ -44,11 +45,11 @@ let storage = multer.diskStorage({
 const usersController = require ("../controllers/usersController.js");
 const upload = multer({storage : storage});
 
-router.get("/login" , usersController.login);
+router.get("/login" , guestMiddleware, usersController.login);
 router.post("/login" , usersController.loginUser);
 
 
-router.get("/register" ,  usersController.getRegister);
+router.get("/register" , guestMiddleware, usersController.getRegister);
 router.post("/register" ,upload.single("imagenUsuario"), validations , usersController.userRegister);
 
 module.exports = router;

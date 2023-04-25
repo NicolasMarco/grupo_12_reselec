@@ -9,5 +9,16 @@
   "telefono": "1156610726",
   "imagen": "default.png",
   "administrador": true
+ },
+ {
+  "id": 2,
+  "usuario": "simonprince",
+  "password": "$2a$10$qGNjIxWGIZjlamW1GzYISuFmn.NPm1MWVqfH7PGmKrGVDxE7/5eCi",
+  "nombre": "Simon",
+  "apellido": "Prince",
+  "email": "simon00prince@gmail.com",
+  "telefono": "1173737829",
+  "imagen": "default.png",
+  "administrador": true
  }
 ]

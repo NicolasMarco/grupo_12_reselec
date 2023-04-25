@@ -3,6 +3,7 @@ const router = express.Router();
 const multer = require ("multer");
 const path = require("path");
 
+
 let storage = multer.diskStorage({
     destination: function(req , file , cb) {
         cb(null , "public/images/products");
@@ -22,10 +23,10 @@ router.get("/" , productsController.index);
 router.get("/agregarProducto" , productsController.agregarProducto);
 router.post("/" , upload.any("productImage") , productsController.guardarProducto);
 //Editar producto
-router.get("/editarProducto/:id" , productsController.editarProducto);
+router.get("/editarProducto/:id", productsController.editarProducto);
 router.patch("/editarProducto/:id", upload.any("productImage"), productsController.updateProducto);
 //Borrar producto
-router.delete("/delete/:id" , productsController.borrarProducto); 
+router.delete("/delete/:id", productsController.borrarProducto); 
 //Carrito de compras
 router.get("/productCart" , productsController.productCart);
 //Detalle de producto
