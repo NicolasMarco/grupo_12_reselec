@@ -161,6 +161,20 @@ footer {
     color: #cc0000;
 }
 
+.login-container-recordar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.login-texto-recordar {
+    color:  rgb(73, 70, 70);
+    font-weight: normal;
+    font-size: 12px;
+    font-family: 'Roboto' , sans-serif;
+}
+
 @media (min-width: 460px) {
 }
 @media (min-width: 768px) {
