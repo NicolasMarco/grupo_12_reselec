@@ -89,7 +89,7 @@ const usersController = {
                             msg: "* El usuario ingresado ya esta registrado"
                         }
                     },
-                    oldData: req.body
+                    oldData: req.body , nombreUsuario
                 });
             } else if (usuarioExistente.email == req.body.email) {
                 return res.render("users/register" , {
@@ -98,7 +98,7 @@ const usersController = {
                             msg: "* El email ingresado ya esta registrado"
                         }
                     },
-                    oldData: req.body
+                    oldData: req.body , nombreUsuario
                 });
             } else {
                 return res.render("users/register" , {
@@ -107,7 +107,7 @@ const usersController = {
                             msg: "* El usuario ingresado ya esta registrado"
                         }
                     },
-                    oldData: req.body
+                    oldData: req.body , nombreUsuario
                 }); 
             }
         }

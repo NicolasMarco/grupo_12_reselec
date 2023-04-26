@@ -1,7 +1,10 @@
 const fs = require('fs');
+const path = require("path");
+
+const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 
 const User = {
-    fileName: "C:/Users/corde/grupo_12_reselec/src/data/usersDataBase.json",
+    fileName: usersFilePath,
 
     getData: function (){
         return  JSON.parse(fs.readFileSync(this.fileName, 'utf-8'))

@@ -1,4 +1,4 @@
-const User = require ("C:/Users/corde/grupo_12_reselec/src/models/Users");
+const User = require ("../../models/Users");
 
 function userLoggedMiddleware (req, res, next){
     res.locals.isLogged = false;
