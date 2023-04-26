@@ -4,7 +4,7 @@ function userLoggedMiddleware (req, res, next){
     res.locals.isLogged = false;
     res.locals.isAdmin = false;
 
-    let usuarioEnCookie = req.cookies.usuarioLoggeado;
+    let usuarioEnCookie = req.cookies.nombreUsuario;
     let usuarioDeCookie = User.findByField("usuario", usuarioEnCookie);
 
     if(usuarioDeCookie){
