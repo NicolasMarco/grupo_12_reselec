@@ -20,5 +20,16 @@
   "telefono": "1173737829",
   "imagen": "default.png",
   "administrador": true
+ },
+ {
+  "id": 3,
+  "usuario": "gasparcordero",
+  "password": "$2a$10$xTyawoNw.bVd7460wvCpi.cbQm5ubpWSosVX0bFSAKHfqaiauNpnG",
+  "nombre": "Gaspar",
+  "apellido": "Cordero",
+  "email": "cordero647@gmail.com",
+  "telefono": "01136466789",
+  "imagen": "default.png",
+  "administrador": false
  }
 ]

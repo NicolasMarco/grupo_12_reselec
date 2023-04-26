@@ -3,7 +3,8 @@ const path = require ("path");
 const app = express();
 const methodOverride = require('method-override');
 const session = require("express-session");
-
+const userLoggedMiddleware = require("./middlewares/global/userLoggedMiddleware");
+const cookies = require("cookie-parser");
 
 app.use(express.static(path.join(__dirname, '../public')));
 
@@ -25,6 +26,10 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
+
+app.use(cookies());
+app.use(userLoggedMiddleware);
+
 
 //Metodos para mostrar las vistas
 

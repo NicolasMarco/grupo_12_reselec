@@ -19,7 +19,7 @@ const homeController = {
             res.render("main/index" , {productosDestacados , nombreUsuario});
         }
 
-    }
-};
+    },
+}
 
 module.exports = homeController;

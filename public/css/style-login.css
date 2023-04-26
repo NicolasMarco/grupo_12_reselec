@@ -31,6 +31,15 @@ footer {
     margin: auto;
     box-shadow: 0px 0px 10px rgb(207, 206, 206);
  }
+ input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+  }
+.Recordame{
+    font-size: 12px;
+    color:  rgb(73, 70, 70);
+    font-family: 'Roboto' , sans-serif;
+    }
 
  .login-control-formulario
 {

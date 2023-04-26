@@ -31,11 +31,13 @@
                     <div class="login-control-formulario">
                         <input type="password" placeholder="Contraseña" class="login-control" name="password"> </input>
                     </div>
+                    <input type="checkbox" value="Recordame" name="recordameButton"> <label class= "Recordame" for="Recordame">Recordar usuario</label>
                     <% if (locals.errors && errors.password) {%>
                         <div class = "register-contenedorError">
                             <h3 class = "register-textoError"><%= errors.password.msg %></h3>
                         </div>
                     <% } %>
+                    <br>
                     <a href="#" value="" class="login-olvidado">OLVIDO SU CONTRASEÑA?</a>
                     <button type="submit" class="login-enviar">INGRESAR</button>
                 </form>

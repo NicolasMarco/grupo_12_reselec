@@ -24,6 +24,9 @@ const usersController = {
             if (compararContraseña) {
                 delete usuarioIngresado.password;
                 req.session.usuarioLoggeado = usuarioIngresado;
+                if (req.body.recordameButton){
+                    res.cookie("nombreUsuario", req.body.usuario, { maxAge: (1000 * 60) * 60})
+                }
                 res.redirect("/");
             } else {
                 return res.render("users/login" , {
@@ -130,7 +133,16 @@ const usersController = {
 		fs.writeFileSync(usersFilePath , usuariosJSON);
         
 		res.redirect("/users/login");
-    }
+    },
+    logout: function (req, res){
+        req.session.destroy(function(err){
+          if(err){
+            console.log(err);
+          } else {
+            res.redirect('/users/login');
+          }
+        });
+      }
 };
 
 module.exports = usersController;

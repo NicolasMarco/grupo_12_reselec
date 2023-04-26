@@ -3,7 +3,8 @@ const router = express.Router();
 const multer = require ("multer");
 const path = require("path");
 const { body } = require("express-validator");
-const guestMiddleware = require("../middlewares/routes/guestMiddleware")
+const guestMiddleware = require("../middlewares/routes/guestMiddleware");
+
 
 const validations = [
     body("usuario").notEmpty().withMessage("* El campo usuario debe estar completo").bail().isAlphanumeric().withMessage("* El nombre de usuario solo puede contener letras o numeros"),
@@ -51,5 +52,8 @@ router.post("/login" , usersController.loginUser);
 
 router.get("/register" , guestMiddleware, usersController.getRegister);
 router.post("/register" ,upload.single("imagenUsuario"), validations , usersController.userRegister);
+
+router.get('/logout', usersController.logout);
+router.post('/logout', usersController.logout);
 
 module.exports = router;

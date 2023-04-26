@@ -1,3 +1,4 @@
+
 <header>
 
     <div class = "contenidoHeader">
@@ -17,9 +18,14 @@
                     <h3 class = "textoUsuario"><%= nombreUsuario %></h3>
                 </div>
             <% } %>
+            <% if (locals.isLogged) { %>
+            <a class = "enlaceNavBar" href="/products">PRODUCTOS</a>
+            <a class = "enlaceNavBar" href="/users/logout">CERRAR SESION</a>
+            <% } else { %>
             <a class = "enlaceNavBar" href="/products">PRODUCTOS</a>
             <a class = "enlaceNavBar" href="/users/login">INGRESA</a>
             <a class = "enlaceNavBar" href="/users/register">REGISTRATE</a>
+            <%  } %>
             <a class = "enlaceBusqueda" href="#"> <i class="logoBusqueda fa-solid fa-magnifying-glass"> </i></a>
             <a class = "enlaceCarritoCompras" href="/products/productCart"> <i class="logoCarrito fa-sharp fa-solid fa-cart-shopping"></i> </a>
         </div>
