@@ -7,7 +7,7 @@ const User = {
     fileName: usersFilePath,
 
     getData: function (){
-        return  JSON.parse(fs.readFileSync(this.fileName, 'utf-8'))
+        return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'))
     },
 
     findAll: function () {

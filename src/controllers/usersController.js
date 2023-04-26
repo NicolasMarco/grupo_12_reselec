@@ -128,6 +128,7 @@ const usersController = {
 		res.redirect("/users/login");
     },
     logout: function (req, res){
+        res.clearCookie("nombreUsuario");
         req.session.destroy(function(err){
           if(err){
             console.log(err);
