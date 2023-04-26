@@ -52,19 +52,12 @@ const usersController = {
     },
 
     getRegister: (req,res) => {
-        let nombreUsuario = "";
-
-        if (req.session.usuarioLoggeado) {
-            nombreUsuario = req.session.usuarioLoggeado.usuario;
-        }
-
-        res.render("users/register" , {nombreUsuario});
+        res.render("users/register");
     },
 
     userRegister: (req,res) => {
         const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
         const resultValidation = validationResult(req);
-        let nombreUsuario = "";
 
         if (resultValidation.errors.length > 0) {
             return res.render("users/register" , {

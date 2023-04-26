@@ -7,14 +7,7 @@ const productsController = {
     //Todos los productos
     index: (req,res) => {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        
-        let nombreUsuario = "";
-        
-        if (req.session.usuarioLoggeado) {
-            nombreUsuario = req.session.usuarioLoggeado.usuario;
-        }
-
-        res.render("products/listadoProductos" , {productos , nombreUsuario});
+        res.render("products/listadoProductos" , {productos});
     },
     //Edicion de producto
     editarProducto: (req,res) => {
@@ -24,49 +17,26 @@ const productsController = {
             return product.id == id
         })
 
-        let nombreUsuario = "";
-
-        if (req.session.usuarioLoggeado) {
-            nombreUsuario = req.session.usuarioLoggeado.usuario;
-        }
-
-        res.render("products/editarProducto", {producto: productToSend , nombreUsuario});
+        res.render("products/editarProducto", {producto: productToSend});
     },
    
     //Carrito de compras
     productCart: (req,res) => {
-        let nombreUsuario = "";
-
-        if (req.session.usuarioLoggeado) {
-            nombreUsuario = req.session.usuarioLoggeado.usuario;
-        }
-
-        res.render("products/productCart" , {nombreUsuario});
+        res.render("products/productCart");
     },
     //Detalle de producto
     productDetail: (req,res) => {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         let id = req.params.id;
-        let nombreUsuario = "";
         const productToSend = productos.find (producto => {
             return producto.id == id
         })
 
-        if (req.session.usuarioLoggeado) {
-            nombreUsuario = req.session.usuarioLoggeado.usuario;
-        }
-
-        res.render("products/productDetail", {producto: productToSend , nombreUsuario});
+        res.render("products/productDetail", {producto: productToSend});
     },
     //Agregar producto nuevo
     agregarProducto: function(req,res) {
-        let nombreUsuario = "";
-
-        if (req.session.usuarioLoggeado) {
-            nombreUsuario = req.session.usuarioLoggeado.usuario;
-        }
-        
-        res.render("products/agregarProducto" , {nombreUsuario});
+        res.render("products/agregarProducto");
     },
     //Guardado de producto nuevo
     guardarProducto: function(req,res) {

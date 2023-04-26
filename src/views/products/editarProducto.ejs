@@ -5,7 +5,7 @@
 <%- include('../partials/head.ejs' , {nombreHojaEstilos: nombreEstilo}) %>
 
 <body>
-    <%- include('../partials/header.ejs' , {nombreUsuario : nombreUsuario}) %>
+    <%- include('../partials/header.ejs') %>
 
     <main>
         
@@ -46,14 +46,9 @@
                     <input class = "carga-edicion-input" id = "imagenSecundaria4" type="file" name = "imagenSecundaria4"></input>
                 </div>
 
-                <% if (locals.isAdmin) { %> 
-
-                    <button type = "submit" class = "carga-edicion-buttonFinalizar"> 
-                        EDITAR
-                    </button>
-
-                <% } %>
-                
+                <button type = "submit" class = "carga-edicion-buttonFinalizar"> 
+                    EDITAR
+                </button>
             </form>
 
 </div>

@@ -11,13 +11,8 @@ const homeController = {
             return producto.categoria == "destacados";
         });
 
-        if (req.session.usuarioLoggeado) {
-            const nombreUsuario = req.session.usuarioLoggeado.usuario;
-            res.render("main/index" , {productosDestacados , nombreUsuario});
-        } else {
-            const nombreUsuario = "";
-            res.render("main/index" , {productosDestacados , nombreUsuario});
-        }
+        res.render("main/index" , {productosDestacados});
+        
 
     },
 }

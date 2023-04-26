@@ -14,13 +14,15 @@ function userLoggedMiddleware (req, res, next){
     if(req.session && req.session.usuarioLoggeado && req.session.usuarioLoggeado.administrador) {
         res.locals.isLogged = true;
         res.locals.isAdmin = true;
+        res.locals.nombreUsuario = req.session.usuarioLoggeado.usuario;
     }
     
     else if(req.session && req.session.usuarioLoggeado){
         res.locals.isLogged = true;
         res.locals.usuarioLoggeado = req.session.usuarioLoggeado;
+        res.locals.nombreUsuario = req.session.usuarioLoggeado.usuario;
     }
-    
+
     next();
 }
 
