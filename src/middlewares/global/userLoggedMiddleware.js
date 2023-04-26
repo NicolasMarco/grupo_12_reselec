@@ -2,6 +2,7 @@ const User = require ("../../models/Users");
 
 function userLoggedMiddleware (req, res, next){
     res.locals.isLogged = false;
+    res.locals.isAdmin = false;
 
     let usuarioEnCookie = req.cookies.usuarioLoggeado;
     let usuarioDeCookie = User.findByField("usuario", usuarioEnCookie);
@@ -9,11 +10,17 @@ function userLoggedMiddleware (req, res, next){
     if(usuarioDeCookie){
         req.session.usuarioLoggeado = usuarioDeCookie;
     }
+
+    if(req.session && req.session.usuarioLoggeado && req.session.usuarioLoggeado.administrador) {
+        res.locals.isLogged = true;
+        res.locals.isAdmin = true;
+    }
     
-    if(req.session && req.session.usuarioLoggeado){
+    else if(req.session && req.session.usuarioLoggeado){
         res.locals.isLogged = true;
         res.locals.usuarioLoggeado = req.session.usuarioLoggeado;
     }
+    
     next();
 }
 

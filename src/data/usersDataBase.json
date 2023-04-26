@@ -31,5 +31,16 @@
   "telefono": "01136466789",
   "imagen": "default.png",
   "administrador": false
+ },
+ {
+  "id": 4,
+  "usuario": "Mariano268",
+  "password": "$2a$10$GZwA7UvuvXhEYqed.aySYOH3VdVoO2x1buhkXFHoIE/hg.JJozFFG",
+  "nombre": "Mariano Gabriel",
+  "apellido": "Marco",
+  "email": "mariano268@gmail.com",
+  "telefono": "12345611",
+  "imagen": "default.png",
+  "administrador": false
  }
 ]

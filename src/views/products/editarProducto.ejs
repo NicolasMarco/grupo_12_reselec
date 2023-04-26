@@ -46,10 +46,14 @@
                     <input class = "carga-edicion-input" id = "imagenSecundaria4" type="file" name = "imagenSecundaria4"></input>
                 </div>
 
-                <button type = "submit" class = "carga-edicion-buttonFinalizar"> 
-                    EDITAR
-                </button>
+                <% if (locals.isAdmin) { %> 
 
+                    <button type = "submit" class = "carga-edicion-buttonFinalizar"> 
+                        EDITAR
+                    </button>
+
+                <% } %>
+                
             </form>
 
 </div>
