@@ -7,8 +7,14 @@ const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const productsController = {
     //Todos los productos
     index: (req,res) => {
-        const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render("products/listadoProductos" , {productos});
+        /* CODIGO ANTERIOR FUNCIONANDO */
+        //const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        //res.render("products/listadoProductos" , {productos});
+
+        db.Product.findAll()
+            .then(function(productos) {
+                res.render("products/listadoProductos" , {productos : productos});
+            })
     },
     //Edicion de producto
     editarProducto: (req,res) => {
