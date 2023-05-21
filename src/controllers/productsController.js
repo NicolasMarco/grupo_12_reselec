@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+let db = require("../../database/models");
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 
@@ -36,10 +37,23 @@ const productsController = {
     },
     //Agregar producto nuevo
     agregarProducto: function(req,res) {
-        res.render("products/agregarProducto");
+        db.CategoryProduct.findAll()
+            .then(function(categorias) {
+                db.TypeProduct.findAll()
+                    .then(function(tiposProducto) {
+                        res.render("products/agregarProducto" , {categorias:categorias , tiposProducto:tiposProducto})
+                    })
+            })
+
+            
+        
+        /* CODIGO ANTERIOR FUNCIONANDO PERFECTO */
+        //res.render("products/agregarProducto");
     },
     //Guardado de producto nuevo
     guardarProducto: function(req,res) {
+        //CODIGO ANTERIOR - FUNCIONANDO CON ARCHIVO JSON
+        
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         
         let imagenPrincipal = "";
@@ -115,7 +129,6 @@ const productsController = {
         
 
 		res.redirect("/products");
-
     },
 
     //Editar un producto
