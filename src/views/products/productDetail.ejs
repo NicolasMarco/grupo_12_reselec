@@ -9,25 +9,25 @@
     
     <main>
             <div class = "prod-container-tituloProducto">
-                <h3 class = "prod-tituloProducto"> <%= producto.nombre %> </h3>
+                <h3 class = "prod-tituloProducto"> <%= product.name %> </h3>
             </div>
             <section class = "prod-container">
                 <div class = "prod-izquierda">
                     <div class="prod-container-img-principal">
-                        <img class="prod-img-principal" src="/images/products/<%= producto.imagen %>" alt="">
+                        <img class="prod-img-principal" src="/images/products/<%= product.mainImage %>" alt="">
                     </div>
                     <div class="prod-container-img-adicionales">
                         <div class="prod-container-img-adicional">
-                            <img class = "prod-img-adicional" src="/images/products/<%= producto.imagen2 %>" alt="">
+                            <img class = "prod-img-adicional" src="/images/products/<%= product.imageTwo %>" alt="">
                         </div>
                         <div class="prod-container-img-adicional">
-                            <img class = "prod-img-adicional" src="/images/products/<%= producto.imagen3 %>" alt="">
+                            <img class = "prod-img-adicional" src="/images/products/<%= product.imageThree %>" alt="">
                         </div>
                         <div class="prod-container-img-adicional">
-                            <img class = "prod-img-adicional" src="/images/products/<%= producto.imagen4 %>" alt="">
+                            <img class = "prod-img-adicional" src="/images/products/<%= product.imageFour %>" alt="">
                         </div>
                         <div class="prod-container-img-adicional">
-                            <img class = "prod-img-adicional" src="/images/products/<%= producto.imagen5 %>" alt="">
+                            <img class = "prod-img-adicional" src="/images/products/<%= product.imageFive %>" alt="">
                         </div>
                     </div>
                 </div>
@@ -36,10 +36,9 @@
                         <div>
                             <h3 class = "prod-tituloRelacionados">Características:</h3><br>
                             <p>
-                                <% for( let i = 0; i < producto.caracteristicas.length; i++ ) { %>
-                                    <i class="prod-icon-descripcion far fa-arrow-alt-circle-right"></i> <%= producto.caracteristicas[i] %><br>
-                                <% } %>
-
+                                <i class="prod-icon-descripcion far fa-arrow-alt-circle-right"></i> <%= product.characteristicOne %><br>
+                                <i class="prod-icon-descripcion far fa-arrow-alt-circle-right"></i> <%= product.characteristicTwo %><br>
+                                <i class="prod-icon-descripcion far fa-arrow-alt-circle-right"></i> <%= product.characteristicThree %><br>
                             </p>
                         </div>
                     </div>
@@ -52,7 +51,7 @@
 
                 <div class="prod-container-compra">
                     <div class = "prod-container-Precio">
-                        <h4 class = "prod-precio">Precio del producto: $<%= producto.precio %></h4>
+                        <h4 class = "prod-precio">Precio del producto: $<%= product.price %></h4>
                     </div>
     
                     <div class = "prod-container-agregar">
@@ -88,11 +87,11 @@
         <% if (locals.isAdmin) { %> 
 
         <div class="prod-container-formEdicion">
-            <form class = "prod-form-editar" action="/products/editarProducto/<%= producto.id %>/" method="GET">
+            <form class = "prod-form-editar" action="/products/editarProducto/<%= product.id %>/" method="GET">
                 <button class = "prod-button-enviar" type = "submit">EDITAR</button>
             </form>
 
-            <form class = "prod-form-borrar" action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
+            <form class = "prod-form-borrar" action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
                 <button class = "prod-button-enviar" type = "submit">BORRAR</button>
             </form>
         </div>

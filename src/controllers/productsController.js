@@ -7,10 +7,6 @@ const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const productsController = {
     //Todos los productos
     index: (req,res) => {
-        /* CODIGO ANTERIOR FUNCIONANDO */
-        //const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        //res.render("products/listadoProductos" , {productos});
-
         db.Product.findAll()
             .then(function(productos) {
                 res.render("products/listadoProductos" , {productos : productos});
@@ -18,13 +14,18 @@ const productsController = {
     },
     //Edicion de producto
     editarProducto: (req,res) => {
-        const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        let id = req.params.id;
-        const productToSend = productos.find (product => {
-            return product.id == id
+        let pedidoProducto = db.Product.findByPk(req.params.id , {
+            include: [{association: "categoryProduct"} , {association: "typeProduct"}]
         })
 
-        res.render("products/editarProducto", {producto: productToSend});
+        let pedidoCategorias = db.CategoryProduct.findAll();
+
+        let pedidoTiposProducto = db.TypeProduct.findAll();
+
+        Promise.all([pedidoProducto , pedidoCategorias , pedidoTiposProducto])
+            .then(function([product , categories , typeProducts]) {
+                res.render("products/editarProducto", {product : product , categories : categories , typeProducts: typeProducts});
+            })
     },
    
     //Carrito de compras
@@ -33,13 +34,11 @@ const productsController = {
     },
     //Detalle de producto
     productDetail: (req,res) => {
-        const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        let id = req.params.id;
-        const productToSend = productos.find (producto => {
-            return producto.id == id
-        })
+        db.Product.findByPk(req.params.id)
+            .then(function(product) {
+                res.render("products/productDetail" , {product: product});
+            })
 
-        res.render("products/productDetail", {producto: productToSend});
     },
     //Agregar producto nuevo
     agregarProducto: function(req,res) {
@@ -50,18 +49,9 @@ const productsController = {
                         res.render("products/agregarProducto" , {categorias:categorias , tiposProducto:tiposProducto})
                     })
             })
-
-            
-        
-        /* CODIGO ANTERIOR FUNCIONANDO PERFECTO */
-        //res.render("products/agregarProducto");
     },
     //Guardado de producto nuevo
     guardarProducto: function(req,res) {
-        //CODIGO ANTERIOR - FUNCIONANDO CON ARCHIVO JSON
-        
-        const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        
         let imagenPrincipal = "";
         let imagenSecundaria1 = "";
         let imagenSecundaria2 = "";
@@ -111,137 +101,120 @@ const productsController = {
                 }
             }
         }
-
-        let productoACargar =  {
-            id: (productos[productos.length-1].id + 1),
-            nombre: req.body.nombre,
-            precio: parseInt(req.body.precio),
-            categoria: req.body.categoria,
-            tipoEquipo: req.body.tipoEquipo,
-            caracteristicas : [req.body.caracteristicaUno , req.body.caracteristicaDos , req.body.caracteristicaTres],
-            descripcion: req.body.descripcion,
-            imagen: imagenPrincipal,
-            imagen2: imagenSecundaria1 == "" ? imagenPrincipal : imagenSecundaria1,
-            imagen3: imagenSecundaria2 == "" ? imagenPrincipal : imagenSecundaria2,
-            imagen4: imagenSecundaria3 == "" ? imagenPrincipal : imagenSecundaria3,
-            imagen5: imagenSecundaria4 == "" ? imagenPrincipal : imagenSecundaria4
-        };
-
-        productos.push(productoACargar);
-
-		let productosJSON = JSON.stringify(productos, null, " ");
-
-		fs.writeFileSync(productsFilePath , productosJSON);
         
+        db.Product.create({
+            name: req.body.nombre,
+            price: req.body.precio,
+            characteristicOne: req.body.caracteristicaUno,
+            characteristicTwo: req.body.caracteristicaDos,
+            characteristicThree: req.body.caracteristicaTres,
+            description: req.body.descripcion,
+            mainImage: imagenPrincipal,
+            imageTwo: imagenSecundaria1 == "" ? imagenPrincipal : imagenSecundaria1,
+            imageThree: imagenSecundaria2 == "" ? imagenPrincipal : imagenSecundaria2,
+            imageFour: imagenSecundaria3 == "" ? imagenPrincipal : imagenSecundaria3,
+            imageFive: imagenSecundaria4 == "" ? imagenPrincipal : imagenSecundaria4,
+            idCategory: req.body.categoria,
+            idTypeProduct: req.body.tipoEquipo
+        });
 
 		res.redirect("/products");
     },
 
     //Editar un producto
     updateProducto: (req, res) => {
-        const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        let id = req.params.id;
-        
-        let productWithoutEdit = productos.find ((producto) => {
-            return producto.id == id;
-        });
+        let imagenPrincipal;
+        let imagenSecundaria1;
+        let imagenSecundaria2;
+        let imagenSecundaria3;
+        let imagenSecundaria4;
+        let descripcion;
 
-        let imagenPrincipal = productWithoutEdit.imagen;
-        let imagenSecundaria1 = productWithoutEdit.imagen2;
-        let imagenSecundaria2 = productWithoutEdit.imagen3;
-        let imagenSecundaria3 = productWithoutEdit.imagen4;
-        let imagenSecundaria4 = productWithoutEdit.imagen5;
+        db.Product.findByPk(req.params.id)
+            .then(function(product) {
+                imagenPrincipal = product.mainImage;
+                imagenSecundaria1 = product.imageTwo;
+                imagenSecundaria2 = product.imageThree;
+                imagenSecundaria3 = product.imageFour;
+                imagenSecundaria4 = product.imageFive;
+                descripcion = product.description;
 
-        if (req.files[0]) {
-            if (req.files[0].fieldname == "imagenPrincipal") {
-                imagenPrincipal = req.files[0].filename;
-            } else if (req.files[0].fieldname == "imagenSecundaria1") {
-                imagenSecundaria1 = req.files[0].filename;
-            } else if (req.files[0].fieldname == "imagenSecundaria2") {
-                imagenSecundaria2 = req.files[0].filename;
-            } else if (req.files[0].fieldname == "imagenSecundaria3") {
-                imagenSecundaria3 = req.files[0].filename;
-            } else if (req.files[0].fieldname == "imagenSecundaria4") {
-                imagenSecundaria4 = req.files[0].filename;
-            }
-
-            if (req.files[1]) {
-                if (req.files[1].fieldname == "imagenSecundaria1") {
-                    imagenSecundaria1 = req.files[1].filename;
-                } else if (req.files[1].fieldname == "imagenSecundaria2") {
-                    imagenSecundaria2 = req.files[1].filename;
-                } else if (req.files[1].fieldname == "imagenSecundaria3") {
-                    imagenSecundaria3 = req.files[1].filename;
-                } else if (req.files[1].fieldname == "imagenSecundaria4") {
-                    imagenSecundaria4 = req.files[1].filename;
-                }
-
-                if (req.files[2]) {
-                    if (req.files[2].fieldname == "imagenSecundaria2") {
-                        imagenSecundaria2 = req.files[2].filename;
-                    } else if (req.files[2].fieldname == "imagenSecundaria3") {
-                        imagenSecundaria3 = req.files[2].filename;
-                    } else if (req.files[2].fieldname == "imagenSecundaria4") {
-                        imagenSecundaria4 = req.files[2].filename;
+                if (req.files[0]) {
+                    if (req.files[0].fieldname == "imagenPrincipal") {
+                        imagenPrincipal = req.files[0].filename;
+                    } else if (req.files[0].fieldname == "imagenSecundaria1") {
+                        imagenSecundaria1 = req.files[0].filename;
+                    } else if (req.files[0].fieldname == "imagenSecundaria2") {
+                        imagenSecundaria2 = req.files[0].filename;
+                    } else if (req.files[0].fieldname == "imagenSecundaria3") {
+                        imagenSecundaria3 = req.files[0].filename;
+                    } else if (req.files[0].fieldname == "imagenSecundaria4") {
+                        imagenSecundaria4 = req.files[0].filename;
                     }
-
-                    if (req.files[3]) {
-                        if (req.files[3].fieldname == "imagenSecundaria3") {
-                            imagenSecundaria3 = req.files[3].filename;
-                        } else if (req.files[3].fieldname == "imagenSecundaria4") {
-                            imagenSecundaria4 = req.files[3].filename;
+        
+                    if (req.files[1]) {
+                        if (req.files[1].fieldname == "imagenSecundaria1") {
+                            imagenSecundaria1 = req.files[1].filename;
+                        } else if (req.files[1].fieldname == "imagenSecundaria2") {
+                            imagenSecundaria2 = req.files[1].filename;
+                        } else if (req.files[1].fieldname == "imagenSecundaria3") {
+                            imagenSecundaria3 = req.files[1].filename;
+                        } else if (req.files[1].fieldname == "imagenSecundaria4") {
+                            imagenSecundaria4 = req.files[1].filename;
+                        }
+        
+                        if (req.files[2]) {
+                            if (req.files[2].fieldname == "imagenSecundaria2") {
+                                imagenSecundaria2 = req.files[2].filename;
+                            } else if (req.files[2].fieldname == "imagenSecundaria3") {
+                                imagenSecundaria3 = req.files[2].filename;
+                            } else if (req.files[2].fieldname == "imagenSecundaria4") {
+                                imagenSecundaria4 = req.files[2].filename;
+                            }
+        
+                            if (req.files[3]) {
+                                if (req.files[3].fieldname == "imagenSecundaria3") {
+                                    imagenSecundaria3 = req.files[3].filename;
+                                } else if (req.files[3].fieldname == "imagenSecundaria4") {
+                                    imagenSecundaria4 = req.files[3].filename;
+                                }
+                            }
                         }
                     }
                 }
-            }
-        }
 
-        let productoEditado =  {
-            id: id,
-            nombre: req.body.nombre,
-            precio: parseInt(req.body.precio),
-            categoria: req.body.categoria,
-            tipoEquipo: req.body.tipoEquipo,
-            caracteristicas : [req.body.caracteristicaUno , req.body.caracteristicaDos , req.body.caracteristicaTres],
-            descripcion: req.body.descripcion ? req.body.descripcion : productWithoutEdit.descripcion,
-            imagen: imagenPrincipal,
-            imagen2: imagenSecundaria1,
-            imagen3: imagenSecundaria2,
-            imagen4: imagenSecundaria3,
-            imagen5: imagenSecundaria4
-        };
+                db.Product.update({
+                    name: req.body.nombre,
+                    price: req.body.precio,
+                    characteristicOne: req.body.caracteristicaUno,
+                    characteristicTwo: req.body.caracteristicaDos,
+                    characteristicThree: req.body.caracteristicaTres,
+                    description: req.body.descripcion == "" ? descripcion : req.body.descripcion,
+                    mainImage: imagenPrincipal,
+                    imageTwo: imagenSecundaria1 == "" ? imagenPrincipal : imagenSecundaria1,
+                    imageThree: imagenSecundaria2 == "" ? imagenPrincipal : imagenSecundaria2,
+                    imageFour: imagenSecundaria3 == "" ? imagenPrincipal : imagenSecundaria3,
+                    imageFive: imagenSecundaria4 == "" ? imagenPrincipal : imagenSecundaria4,
+                    idCategory: req.body.categoria,
+                    idTypeProduct: req.body.tipoEquipo
+                } , {
+                    where: {
+                        id: req.params.id
+                    }
+                });
 
-        console.log(imagenPrincipal , imagenSecundaria1 , imagenSecundaria2 , imagenSecundaria3 , imagenSecundaria4);
-
-        let indice = productos.findIndex((producto) => {
-            return producto.id == id;
-        });
-
-        productos[indice] = productoEditado;
-        
-		let productosJSON = JSON.stringify(productos, null, " ");
-
-		fs.writeFileSync(productsFilePath , productosJSON);
-        
-
-		res.redirect("/products");
+                res.redirect("/products");
+            })
     },
 
     //Borrar un producto
     borrarProducto: function(req,res) {
-        const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
         
-        let id = req.params.id;
-
-        let productosFinales = productos.filter((producto) => {
-            return producto.id != id;
-        });
-
-        let productosJSON = JSON.stringify(productosFinales, null, " ");
-
-        fs.writeFileSync(productsFilePath , productosJSON);
-        
-
 		res.redirect("/products");
     }
     
