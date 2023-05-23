@@ -136,7 +136,8 @@ const usersController = {
                 res.redirect("/users/login");
             })
     },
-    logout: function (req, res){
+    
+    logout: (req, res) => {
         res.clearCookie("nombreUsuario");
         req.session.destroy(function(err){
           if(err){
@@ -145,7 +146,7 @@ const usersController = {
             res.redirect('/users/login');
           }
         });
-      }
+    }
 };
 
 module.exports = usersController;
