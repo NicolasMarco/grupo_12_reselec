@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+let db = require("../../database/models");
 
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const { validationResult } = require("express-validator");
@@ -11,7 +12,7 @@ const usersController = {
     },
 
     loginUser: (req,res) => {
-        const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+        /*const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
         
         let usuarioIngresado = usuarios.find((usuario) => {
@@ -48,7 +49,56 @@ const usersController = {
                 },
                 oldData: req.body
             });
-        }
+        }*/
+
+        //NUEVO CODIGO
+
+        db.User.findOne({
+            attributes: ["userName" , "password"],
+            where: {
+                userName: req.body.usuario
+            },
+        })
+
+        .then(function(user) {
+            let compararContraseña = bcryptjs.compareSync(req.body.password , user.password);
+            if (compararContraseña) {
+                db.User.findOne({
+                    attributes: { exclude: ["password"]},
+                    where: {
+                        userName: req.body.usuario
+                    }
+                })
+                    .then(function(userSinPassword) {
+                        console.log(userSinPassword);
+                        req.session.usuarioLoggeado = userSinPassword;
+                        if (req.body.recordameButton){
+                            res.cookie("nombreUsuario", req.body.usuario, { maxAge: (1000 * 60) * 60})
+                        }
+                        res.redirect("/");
+                    })
+            } else {
+                return res.render("users/login" , {
+                    errors: {
+                        password: {
+                            msg: "* La contraseña es incorrecta"
+                        }
+                    },
+                    oldData: req.body
+                });
+            }
+        })
+
+        .catch(function(error) {
+            return res.render("users/login" , {
+                errors: {
+                    password: {
+                        msg: "* El usuario ingresado no esta registrado"
+                    }
+                },
+                oldData: req.body
+            });
+        })
     },
 
     getRegister: (req,res) => {
