@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 let db = require("../../database/models");
+const Op = require("sequelize").Op;
 
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const { validationResult } = require("express-validator");
@@ -12,47 +13,6 @@ const usersController = {
     },
 
     loginUser: (req,res) => {
-        /*const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-        
-        let usuarioIngresado = usuarios.find((usuario) => {
-            return (usuario.usuario == req.body.usuario);
-        });
-        
-        
-        if (usuarioIngresado) {
-            let compararContraseña = bcryptjs.compareSync(req.body.password , usuarioIngresado.password);
-            if (compararContraseña) {
-                delete usuarioIngresado.password;
-                req.session.usuarioLoggeado = usuarioIngresado;
-                if (req.body.recordameButton){
-                    res.cookie("nombreUsuario", req.body.usuario, { maxAge: (1000 * 60) * 60})
-                }
-                res.redirect("/");
-            } else {
-                return res.render("users/login" , {
-                    errors: {
-                        password: {
-                            msg: "* La contraseña es incorrecta"
-                        }
-                    },
-                    oldData: req.body
-                });
-            }
-        
-        } else {
-            return res.render("users/login" , {
-                errors: {
-                    password: {
-                        msg: "* El usuario ingresado no esta registrado"
-                    }
-                },
-                oldData: req.body
-            });
-        }*/
-
-        //NUEVO CODIGO
-
         db.User.findOne({
             attributes: ["userName" , "password"],
             where: {
@@ -106,76 +66,75 @@ const usersController = {
     },
 
     userRegister: (req,res) => {
-        const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+        //const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
             return res.render("users/register" , {
                 errors: resultValidation.mapped() , 
-                oldData: req.body, 
-                nombreUsuario
+                oldData: req.body
             });
         }
 
-        let usuarioExistente = usuarios.find((usuario) => {
-            return (usuario.email == req.body.email || usuario.usuario == req.body.usuario);
-        });
-
-        if (usuarioExistente) {
-            if (usuarioExistente.email == req.body.email && usuarioExistente.usuario == req.body.usuario) {
-                return res.render("users/register" , {
-                    errors: {
-                        email: {
-                            msg: "* El email ingresado ya esta registrado"
-                        },
-                        usuario: {
-                            msg: "* El usuario ingresado ya esta registrado"
-                        }
-                    },
-                    oldData: req.body , nombreUsuario
-                });
-            } else if (usuarioExistente.email == req.body.email) {
-                return res.render("users/register" , {
-                    errors: {
-                        email: {
-                            msg: "* El email ingresado ya esta registrado"
-                        }
-                    },
-                    oldData: req.body , nombreUsuario
-                });
-            } else {
-                return res.render("users/register" , {
-                    errors: {
-                        usuario: {
-                            msg: "* El usuario ingresado ya esta registrado"
-                        }
-                    },
-                    oldData: req.body , nombreUsuario
-                }); 
+        db.User.findOne({
+            where: {
+                [Op.or]: [
+                    {userName: req.body.usuario},
+                    {email: req.body.email}
+                ]
             }
-        }
+        })
 
-        let contraseñaEncriptada = bcryptjs.hashSync(req.body.password,10);
-        
-        let usuarioACargar =  {
-            id: usuarios.length > 0 ? (usuarios[usuarios.length-1].id + 1) : 1,
-            usuario: req.body.usuario,
-            password: contraseñaEncriptada,
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            email: req.body.email,
-            telefono: req.body.telefono,
-            imagen: req.file ? req.file.filename : "default.png",
-            administrador: req.body.passwordAdmin ? true : false
-        };
+            .then(function(user) {
+                if (user.email == req.body.email && user.userName == req.body.usuario) {
+                    return res.render("users/register" , {
+                        errors: {
+                            email: {
+                                msg: "* El email ingresado ya esta registrado"
+                            },
+                            usuario: {
+                                msg: "* El usuario ingresado ya esta registrado"
+                            }
+                        },
+                        oldData: req.body
+                    });
+                } else if (user.email == req.body.email) {
+                    return res.render("users/register" , {
+                        errors: {
+                            email: {
+                                msg: "* El email ingresado ya esta registrado"
+                            }
+                        },
+                        oldData: req.body
+                    });
+                } else {
+                    return res.render("users/register" , {
+                        errors: {
+                            usuario: {
+                                msg: "* El usuario ingresado ya esta registrado"
+                            }
+                        },
+                        oldData: req.body
+                    }); 
+                }
+            })
 
-        usuarios.push(usuarioACargar);
+            .catch(function(error) {
+                let contraseñaEncriptada = bcryptjs.hashSync(req.body.password,10);
 
-		let usuariosJSON = JSON.stringify(usuarios, null, " ");
+                db.User.create({
+                    userName: req.body.usuario,
+                    password: contraseñaEncriptada,
+                    name: req.body.nombre,
+                    lastName: req.body.apellido,
+                    email: req.body.email,
+                    phoneNumber: req.body.telefono,
+                    userImage: req.file ? req.file.filename : "default.png",
+                    idCategory: req.body.passwordAdmin ? 2 : 1
+                });
 
-		fs.writeFileSync(usersFilePath , usuariosJSON);
-        
-		res.redirect("/users/login");
+                res.redirect("/users/login");
+            })
     },
     logout: function (req, res){
         res.clearCookie("nombreUsuario");

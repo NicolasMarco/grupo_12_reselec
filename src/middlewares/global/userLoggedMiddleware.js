@@ -7,9 +7,6 @@ function userLoggedMiddleware (req, res, next){
 
     let usuarioEnCookie = req.cookies.nombreUsuario;
 
-    //let usuarioDeCookie = User.findByField("usuario", usuarioEnCookie);
-    
-
     if(usuarioEnCookie) {
         db.User.findOne({
             attributes: {exclude : ["password"]},
@@ -37,10 +34,6 @@ function userLoggedMiddleware (req, res, next){
             })
     }
     
-    /*
-    if(usuarioDeCookie){
-        req.session.usuarioLoggeado = usuarioDeCookie;
-    }*/
     else {
         if(req.session && req.session.usuarioLoggeado && req.session.usuarioLoggeado.idCategory == 2) {
             res.locals.isLogged = true;
@@ -56,8 +49,6 @@ function userLoggedMiddleware (req, res, next){
 
         next();
     }
-
-    //next();
 }
 
 module.exports = userLoggedMiddleware;
