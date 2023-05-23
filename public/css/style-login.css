@@ -11,6 +11,19 @@ footer {
     border-bottom: 2px solid #eee;
  }
 
+ body {
+    margin: 0px;
+    min-height: 100vh;
+    padding-bottom: 182px;
+    position: relative;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
  main {
     background-color: #ffffff;
     display: flex;
@@ -178,6 +191,10 @@ footer {
 @media (min-width: 460px) {
 }
 @media (min-width: 768px) {
+    body {
+        padding-bottom: 137px;
+    }
+    
     header {
         width: 90%;
         display: flex;

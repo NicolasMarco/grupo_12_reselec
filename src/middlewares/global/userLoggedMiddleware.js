@@ -24,6 +24,8 @@ function userLoggedMiddleware (req, res, next){
     }
 
     next();
+
+    //NUEVO CODIGO
 }
 
 module.exports = userLoggedMiddleware;
