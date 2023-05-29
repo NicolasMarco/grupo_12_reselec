@@ -17,14 +17,14 @@
                 <input class = "carga-edicion-input" type="text" value="<%= product.price %>" name = "precio" required> </input>
 
                 <select class = "carga-edicion-input" name = "categoria" required>
-                    <option value = "disabled" <% if (product.idCategory.name == "") { %> selected <% } %>> CATEGORIA </option>
+                    <option disabled <% if (product.idCategory.name == "") { %> selected <% } %>> CATEGORIA </option>
                     <% categories.forEach(function(category) { %>
                         <option value="<%= category.id %>" <% if (product.categoryProduct.name == category.name) { %> selected <% } %>> <%= category.name.toUpperCase() %> </option>
                     <% }) %>
                 </select>
 
                 <select class = "carga-edicion-input" name = "tipoEquipo" required> 
-                    <option value = "disabled" <% if (product.typeProduct.name == "") {%> selected <% } %>> TIPO DE EQUIPO </option>
+                    <option disabled <% if (product.typeProduct.name == "") {%> selected <% } %>> TIPO DE EQUIPO </option>
                     <% typeProducts.forEach(function(typeProduct) { %>
                         <option value="<%= typeProduct.id %>" <% if (product.typeProduct.name == typeProduct.name) {%> selected <% } %>> <%= typeProduct.name.toUpperCase() %> </option>
                     <% }) %>

@@ -22,7 +22,7 @@
                 </select> -->
 
                 <select class = "carga-edicion-input" name = "categoria" required>
-                    <option value = "disabled"> CATEGORIA </option>
+                    <option disabled> CATEGORIA </option>
                     <% categorias.forEach(function(categoria) { %>
                         <option value="<%= categoria.id %>"> <%= categoria.name.toUpperCase() %> </option>
                     <% }) %>
@@ -36,7 +36,7 @@
                 </select> -->
 
                 <select class = "carga-edicion-input" name = "tipoEquipo" required> 
-                    <option value = "disabled"> TIPO DE EQUIPO </option>
+                    <option disabled> TIPO DE EQUIPO </option>
                     <% tiposProducto.forEach(function(tipoProducto) { %>
                         <option value="<%= tipoProducto.id %>"> <%= tipoProducto.name.toUpperCase() %> </option>
                     <% }) %>
