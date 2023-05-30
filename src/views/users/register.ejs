@@ -16,57 +16,69 @@
                 <div class = "register-primerParteFormulario">
 
                     <input class = "register-input" type="text" placeholder="USUARIO" name = "usuario" value = "<%= locals.oldData ? oldData.usuario : null %>"> </input>
-                    <% if (locals.errors && errors.usuario) {%>
-                        <div class = "register-contenedorError">
-                            <h3 class = "register-textoError"><%= errors.usuario.msg %></h3>
-                        </div>
-                    <% } %>
+                    <div class = "register-contenedorErrorUsuario">
+                        <% if (locals.errors && errors.usuario) {%>
+                                <h3 class = "register-textoError"><%= errors.usuario.msg %></h3>
+                        <% } %>
+                    </div>
+                    
+                    
                     <input class = "register-input" type="password" placeholder="CONTRASEÑA" name = "password"> </input>
-                    <% if (locals.errors && errors.password) {%>
-                        <div class = "register-contenedorError">
-                            <h3 class = "register-textoError"><%= errors.password.msg %></h3>
-                        </div>
-                    <% } %>
+                    <div class = "register-contenedorErrorPassword">
+                        <% if (locals.errors && errors.password) {%>
+                                <h3 class = "register-textoError"><%= errors.password.msg %></h3>  
+                        <% } %>
+                    </div>
+                    
                     <input class = "register-input" type="password" placeholder="REPETIR CONTRASEÑA" name = "passwordRepetida"> </input>
-                    <% if (locals.errors && errors.passwordRepetida) {%>
-                        <div class = "register-contenedorError">
+                    <div class = "register-contenedorErrorPasswordRepetida">
+                        <% if (locals.errors && errors.passwordRepetida) {%>
                             <h3 class = "register-textoError"><%= errors.passwordRepetida.msg %></h3>
-                        </div>
-                    <% } %>
+                        <% } %>
+                    </div>
+                    
                     <input class = "register-input" type="text" placeholder="NOMBRE" name = "nombre" value = "<%= locals.oldData ? oldData.nombre : null %>"> </input>
-                    <% if (locals.errors && errors.nombre) {%>
-                        <div class = "register-contenedorError">
+                    <div class = "register-contenedorErrorNombre">
+                        <% if (locals.errors && errors.nombre) {%>
                             <h3 class = "register-textoError"><%= errors.nombre.msg %></h3>
-                        </div>
-                    <% } %>
+                        <% } %>
+                    </div>
+                    
                     <input class = "register-input" type="text" placeholder="APELLIDO" name = "apellido" value = "<%= locals.oldData ? oldData.apellido : null %>"> </input>
-                    <% if (locals.errors && errors.apellido) {%>
-                        <div class = "register-contenedorError">
+                    <div class = "register-contenedorErrorApellido">
+                        <% if (locals.errors && errors.apellido) {%>
                             <h3 class = "register-textoError"><%= errors.apellido.msg %></h3>
-                        </div>
-                    <% } %>
+                        <% } %>
+                    </div>
+                    
+                    
                     <input class = "register-input" type="text" placeholder="EMAIL" name = "email" value = "<%= locals.oldData ? oldData.email : null %>"> </input>
-                    <% if (locals.errors && errors.email) {%>
-                        <div class = "register-contenedorError">
-                            <h3 class = "register-textoError"><%= errors.email.msg %></h3>
-                        </div>
-                    <% } %>
+                    <div class = "register-contenedorErrorEmail">
+                        <% if (locals.errors && errors.email) {%>
+                                <h3 class = "register-textoError"><%= errors.email.msg %></h3>
+                        <% } %>
+                    </div>
+                    
+                    
                     <input class = "register-input" type="tel" placeholder="TELEFONO" name = "telefono" value = "<%= locals.oldData ? oldData.telefono : null %>"> </input>
-                    <% if (locals.errors && errors.telefono) {%>
-                        <div class = "register-contenedorError">
+                    <div class = "register-contenedorErrorTelefono">
+                        <% if (locals.errors && errors.telefono) {%>
                             <h3 class = "register-textoError"><%= errors.telefono.msg %></h3>
-                        </div>
-                    <% } %>
+                        <% } %>
+                    </div>
+                    
                     <div class = "register-containerFileInput">
                         <label class = "register-labelCargarImagen" for="imagen"> Imagen usuario </label>
                         <input class = "register-input" id = "imagenUsuario" type="file" name = "imagenUsuario"></input>
                     </div>
                     <input class = "register-input" type="password" placeholder="CONTRASEÑA ADMINISTRADOR" name = "passwordAdmin"> </input>
-                    <% if (locals.errors && errors.passwordAdmin) {%>
-                        <div class = "register-contenedorError">
-                            <h3 class = "register-textoError"><%= errors.passwordAdmin.msg %></h3>
-                        </div>
-                    <% } %>
+                    
+                    <div class = "register-contenedorErrorPasswordAdmin">
+                        <% if (locals.errors && errors.passwordAdmin) {%>
+                                <h3 class = "register-textoError"><%= errors.passwordAdmin.msg %></h3>
+                        <% } %>
+                    </div>
+                    
                 </div>
 
                 <button type = "submit" class = "register-buttonFinalizar"> 
@@ -80,8 +92,9 @@
 
         
     </main>
+    
     <%- include('../partials/footer.ejs') %>
     
-
+    <script src = "/js/validationUserRegister.js"></script>
 </body>
 </html>

@@ -112,7 +112,63 @@ footer {
     margin-top: 10px;
 }
 
-.register-contenedorError {
+.register-contenedorErrorUsuario {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.register-contenedorErrorPassword {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.register-contenedorErrorPasswordRepetida {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.register-contenedorErrorNombre {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.register-contenedorErrorApellido {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.register-contenedorErrorEmail {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.register-contenedorErrorTelefono {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.register-contenedorErrorPasswordAdmin {
     display: flex;
     justify-content: flex-start;
     align-items: center;
