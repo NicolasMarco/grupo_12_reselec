@@ -13,32 +13,53 @@
             <h3 class = "carga-edicion-titulo"> Editar producto: <%= product.name %> </h3>
             
             <form class = "carga-edicion-form" action="/products/editarProducto/<%= product.id %>?_method=PATCH" method = "POST" enctype="multipart/form-data">
-                <input class = "carga-edicion-input" type="text" value="<%= product.name %>" name = "nombre" required minlength="5"> </input>
-                <input class = "carga-edicion-input" type="text" value="<%= product.price %>" name = "precio" required> </input>
+                <input class = "carga-edicion-input" type="text" value="<%= product.name %>" name = "nombre"> </input>
+                <div class = "carga-edicion-contenedorErrorNombre">
+                    
+                </div>
+                <input class = "carga-edicion-input" type="text" value="<%= product.price %>" name = "precio"> </input>
+                <div class = "carga-edicion-contenedorErrorPrecio">
+                    
+                </div>
 
-                <select class = "carga-edicion-input" name = "categoria" required>
+                <select class = "carga-edicion-input" name = "categoria">
                     <option disabled <% if (product.idCategory.name == "") { %> selected <% } %>> CATEGORIA </option>
                     <% categories.forEach(function(category) { %>
                         <option value="<%= category.id %>" <% if (product.categoryProduct.name == category.name) { %> selected <% } %>> <%= category.name.toUpperCase() %> </option>
                     <% }) %>
                 </select>
+                <div class = "carga-edicion-contenedorErrorCategoria">
+                    
+                </div>
 
-                <select class = "carga-edicion-input" name = "tipoEquipo" required> 
+                <select class = "carga-edicion-input" name = "tipoEquipo"> 
                     <option disabled <% if (product.typeProduct.name == "") {%> selected <% } %>> TIPO DE EQUIPO </option>
                     <% typeProducts.forEach(function(typeProduct) { %>
                         <option value="<%= typeProduct.id %>" <% if (product.typeProduct.name == typeProduct.name) {%> selected <% } %>> <%= typeProduct.name.toUpperCase() %> </option>
                     <% }) %>
                 </select>
+                <div class = "carga-edicion-contenedorErrorTipo">
+                    
+                </div>
 
-                <input class = "carga-edicion-input" type="text" value="<%= product.characteristicOne %>" name = "caracteristicaUno" required> </input>
-                <input class = "carga-edicion-input" type="text" value="<%= product.characteristicTwo %>" name = "caracteristicaDos" required> </input>
-                <input class = "carga-edicion-input" type="text" value="<%= product.characteristicThree %>" name = "caracteristicaTres" required> </input>
+                <input class = "carga-edicion-input" type="text" value="<%= product.characteristicOne %>" name = "caracteristicaUno"> </input>
+                <input class = "carga-edicion-input" type="text" value="<%= product.characteristicTwo %>" name = "caracteristicaDos"> </input>
+                <input class = "carga-edicion-input" type="text" value="<%= product.characteristicThree %>" name = "caracteristicaTres"> </input>
+                <div class = "carga-edicion-contenedorErrorCaracteristicas">
+                    
+                </div>
 
                 <textarea class = "carga-edicion-textArea" type="text" placeholder = "<%= product.description %>" name = "descripcion"></textarea>
+                <div class = "carga-edicion-contenedorErrorDescripcion">
+                    
+                </div>
 
                 <div class = "carga-edicion-containerInputImagen">
                     <label class = "carga-edicion-labelCargarImagen" for="imagen"> Imagen principal </label>
                     <input class = "carga-edicion-input" id = "imagenPrincipal" type="file" name = "imagenPrincipal"></input>
+                </div>
+                <div class = "carga-edicion-contenedorErrorImagen">
+                    
                 </div>
 
                 <div class = "carga-edicion-containerInputImagen">
@@ -47,6 +68,9 @@
                     <input class = "carga-edicion-input" id = "imagenSecundaria2" type="file" name = "imagenSecundaria2"></input>
                     <input class = "carga-edicion-input" id = "imagenSecundaria3" type="file" name = "imagenSecundaria3"></input>
                     <input class = "carga-edicion-input" id = "imagenSecundaria4" type="file" name = "imagenSecundaria4"></input>
+                </div>
+                <div class = "carga-edicion-contenedorErrorImagenesSecundarias">
+                    
                 </div>
 
                 <button type = "submit" class = "carga-edicion-buttonFinalizar"> 
@@ -59,5 +83,6 @@
     </main>
 
     <%- include('../partials/footer.ejs') %>
+    <script src = "/js/validationProducts.js"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 window.addEventListener('load', function() {
     let form = document.querySelector("form");
+    console.log(window.location);
 
     form.addEventListener("submit" , function(evento) {
         let erroresNombre = [];
@@ -14,7 +15,7 @@ window.addEventListener('load', function() {
         //NOMBRE
         if (form.nombre.value == "") {
             erroresNombre.push("* El nombre no puede estar vacio");
-        } else if (form.nombre.value.length < 5) {
+        } else if (form.nombre.value != "" && form.nombre.value.length < 5) {
             erroresNombre.push("* El nombre debe tener mas de 5 caracteres");
         }
 
@@ -42,9 +43,9 @@ window.addEventListener('load', function() {
         } 
 
         //DESCRIPCION
-        if (form.descripcion.value == "") {
+        if (window.location.pathname == "/products/agregarProducto" && form.descripcion.value == "") {
             erroresDescripcion.push("* La descripcion no puede estar vacia");
-        } else if (form.descripcion.value.length < 8) {
+        } else if (form.descripcion.value != "" && form.descripcion.value.length < 8) {
             erroresDescripcion.push("* La descripcion debe tener al menos 8 caracteres");
         }
         
@@ -58,7 +59,7 @@ window.addEventListener('load', function() {
             if (!nombreImagenPrincipal.includes(".jpg") && !nombreImagenPrincipal.includes(".png") && !nombreImagenPrincipal.includes(".gif") && !nombreImagenPrincipal.includes(".jpeg")) {
                 erroresImagenPrincipal.push("* Formato de imagen invalido");
             }
-        } else {
+        } else if (window.location.pathname == "/products/agregarProducto"){
             erroresImagenPrincipal.push("* Debe seleccionar una imagen");
         }
         
