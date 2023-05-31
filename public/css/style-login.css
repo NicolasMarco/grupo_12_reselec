@@ -159,19 +159,20 @@ footer {
     padding-bottom: 10px;
 }
 
-.register-contenedorError {
+.login-contenedorError {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
     width: 100%;
-    margin-bottom: 10px;
 }
 
-.register-textoError {
+.login-textoError {
     font-weight: bold;
     font-size: 12px;
     font-family: 'Roboto' , sans-serif;
     color: #cc0000;
+    margin-bottom: 10px;
 }
 
 .login-container-recordar {

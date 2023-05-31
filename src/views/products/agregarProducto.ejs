@@ -13,44 +13,53 @@
             <h3 class = "carga-edicion-titulo"> Agregar producto </h3>
             
             <form class = "carga-edicion-form" action = "/products" method = "post" enctype="multipart/form-data">
-                <input class = "carga-edicion-input" type="text" placeholder="NOMBRE DEL PRODUCTO" name = "nombre" required minlength="5"> </input>
-                <input class = "carga-edicion-input" type="text" placeholder="PRECIO" name = "precio" required> </input>
-                <!-- <select class = "carga-edicion-input" name = "categoria" required> 
-                    <option value = "disabled"> CATEGORIA </option>
-                    <option value="destacados"> PRODUCTO DESTACADO </option>
-                    <option value="ultimaVisita"> ULTIMA VISITA </option>
-                </select> -->
+                <input class = "carga-edicion-input" type="text" placeholder="NOMBRE DEL PRODUCTO" name = "nombre"> </input>
+                <div class = "carga-edicion-contenedorErrorNombre">
+                    
+                </div>
+                <input class = "carga-edicion-input" type="text" placeholder="PRECIO" name = "precio"> </input>
+                <div class = "carga-edicion-contenedorErrorPrecio">
+                    
+                </div>
 
-                <select class = "carga-edicion-input" name = "categoria" required>
-                    <option disabled> CATEGORIA </option>
+                <select class = "carga-edicion-input" name = "categoria">
+                    <option value = "disabled"> CATEGORIA </option>
                     <% categorias.forEach(function(categoria) { %>
                         <option value="<%= categoria.id %>"> <%= categoria.name.toUpperCase() %> </option>
                     <% }) %>
                 </select>
+                <div class = "carga-edicion-contenedorErrorCategoria">
+                    
+                </div>
 
-                <!-- <select class = "carga-edicion-input" name = "tipoEquipo" required> 
+                <select class = "carga-edicion-input" name = "tipoEquipo"> 
                     <option value = "disabled"> TIPO DE EQUIPO </option>
-                    <option value = "Resistencia"> RESISTENCIA </option>
-                    <option value= "Medicion"> MEDICION </option>
-                    <option value= "Conexion"> CONEXION </option>
-                </select> -->
-
-                <select class = "carga-edicion-input" name = "tipoEquipo" required> 
-                    <option disabled> TIPO DE EQUIPO </option>
                     <% tiposProducto.forEach(function(tipoProducto) { %>
                         <option value="<%= tipoProducto.id %>"> <%= tipoProducto.name.toUpperCase() %> </option>
                     <% }) %>
                 </select>
+                <div class = "carga-edicion-contenedorErrorTipo">
+                    
+                </div>
 
-                <input class = "carga-edicion-input" type="text" placeholder="CARACTERISTICA" name = "caracteristicaUno" required> </input>
-                <input class = "carga-edicion-input" type="text" placeholder="CARACTERISTICA" name = "caracteristicaDos" required> </input>
-                <input class = "carga-edicion-input" type="text" placeholder="CARACTERISTICA" name = "caracteristicaTres" required> </input>
+                <input class = "carga-edicion-input" type="text" placeholder="CARACTERISTICA" name = "caracteristicaUno"> </input>
+                <input class = "carga-edicion-input" type="text" placeholder="CARACTERISTICA" name = "caracteristicaDos"> </input>
+                <input class = "carga-edicion-input" type="text" placeholder="CARACTERISTICA" name = "caracteristicaTres"> </input>
+                <div class = "carga-edicion-contenedorErrorCaracteristicas">
+                    
+                </div>
 
                 <textarea class = "carga-edicion-textArea" type="text" placeholder="DESCRIPCION" name = "descripcion"></textarea>
+                <div class = "carga-edicion-contenedorErrorDescripcion">
+                    
+                </div>
 
                 <div class = "carga-edicion-containerInputImagen">
                     <label class = "carga-edicion-labelCargarImagen" for="imagen"> Imagen principal </label>
-                    <input class = "carga-edicion-input" id = "imagenPrincipal" type="file" name = "imagenPrincipal" required></input>
+                    <input class = "carga-edicion-input" id = "imagenPrincipal" type="file" name = "imagenPrincipal"></input>
+                </div>
+                <div class = "carga-edicion-contenedorErrorImagen">
+                    
                 </div>
 
                 <div class = "carga-edicion-containerInputImagen">
@@ -60,16 +69,20 @@
                     <input class = "carga-edicion-input" id = "imagenSecundaria3" type="file" name = "imagenSecundaria3"></input>
                     <input class = "carga-edicion-input" id = "imagenSecundaria4" type="file" name = "imagenSecundaria4"></input>
                 </div>
+                <div class = "carga-edicion-contenedorErrorImagenesSecundarias">
+                    
+                </div>
 
                 <button type = "submit" class = "carga-edicion-buttonFinalizar"> 
                     AGREGAR
                 </button>
-
             </form>
-</div>
+    </div>
         
     </main>
 
     <%- include('../partials/footer.ejs') %>
+
+    <script src = "/js/validationProducts.js"></script>
 </body>
 </html>

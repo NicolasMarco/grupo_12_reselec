@@ -66,7 +66,6 @@ const usersController = {
     },
 
     userRegister: (req,res) => {
-        //const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
