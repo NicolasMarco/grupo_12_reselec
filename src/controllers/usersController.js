@@ -106,6 +106,7 @@ const usersController = {
                         },
                         oldData: req.body
                     });
+              
                 } else {
                     return res.render("users/register" , {
                         errors: {

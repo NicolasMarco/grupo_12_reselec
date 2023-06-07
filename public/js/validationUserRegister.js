@@ -66,6 +66,7 @@ window.addEventListener('load', function() {
             erroresTelefono.push("* El telefono solo puede contener numeros");
         }
 
+
         //CONTRASEÑA ADMIN
         if (form.passwordAdmin.value != "" && form.passwordAdmin.value != "123456") {
             erroresPasswordAdmin.push("* La contraseña es incorrecta");

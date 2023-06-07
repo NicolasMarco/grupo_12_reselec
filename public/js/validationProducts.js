@@ -45,7 +45,7 @@ window.addEventListener('load', function() {
         //DESCRIPCION
         if (window.location.pathname == "/products/agregarProducto" && form.descripcion.value == "") {
             erroresDescripcion.push("* La descripcion no puede estar vacia");
-        } else if (form.descripcion.value != "" && form.descripcion.value.length < 8) {
+        } else if (form.descripcion.value != "" && form.descripcion.value.length < 20) {
             erroresDescripcion.push("* La descripcion debe tener al menos 8 caracteres");
         }
         

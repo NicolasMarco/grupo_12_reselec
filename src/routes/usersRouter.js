@@ -20,8 +20,8 @@ const validations = [
 
         return true;
     }),
-    body("nombre").notEmpty().withMessage("* El campo nombre debe estar completo"),
-    body("apellido").notEmpty().withMessage("* El campo apellido debe estar completo"),
+    body("nombre").notEmpty().withMessage("* El campo nombre debe estar completo").isLength({ min:2 }).withMessage("* El nombre debe contener al menos dos letras"),
+    body("apellido").notEmpty().withMessage("* El campo apellido debe estar completo").isLength({ min:2 }).withMessage("* El apellido debe contener al menos dos letras"),
     body("email").notEmpty().withMessage("* El campo email debe estar completo").bail().isEmail().withMessage("* El formato del email es invalido"),
     body("telefono").notEmpty().withMessage("* El campo telefono debe estar completo"),
     body("passwordAdmin").custom((value , { req }) => {

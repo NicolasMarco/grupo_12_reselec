@@ -3,6 +3,7 @@ const path = require('path');
 let db = require("../../database/models");
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const { validationResult } = require("express-validator");
 
 const productsController = {
     //Todos los productos
@@ -56,7 +57,9 @@ const productsController = {
         let imagenSecundaria1 = "";
         let imagenSecundaria2 = "";
         let imagenSecundaria3 = "";
-        let imagenSecundaria4 = ""
+        let imagenSecundaria4 = "";
+
+        
 
         if (req.files[0]) {
             if (req.files[0].fieldname == "imagenPrincipal") {
@@ -116,9 +119,8 @@ const productsController = {
             imageFive: imagenSecundaria4 == "" ? imagenPrincipal : imagenSecundaria4,
             idCategory: req.body.categoria,
             idTypeProduct: req.body.tipoEquipo
-        });
-
-		res.redirect("/products");
+        })
+            res.redirect("/products");
     },
 
     //Editar un producto
