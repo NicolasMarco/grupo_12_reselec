@@ -45,7 +45,7 @@ window.addEventListener('load', function() {
         //DESCRIPCION
         if (window.location.pathname == "/products/agregarProducto" && form.descripcion.value == "") {
             erroresDescripcion.push("* La descripcion no puede estar vacia");
-        } else if (form.descripcion.value != "" && form.descripcion.value.length < 20) {
+        } else if (form.descripcion.value != "" && form.descripcion.value.length < 8) {
             erroresDescripcion.push("* La descripcion debe tener al menos 8 caracteres");
         }
         
@@ -86,7 +86,7 @@ window.addEventListener('load', function() {
         let erroresImagenPrincipalHtml = document.querySelector("div.carga-edicion-contenedorErrorImagen");
         let erroresImagenesSecundariasHtml = document.querySelector("div.carga-edicion-contenedorErrorImagenesSecundarias");
 
-        if (erroresNombre.length > 0 || erroresPrecio.length > 0 || erroresCategoria.length > 0 || erroresTipo.length > 0 || erroresCaracteristicas.length > 0 || erroresDescripcion.length > 0 || erroresImagenPrincipal.length > 0 || erroresImagenesSecundarias != "") {
+        if (erroresNombre.length > 0 || erroresPrecio.length > 0 || erroresCategoria.length > 0 || erroresTipo.length > 0 || erroresCaracteristicas.length > 0 || erroresDescripcion.length > 0 || erroresImagenPrincipal.length > 0 || errorImagenesSecundarias != "") {
             console.log("HOLA! Entre al if");
             
             evento.preventDefault();

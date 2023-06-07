@@ -7,10 +7,11 @@ const guestMiddleware = require("../middlewares/routes/guestMiddleware");
 
 
 const validations = [
-    body("usuario").notEmpty().withMessage("* El campo usuario debe estar completo").bail().isAlphanumeric().withMessage("* El nombre de usuario solo puede contener letras o numeros"),
-    body("password").notEmpty().withMessage("* El campo contraseña debe estar completo"),
-    body("passwordRepetida").notEmpty().withMessage("* Debes volver a ingresar la contraseña").bail().
-    custom((value , { req }) => {
+    body("usuario").notEmpty().withMessage("* El campo usuario debe estar completo").bail().isAlphanumeric().withMessage("* El nombre de usuario solo puede contener letras o numeros")
+    .bail().isLength({min: 5}).withMessage("* El nombre de usuario debe contener al menos 5 caracteres"),
+    body("password").notEmpty().withMessage("* El campo contraseña debe estar completo").bail().isLength({min: 5}).withMessage("* La contraseña debe contener al menos 5 caracteres"),
+    body("passwordRepetida").notEmpty().withMessage("* Debes volver a ingresar la contraseña").bail().isLength({min: 5}).withMessage("* La contraseña debe contener al menos 5 caracteres")
+    .bail().custom((value , { req }) => {
         let passwordOriginal = req.body.password;
         let passwordRepetida = req.body.passwordRepetida;
 
@@ -20,8 +21,8 @@ const validations = [
 
         return true;
     }),
-    body("nombre").notEmpty().withMessage("* El campo nombre debe estar completo").isLength({ min:2 }).withMessage("* El nombre debe contener al menos dos letras"),
-    body("apellido").notEmpty().withMessage("* El campo apellido debe estar completo").isLength({ min:2 }).withMessage("* El apellido debe contener al menos dos letras"),
+    body("nombre").notEmpty().withMessage("* El campo nombre debe estar completo").bail().isLength({ min:2 }).withMessage("* El nombre debe contener al menos dos letras"),
+    body("apellido").notEmpty().withMessage("* El campo apellido debe estar completo").bail().isLength({ min:2 }).withMessage("* El apellido debe contener al menos dos letras"),
     body("email").notEmpty().withMessage("* El campo email debe estar completo").bail().isEmail().withMessage("* El formato del email es invalido"),
     body("telefono").notEmpty().withMessage("* El campo telefono debe estar completo"),
     body("passwordAdmin").custom((value , { req }) => {

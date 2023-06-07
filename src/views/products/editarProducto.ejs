@@ -15,11 +15,15 @@
             <form class = "carga-edicion-form" action="/products/editarProducto/<%= product.id %>?_method=PATCH" method = "POST" enctype="multipart/form-data">
                 <input class = "carga-edicion-input" type="text" value="<%= product.name %>" name = "nombre"> </input>
                 <div class = "carga-edicion-contenedorErrorNombre">
-                    
+                    <% if (locals.errors && errors.nombre) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.nombre.msg %></h3>
+                    <% } %>
                 </div>
                 <input class = "carga-edicion-input" type="text" value="<%= product.price %>" name = "precio"> </input>
                 <div class = "carga-edicion-contenedorErrorPrecio">
-                    
+                    <% if (locals.errors && errors.precio) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.precio.msg %></h3>
+                    <% } %>
                 </div>
 
                 <select class = "carga-edicion-input" name = "categoria">
@@ -29,7 +33,9 @@
                     <% }) %>
                 </select>
                 <div class = "carga-edicion-contenedorErrorCategoria">
-                    
+                    <% if (locals.errors && errors.categoria) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.categoria.msg %></h3>
+                    <% } %>
                 </div>
 
                 <select class = "carga-edicion-input" name = "tipoEquipo"> 
@@ -39,14 +45,24 @@
                     <% }) %>
                 </select>
                 <div class = "carga-edicion-contenedorErrorTipo">
-                    
+                    <% if (locals.errors && errors.tipoEquipo) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.tipoEquipo.msg %></h3>
+                    <% } %>
                 </div>
 
                 <input class = "carga-edicion-input" type="text" value="<%= product.characteristicOne %>" name = "caracteristicaUno"> </input>
                 <input class = "carga-edicion-input" type="text" value="<%= product.characteristicTwo %>" name = "caracteristicaDos"> </input>
                 <input class = "carga-edicion-input" type="text" value="<%= product.characteristicThree %>" name = "caracteristicaTres"> </input>
                 <div class = "carga-edicion-contenedorErrorCaracteristicas">
-                    
+                    <% if (locals.errors && errors.caracteristicaUno) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.caracteristicaUno.msg %></h3>
+                    <% } %>
+                    <% if (locals.errors && errors.caracteristicaDos) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.caracteristicaDos.msg %></h3>
+                    <% } %>
+                    <% if (locals.errors && errors.caracteristicaTres) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.caracteristicaTres.msg %></h3>
+                    <% } %>
                 </div>
 
                 <textarea class = "carga-edicion-textArea" type="text" placeholder = "<%= product.description %>" name = "descripcion"></textarea>
@@ -59,7 +75,9 @@
                     <input class = "carga-edicion-input" id = "imagenPrincipal" type="file" name = "imagenPrincipal"></input>
                 </div>
                 <div class = "carga-edicion-contenedorErrorImagen">
-                    
+                    <% if (locals.errors && errors.imagenPrincipal) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.imagenPrincipal.msg %></h3>
+                    <% } %>
                 </div>
 
                 <div class = "carga-edicion-containerInputImagen">
@@ -70,7 +88,18 @@
                     <input class = "carga-edicion-input" id = "imagenSecundaria4" type="file" name = "imagenSecundaria4"></input>
                 </div>
                 <div class = "carga-edicion-contenedorErrorImagenesSecundarias">
-                    
+                    <% if (locals.errors && errors.imagenSecundaria1) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.imagenSecundaria1.msg %></h3>
+                    <% } %>
+                    <% if (locals.errors && errors.imagenSecundaria2) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.imagenSecundaria2.msg %></h3>
+                    <% } %>
+                    <% if (locals.errors && errors.imagenSecundaria3) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.imagenSecundaria3.msg %></h3>
+                    <% } %>
+                    <% if (locals.errors && errors.imagenSecundaria4) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.imagenSecundaria4.msg %></h3>
+                    <% } %>
                 </div>
 
                 <button type = "submit" class = "carga-edicion-buttonFinalizar"> 

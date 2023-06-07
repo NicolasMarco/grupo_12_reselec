@@ -13,40 +13,56 @@
             <h3 class = "carga-edicion-titulo"> Agregar producto </h3>
             
             <form class = "carga-edicion-form" action = "/products" method = "post" enctype="multipart/form-data">
-                <input class = "carga-edicion-input" type="text" placeholder="NOMBRE DEL PRODUCTO" name = "nombre"> </input>
+                <input class = "carga-edicion-input" type="text" placeholder="NOMBRE DEL PRODUCTO" name = "nombre" value = "<%= locals.oldData ? oldData.nombre : null %>"> </input>
                 <div class = "carga-edicion-contenedorErrorNombre">
-                    
+                    <% if (locals.errors && errors.nombre) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.nombre.msg %></h3>
+                    <% } %>
                 </div>
-                <input class = "carga-edicion-input" type="text" placeholder="PRECIO" name = "precio"> </input>
+                <input class = "carga-edicion-input" type="text" placeholder="PRECIO" name = "precio" value = "<%= locals.oldData ? oldData.precio : null %>"> </input>
                 <div class = "carga-edicion-contenedorErrorPrecio">
-                    
+                    <% if (locals.errors && errors.precio) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.precio.msg %></h3>
+                    <% } %>
                 </div>
 
                 <select class = "carga-edicion-input" name = "categoria">
                     <option value = "disabled"> CATEGORIA </option>
                     <% categorias.forEach(function(categoria) { %>
-                        <option value="<%= categoria.id %>"> <%= categoria.name.toUpperCase() %> </option>
+                        <option value="<%= categoria.id %>" <% if(locals.oldData && oldData.categoria == categoria.id) { %> selected <% } %>> <%= categoria.name.toUpperCase() %> </option>
                     <% }) %>
                 </select>
                 <div class = "carga-edicion-contenedorErrorCategoria">
-                    
+                    <% if (locals.errors && errors.categoria) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.categoria.msg %></h3>
+                    <% } %>
                 </div>
 
                 <select class = "carga-edicion-input" name = "tipoEquipo"> 
                     <option value = "disabled"> TIPO DE EQUIPO </option>
                     <% tiposProducto.forEach(function(tipoProducto) { %>
-                        <option value="<%= tipoProducto.id %>"> <%= tipoProducto.name.toUpperCase() %> </option>
+                        <option value="<%= tipoProducto.id %>" <% if(locals.oldData && oldData.tipoEquipo == tipoProducto.id) { %> selected <% } %>> <%= tipoProducto.name.toUpperCase() %> </option>
                     <% }) %>
                 </select>
                 <div class = "carga-edicion-contenedorErrorTipo">
-                    
+                    <% if (locals.errors && errors.tipoEquipo) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.tipoEquipo.msg %></h3>
+                    <% } %>
                 </div>
 
-                <input class = "carga-edicion-input" type="text" placeholder="CARACTERISTICA" name = "caracteristicaUno"> </input>
-                <input class = "carga-edicion-input" type="text" placeholder="CARACTERISTICA" name = "caracteristicaDos"> </input>
-                <input class = "carga-edicion-input" type="text" placeholder="CARACTERISTICA" name = "caracteristicaTres"> </input>
+                <input class = "carga-edicion-input" type="text" value = "<%= locals.oldData ? oldData.caracteristicaUno : null %>" placeholder="CARACTERISTICA" name = "caracteristicaUno"> </input>
+                <input class = "carga-edicion-input" type="text" value = "<%= locals.oldData ? oldData.caracteristicaDos : null %>" placeholder="CARACTERISTICA" name = "caracteristicaDos"> </input>
+                <input class = "carga-edicion-input" type="text" value = "<%= locals.oldData ? oldData.caracteristicaTres : null %>" placeholder="CARACTERISTICA" name = "caracteristicaTres"> </input>
                 <div class = "carga-edicion-contenedorErrorCaracteristicas">
-                    
+                    <% if (locals.errors && errors.caracteristicaUno) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.caracteristicaUno.msg %></h3>
+                    <% } %>
+                    <% if (locals.errors && errors.caracteristicaDos) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.caracteristicaDos.msg %></h3>
+                    <% } %>
+                    <% if (locals.errors && errors.caracteristicaTres) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.caracteristicaTres.msg %></h3>
+                    <% } %>
                 </div>
 
                 <textarea class = "carga-edicion-textArea" type="text" placeholder="DESCRIPCION" name = "descripcion"></textarea>
@@ -59,7 +75,9 @@
                     <input class = "carga-edicion-input" id = "imagenPrincipal" type="file" name = "imagenPrincipal"></input>
                 </div>
                 <div class = "carga-edicion-contenedorErrorImagen">
-                    
+                    <% if (locals.errors && errors.imagenPrincipal) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.imagenPrincipal.msg %></h3>
+                    <% } %>
                 </div>
 
                 <div class = "carga-edicion-containerInputImagen">
@@ -70,7 +88,18 @@
                     <input class = "carga-edicion-input" id = "imagenSecundaria4" type="file" name = "imagenSecundaria4"></input>
                 </div>
                 <div class = "carga-edicion-contenedorErrorImagenesSecundarias">
-                    
+                    <% if (locals.errors && errors.imagenSecundaria1) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.imagenSecundaria1.msg %></h3>
+                    <% } %>
+                    <% if (locals.errors && errors.imagenSecundaria2) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.imagenSecundaria2.msg %></h3>
+                    <% } %>
+                    <% if (locals.errors && errors.imagenSecundaria3) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.imagenSecundaria3.msg %></h3>
+                    <% } %>
+                    <% if (locals.errors && errors.imagenSecundaria4) { %>
+                        <h3 class = "carga-edicion-textoError"><%= errors.imagenSecundaria4.msg %></h3>
+                    <% } %>
                 </div>
 
                 <button type = "submit" class = "carga-edicion-buttonFinalizar"> 
