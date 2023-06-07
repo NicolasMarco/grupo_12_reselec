@@ -8,8 +8,8 @@ const { body } = require("express-validator");
 const validations = [
     body("nombre").notEmpty().withMessage("* El campo nombre debe estar completo").bail().isAlphanumeric().withMessage("* El nombre del producto solo puede contener letras o numeros").isLength({ min:5 }).withMessage("* El nombre debe tener al menos cinco caracteres"),
     body("precio").notEmpty().withMessage("* El campo precio debe estar completo").bail().isInt().withMessage("* El precio debe ser expresado en numeros"),
-    body("categoria").notEmpty().withMessage("* Debes volver a ingresar la contraseña").bail(),
-    body("tipoEquipo").notEmpty().withMessage("* El campo nombre debe estar completo").bail(),
+    body("categoria").notEmpty().withMessage("* Debe seleccionar una opcion").bail(),
+    body("tipoEquipo").notEmpty().withMessage("* Debe seleccionar una opcion").bail(),
     body("caracteristicaUno").notEmpty().withMessage("* El campo debe estar completo").bail(),
     body("caracteristicaDos").notEmpty().withMessage("* El campo debe estar completo").bail().isEmail().withMessage("* El formato del email es invalido"),
     body("caracteristicaTres").notEmpty().withMessage("* El campo debe estar completo").bail(),
