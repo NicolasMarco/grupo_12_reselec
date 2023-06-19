@@ -22,12 +22,14 @@ function userLoggedMiddleware (req, res, next){
                     res.locals.isLogged = true;
                     res.locals.isAdmin = true;
                     res.locals.nombreUsuario = req.session.usuarioLoggeado.userName;
+                    res.locals.idUsuario = req.session.usuarioLoggeado.id;
                 }
                 
                 else if(req.session && req.session.usuarioLoggeado){
                     res.locals.isLogged = true;
                     res.locals.usuarioLoggeado = req.session.usuarioLoggeado;
                     res.locals.nombreUsuario = req.session.usuarioLoggeado.userName;
+                    res.locals.idUsuario = req.session.usuarioLoggeado.id;
                 }
 
                 next();
@@ -39,12 +41,14 @@ function userLoggedMiddleware (req, res, next){
             res.locals.isLogged = true;
             res.locals.isAdmin = true;
             res.locals.nombreUsuario = req.session.usuarioLoggeado.userName;
+            res.locals.idUsuario = req.session.usuarioLoggeado.id;
         }
         
         else if(req.session && req.session.usuarioLoggeado){
             res.locals.isLogged = true;
             res.locals.usuarioLoggeado = req.session.usuarioLoggeado;
             res.locals.nombreUsuario = req.session.usuarioLoggeado.userName;
+            res.locals.idUsuario = req.session.usuarioLoggeado.id;
         }
 
         next();

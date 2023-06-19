@@ -30,7 +30,6 @@ const usersController = {
                     }
                 })
                     .then(function(userSinPassword) {
-                        console.log(userSinPassword);
                         req.session.usuarioLoggeado = userSinPassword;
                         if (req.body.recordameButton){
                             res.cookie("nombreUsuario", req.body.usuario, { maxAge: (1000 * 60) * 60})
@@ -146,6 +145,14 @@ const usersController = {
             res.redirect('/users/login');
           }
         });
+    },
+
+    userDetail: (req,res) => {
+        console.log("Esta es la id: " + req.params.id);
+        db.User.findByPk(req.params.id)
+            .then(function(user) {
+                res.render("users/userDetail" , {user: user});
+            })
     }
 };
 

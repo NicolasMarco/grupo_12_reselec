@@ -4,6 +4,7 @@ const multer = require ("multer");
 const path = require("path");
 const { body } = require("express-validator");
 const guestMiddleware = require("../middlewares/routes/guestMiddleware");
+const rutaLogeado = require("../middlewares/routes/rutaLogeado");
 
 
 const validations = [
@@ -56,5 +57,7 @@ router.post("/register" ,upload.single("imagenUsuario"), validations , usersCont
 
 router.get('/logout', usersController.logout);
 router.post('/logout', usersController.logout);
+
+router.get("/detail/:id", rutaLogeado, usersController.userDetail);
 
 module.exports = router;

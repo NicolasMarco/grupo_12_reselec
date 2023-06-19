@@ -11,12 +11,12 @@
             
         <div class = "barraNavegacion">
             <% if (locals.isLogged) { %>
-                <div class = "containerUsuario">
+                <a class = "containerUsuario" href="/users/detail/<%= locals.idUsuario %>">
                     <div class = "containerIconoUsuario">
                         <i class="logoUsuario fa-solid fa-user"></i>
                     </div>
                     <h3 class = "textoUsuario"><%= locals.nombreUsuario %></h3>
-                </div>
+                </a>
             <a class = "enlaceNavBar" href="/products">PRODUCTOS</a>
             <a class = "enlaceNavBar" href="/users/logout">CERRAR SESION</a>
             <% } else { %>

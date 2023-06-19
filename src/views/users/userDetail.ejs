@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% const nombreEstilo = "style-UserDetail.css" %>
+<%- include('../partials/head.ejs' , {nombreHojaEstilos: nombreEstilo}) %>
+
+<body>
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+        <div class = "ContenedorSeccion-UserDetail">
+            <h3 class = "InfoSeccion-UserDetail">Detalle del usuario</h3>
+            <div class = "ContenedorTotal-UserDetail">
+                <div class = "InfoUsuario-UserDetail">
+                    <div class = "ContenedorImagenUsuario-UserDetail">
+                        <img class = "ImagenUsuario-UserDetail" src="/images/users/<%= user.userImage %>" alt="">
+                    </div>
+                    <h3 class = "NombreUsuario-UserDetail"><%= user.userName %></h3>
+                    <h3 class = "NombreApellido-UserDetail"><%= user.name %> <%= user.lastName %></h3>
+                    <h3 class = "Email-UserDetail"><%= user.email %></h3>
+                    <h3 class = "Telefono-UserDetail"><%= user.phoneNumber %></h3>
+                </div>
+    
+                <div class = "Compras-UserDetail">
+                    <h3 class = "TituloCompras-UserDetail">Compras</h3>
+                    <h3 class = "NoHayCompras-UserDetail">El usuario aun no realizo compras</h3>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
