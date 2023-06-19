@@ -132,6 +132,7 @@ footer {
     .ContenedorSeccion-UserDetail {
         max-width: 740px;
         align-items: flex-start;
+        padding-top: 30px;
     }
 
     .ContenedorTotal-UserDetail {
