@@ -7,10 +7,6 @@ footer {
     width:100%;
  }
 
- header {
-    border-bottom: 2px solid #eee;
- }
-
  body {
     margin: 0px;
     min-height: 100vh;
@@ -31,6 +27,31 @@ footer {
     justify-content: center;
     align-content: center;
  }
+
+ .login-Header-Contenedor {
+    width: 100%;
+    background-color: #ad0909;
+ }
+
+ .login-ContenidoHeader {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.login-LogoHeader {
+    width: 170px;
+    height: 60px;
+}
+
+.login-ImagenLogoHeader {
+    width: 100%;
+    height: 100%;
+}
 
  .login-container {
     background-color: #ffffff;
@@ -197,7 +218,6 @@ footer {
     }
     
     header {
-        width: 90%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -211,17 +231,11 @@ footer {
     }
 }
 @media (min-width: 992px) {
-    header {
-        width: 90%;
-    }
     .login-fondo {
         width: 90%;
     }
 }
 @media (min-width: 1200px) {
-    header {
-        width: 90%;
-    }
     .login-fondo {
         width: 90%;
     }
