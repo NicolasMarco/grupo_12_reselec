@@ -47,7 +47,7 @@ p {
     background-color: #ad0909;
 }
 
-.login-ContenidoHeader {
+.contenidoHeader {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
