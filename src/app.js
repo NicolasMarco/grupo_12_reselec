@@ -45,6 +45,12 @@ app.use('/products', productsRouter);
 const usersRouter = require ("./routes/usersRouter.js");
 app.use('/users', usersRouter);
 
+//CORS
+const cors = require ("cors");
+app.use(cors({
+    origin: "http://localhost:4000"
+}));
+
 //APIS
 const apiRouter = require ("./routes/apiRouter.js");
 app.use('/api', apiRouter);

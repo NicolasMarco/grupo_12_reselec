@@ -1,5 +1,6 @@
 let db = require("../../database/models");
 
+
 const apiController = {
     users: (req,res) => {
         db.User
