@@ -45,6 +45,10 @@ app.use('/products', productsRouter);
 const usersRouter = require ("./routes/usersRouter.js");
 app.use('/users', usersRouter);
 
+//APIS
+const apiRouter = require ("./routes/apiRouter.js");
+app.use('/api', apiRouter);
+
 //Configuracion puerto
 const port = process.env.PORT || 3000;
 
