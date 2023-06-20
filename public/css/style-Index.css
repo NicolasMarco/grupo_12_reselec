@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,700;1,300;1,400&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;700&family=Raleway&display=swap');
 
 .sliderImagenes {
     position: relative;
@@ -45,20 +47,52 @@
     display: none;
 }
 
-.tituloDestacados {
+.ContenedorTitulo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.tituloDestacadosA {
     font-size: 20px;
     color:  rgb(73, 70, 70);
-    font-family: 'Roboto' , sans-serif;
-    text-align: center;
-    padding: 10px;
-    width: 90%;
-    margin: auto;
+    font-family: 'Raleway' , sans-serif;
+    font-weight: normal;
+    padding-right: 5px;
+}
+
+.tituloDestacadosB {
+    font-size: 20px;
+    color:  rgb(73, 70, 70);
+    font-family: 'Raleway' , sans-serif;
+    padding-left: 5px;
+    color: #cc0000;
+    font-weight: bold;
+}
+
+.tituloServiciosA {
+    font-size: 20px;
+    color:  rgb(73, 70, 70);
+    font-family: 'Raleway' , sans-serif;
+    font-weight: normal;
+    padding-right: 5px;
+}
+
+.tituloServiciosB {
+    font-size: 20px;
+    color:  rgb(73, 70, 70);
+    font-family: 'Raleway' , sans-serif;
+    padding-left: 5px;
+    color: #cc0000;
+    font-weight: bold;
 }
 
 .tituloServicios {
     font-size: 20px;
     color:  rgb(73, 70, 70);
-    font-family: 'Roboto' , sans-serif;
+    font-family: 'Raleway' , sans-serif;
     text-align: center;
     padding: 10px;
     width: 90%;
@@ -147,9 +181,9 @@
 }
 
 .textoPrecio {
-    color: #636363;
+    color: #00a650;
     font-family: 'Roboto' , sans-serif;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .descripcionProducto {
@@ -198,7 +232,7 @@
 
 .logoServicio {
     font-size: 40px;
-    color: #cc0000;;
+    color: #cc0000;
 }
 
 .datosServicio {
@@ -209,14 +243,14 @@
 }
 
 .tituloServicio {
-    font-family: 'Roboto' , sans-serif;
+    font-family: 'Raleway' , sans-serif;
     font-size: 18px;
     color: black;
     padding: 10px;
 }
 
 .descripcionServicio {
-    font-family: 'Roboto' , sans-serif;
+    font-family: 'Raleway' , sans-serif;
     font-size: 14px;
     color: #636363;
     text-align: center;
@@ -282,10 +316,12 @@
         margin: auto;
     }
 
-    .tituloDestacados {
+    .ContenedorTitulo {
         z-index: 10;
-        padding: 0px;
-        width: 240px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-right: 15px;
+        padding-left: 15px;
         position: relative;
         background-color: #fff;
     }
