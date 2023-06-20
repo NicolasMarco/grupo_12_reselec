@@ -1,33 +1,33 @@
 
 <header>
-
-    <div class = "contenidoHeader">
-        <a class = "burgerMenu" href="#"> <i class="logoBurger fa-sharp fa-solid fa-bars"></i> </a>
-    
-        <a class = "logoHeader" href="/">
-            <img class = "imagenLogoHeader" src="/images/home/ReselecLogoHeader.png">
-        </a>
-    
-            
-        <div class = "barraNavegacion">
-            <% if (locals.isLogged) { %>
-                <a class = "containerUsuario" href="/users/detail/<%= locals.idUsuario %>">
-                    <div class = "containerIconoUsuario">
-                        <i class="logoUsuario fa-solid fa-user"></i>
-                    </div>
-                    <h3 class = "textoUsuario"><%= locals.nombreUsuario %></h3>
-                </a>
-            <a class = "enlaceNavBar" href="/products">PRODUCTOS</a>
-            <a class = "enlaceNavBar" href="/users/logout">CERRAR SESION</a>
-            <% } else { %>
-            <a class = "enlaceNavBar" href="/products">PRODUCTOS</a>
-            <a class = "enlaceNavBar" href="/users/login">INGRESA</a>
-            <a class = "enlaceNavBar" href="/users/register">REGISTRATE</a>
-            <%  } %>
-            <a class = "enlaceBusqueda" href="#"> <i class="logoBusqueda fa-solid fa-magnifying-glass"> </i></a>
-            <a class = "enlaceCarritoCompras" href="/products/productCart"> <i class="logoCarrito fa-sharp fa-solid fa-cart-shopping"></i> </a>
-        </div>
+    <div class = "Header-Contenedor-AnchoTotal">
+        <div class = "contenidoHeader">
+            <a class = "burgerMenu" href="#"> <i class="logoBurger fa-sharp fa-solid fa-bars"></i> </a>
         
+            <a class = "logoHeader" href="/">
+                <img class = "imagenLogoHeader" src="/images/home/Logo Reselec Sombra Blanca.png">
+            </a>
+        
+                
+            <div class = "barraNavegacion">
+                <% if (locals.isLogged) { %>
+                    <a class = "containerUsuario" href="/users/detail/<%= locals.idUsuario %>">
+                        <div class = "containerIconoUsuario">
+                            <i class="logoUsuario fa-solid fa-user"></i>
+                        </div>
+                        <h3 class = "textoUsuario"><%= locals.nombreUsuario %></h3>
+                    </a>
+                <a class = "enlaceNavBar" href="/products">PRODUCTOS</a>
+                <a class = "enlaceNavBar" href="/users/logout">CERRAR SESION</a>
+                <% } else { %>
+                <a class = "enlaceNavBar" href="/products">PRODUCTOS</a>
+                <a class = "enlaceNavBar" href="/users/login">INGRESA</a>
+                <a class = "enlaceNavBar" href="/users/register">REGISTRATE</a>
+                <%  } %>
+                <a class = "enlaceBusqueda" href="#"> <i class="logoBusqueda fa-solid fa-magnifying-glass"> </i></a>
+                <a class = "enlaceCarritoCompras" href="/products/productCart"> <i class="logoCarrito fa-sharp fa-solid fa-cart-shopping"></i> </a>
+            </div>
+            
+        </div>
     </div>
-
 </header>

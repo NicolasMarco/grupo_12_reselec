@@ -42,13 +42,17 @@ p {
     margin-inline-end: 0px;
 }
 
+.Header-Contenedor-AnchoTotal {
+    width: 100%;
+    background-color: #ad0909;
+}
+
 .contenidoHeader {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    background-color: #fff;
+    padding: 1px;
     max-width: 100%;
     margin: auto;
 }
@@ -72,12 +76,12 @@ p {
 }
 
 .logoBusqueda {
-    color: #636363;
+    color: #ffffff;
     font-size: 20px;
 }
 
 .logoCarrito {
-    color: #636363;
+    color: #ffffff;
     font-size: 20px;
 }
 
@@ -94,7 +98,7 @@ p {
 }
 
 .logoBurger {
-    color: #636363;
+    color: #ffffff;
     font-size: 25px;
 }
 
@@ -112,7 +116,7 @@ p {
 }
 
 .containerIconoUsuario {
-    border: 1px solid #636363;
+    border: 1px solid #ffffff;
     border-radius: 50%;
     width: 26px;
     height: 26px;
@@ -123,9 +127,11 @@ p {
     margin-right: 5px;
 }
 
+
+
 .logoUsuario {
     font-size: 14px;
-    color: #636363;
+    color: #ffffff;
 }
 
 .textoUsuario {
@@ -182,7 +188,7 @@ p {
         display: block;
         font-family: 'Roboto' , sans-serif;
         font-size: 14px;
-        color: #636363;
+        color: #ffffff;
     }
 
     .imagenLogoHeader {
@@ -212,7 +218,7 @@ p {
 @media (min-width: 1200px) {
     
     header {
-        border-bottom: 1px solid #eee;
+       
     }
 
     .contenidoHeader {
