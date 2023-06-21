@@ -10,13 +10,18 @@
 }
 
 .sliderImagenes {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 100%;
     height: 150px;
+    overflow: hidden;
 }
 
 .imagenSlider {
-    width: 100%;
+    width: auto;
     height: 100%;
 }
 

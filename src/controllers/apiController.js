@@ -16,7 +16,7 @@ const apiController = {
                         id: user.id,
                         name: user.productName,
                         email: user.email,
-                        detail: "http://localhost:3000/users/detail/" + user.id
+                        detail: "http://localhost:3001/users/detail/" + user.id
                     })
                 })
                 return res.status(200).json({
@@ -63,7 +63,7 @@ const apiController = {
                         name: product.name,
                         description: product.description,
                         categoria: product.categoryProduct.name,
-                        detail: "http://localhost:3000/products/productDetail/" + product.id
+                        detail: "http://localhost:3001/products/productDetail/" + product.id
                     })
                 })
                 return res.status(200).json({
