@@ -11,7 +11,11 @@
     <main>
         
         <div class = "encabezadoProductos">
-            <h3 class = "tituloDestacados">Listado de productos</h3>
+            <div class = "lineaEstetica"></div>
+            <div class = "ContenedorTitulo">
+                <h3 class = "tituloDestacadosA">Listado de</h3>
+                <h3 class = "tituloDestacadosB">Productos</h3>
+            </div>
         </div>
 
         <section class = "productosDestacados">
@@ -20,7 +24,9 @@
 
             <a class = "enlaceProducto" href="/products/productDetail/<%= producto.id %>">
                 <article class = "cuadroProducto">
-                    <img class = "imagenProducto" src="/images/products/<%= producto.mainImage %>" alt="">
+                    <div class = "contenedorImagenProducto">
+                        <img class = "imagenProducto" src="/images/products/<%= producto.mainImage %>" alt="">
+                    </div>
                     <div class = "lineaEsteticaProducto"></div>
                     <div class = "datosProducto">
                         <h4 class = "nombreProducto"> <%= producto.name %> </h4>

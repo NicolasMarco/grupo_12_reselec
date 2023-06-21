@@ -29,7 +29,9 @@
             
             <a class = "enlaceProducto" href="/products/productDetail/<%= producto.id %>">
                 <article class = "cuadroProducto">
-                    <img class = "imagenProducto" src="/images/products/<%= producto.mainImage %>" alt="">
+                    <div class = "contenedorImagenProducto">
+                        <img class = "imagenProducto" src="/images/products/<%= producto.mainImage %>" alt="">
+                    </div>
                     <div class = "lineaEsteticaProducto"></div>
                     <div class = "datosProducto">
                         <h4 class = "nombreProducto"> <%= producto.name %> </h4>

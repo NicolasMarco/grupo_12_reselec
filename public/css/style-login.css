@@ -43,14 +43,8 @@ footer {
     margin: auto;
 }
 
-.login-LogoHeader {
-    width: 170px;
-    height: 60px;
-}
-
 .login-ImagenLogoHeader {
-    width: 100%;
-    height: 100%;
+    height: 70px;
 }
 
  .login-container {
