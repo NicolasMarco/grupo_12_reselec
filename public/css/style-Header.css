@@ -210,10 +210,6 @@ p {
 }
 
 @media (min-width: 1200px) {
-    
-    header {
-       
-    }
 
     .contenidoHeader {
         max-width: 1140px;
