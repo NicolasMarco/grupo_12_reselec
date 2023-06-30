@@ -23,7 +23,7 @@ class ProductosTotales extends Component {
     }
 
     render() {
-      this.buscarProductos();
+      //this.buscarProductos();
       return (
         <h3>Cantidad de productos: {this.state.totalProductos}</h3>
       );

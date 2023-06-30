@@ -2,14 +2,17 @@ import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import ProductosTotales from './components/ProductosTotales/ProductosTotales';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div className="App">
-      <header></header>
+      <header>
+        <Header />
+      </header>
 
       <main>
-        <ProductosTotales />
+        
       </main>
 
       <footer></footer>

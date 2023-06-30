@@ -1,0 +1,18 @@
+.login-Header-Contenedor {
+    width: 100%;
+    background-color: #ad0909;
+ }
+
+ .login-ContenidoHeader {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.login-ImagenLogoHeader {
+    height: 70px;
+}
