@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,700;1,300;1,400&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;700&family=Raleway&display=swap');
+
+*{
+    box-sizing: border-box;
+  }
+
+.ContenedorTotal-LProductos {
+    border: 1px solid #ccc;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgb(207, 206, 206);
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.ContenedorElementos-LProductos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.ContenedorTitulo-LProductos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.TituloSeccionA-LProductos{
+    font-family: 'Raleway' , sans-serif;
+    font-weight: normal;
+    color:  rgb(73, 70, 70);
+    padding-right: 3px;
+}
+
+.TituloSeccionB-LProductos {
+    font-family: 'Raleway' , sans-serif;
+    color: #cc0000;
+    font-weight: bold;
+    padding-left: 3px;
+}
+
+.LineaEstetica-LProductos {
+    display: block;
+    border-top: 1px solid #eee;
+    width: 90%;
+    position: absolute;
+    top: 38px;
+    z-index: 1;
+    margin: auto;
+}
+
+.ContenedorInfo-LProductos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    width: 80%;
+}
+
+.TituloSeccion-LProductos {
+    font-family: 'Raleway' , sans-serif;
+    font-weight: normal;
+    color:  rgb(73, 70, 70);
+    font-size: 16px;
+}
+
+.NumeroProductos-LProductos {
+    font-family: 'Raleway' , sans-serif;
+    color: #cc0000;
+    font-weight: bold;
+    padding-left: 5px;
+    font-size: 16px;
+}
+
+.ContenedorCategoria-LProductos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContenedorEncabezados-Productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.EncabezadoID-Producto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+    border-right: 1px solid #ccc;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.EncabezadoNombre-Producto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.InfoEncabezado-Producto {
+    font-family: 'Raleway' , sans-serif;
+    color: #cc0000;
+    font-weight: bold;
+    font-size: 16px;
+}

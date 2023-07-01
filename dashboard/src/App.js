@@ -8,6 +8,8 @@ import ProductosTotales from './components/ProductosTotales/ProductosTotales';
 import UsuariosTotales from './components/UsuariosTotales/UsuariosTotales';
 import TotalCategorias from './components/TotalCategorias/TotalCategorias';
 import UltimoProducto from './components/UltimoProducto/UltimoProducto';
+import ProductosCategoria from './components/ProductosCategoria/ProductosCategoria';
+import ListadoProductos from './components/ListadoProductos/ListadoProductos';
 
 function App() {
   return (
@@ -23,7 +25,11 @@ function App() {
           <UsuariosTotales />
           <TotalCategorias />
         </div>
+        <div className = "ContenedorB-App">
           <UltimoProducto />
+          <ProductosCategoria />
+          <ListadoProductos />
+        </div>
       </main>
 
       <footer>

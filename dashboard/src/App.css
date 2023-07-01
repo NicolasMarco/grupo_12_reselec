@@ -7,3 +7,13 @@
   max-width: 340px;
   margin: auto;
 }
+
+.ContenedorB-App {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 340px;
+  margin: auto;
+}

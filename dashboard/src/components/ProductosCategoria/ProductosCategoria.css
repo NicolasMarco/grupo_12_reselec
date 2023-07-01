@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,700;1,300;1,400&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;700&family=Raleway&display=swap');
+
+.ContenedorTotal-PCategorias {
+    border: 1px solid #ccc;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgb(207, 206, 206);
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.ContenedorElementos-PCategorias {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.ContenedorTitulo-PCategorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.TituloSeccionA-PCategorias{
+    font-family: 'Raleway' , sans-serif;
+    font-weight: normal;
+    color:  rgb(73, 70, 70);
+    padding-right: 3px;
+}
+
+.TituloSeccionB-PCategorias {
+    font-family: 'Raleway' , sans-serif;
+    color: #cc0000;
+    font-weight: bold;
+    padding-left: 3px;
+}
+
+.LineaEstetica-PCategorias {
+    display: block;
+    border-top: 1px solid #eee;
+    width: 90%;
+    position: absolute;
+    top: 38px;
+    z-index: 1;
+    margin: auto;
+}
+
+.ContenedorInfo-PCategorias {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px;
+    padding-top: 5px;
+    width: 100%;
+}
+
+.TituloSeccion-PCategorias {
+    font-family: 'Raleway' , sans-serif;
+    font-weight: normal;
+    color:  rgb(73, 70, 70);
+    font-size: 16px;
+}
+
+.NumeroProductos-PCategorias {
+    font-family: 'Raleway' , sans-serif;
+    color: #cc0000;
+    font-weight: bold;
+    padding-left: 5px;
+    font-size: 16px;
+}
+
+.ContenedorCategoria-PCategorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

@@ -43,7 +43,7 @@ p {
 body {
   margin: 0px;
   min-height: 100vh;
-  padding-bottom: 182px;
+  padding-bottom: 203px;
   position: relative;
 }
 
@@ -65,4 +65,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media (min-width: 768px) {
+
+  body {
+    margin: 0px;
+    min-height: 100vh;
+    padding-bottom: 152px;
+    position: relative;
+  }
+
 }

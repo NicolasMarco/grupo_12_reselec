@@ -50,30 +50,47 @@ const apiController = {
     products: (req,res) => {
         
         db.Product
-            .findAll({include: [{association: "categoryProduct"}]})
+            .findAll({include: [{association: "categoryProduct"} , {association: "typeProduct"}]})
 
             .then(products => {
                 let finalproducts = [];
                 let productosDestacados = 0;
                 let productosUltimaVisita = 0;
+                let resistencias = 0;
+                let medicion = 0;
+                let conexion = 0;
                 products.forEach((product) => {
-                    product.categoryProduct.id == 1 ? productosDestacados++ : productosUltimaVisita++;
+                    switch(product.typeProduct.id) {
+                        case 1: 
+                            resistencias++;
+                            break;
+                        case 2:
+                            medicion++;
+                            break;
+                        case 3:
+                            conexion++;
+                            break;
+                        default:
+                            break;
+                    }
+                    //product.categoryProduct.id == 1 ? productosDestacados++ : productosUltimaVisita++;
                     finalproducts.push({
                         id: product.id,
                         name: product.name,
                         description: product.description,
                         image: product.mainImage,
-                        categoria: product.categoryProduct.name,
+                        categoria: product.typeProduct.name,
                         detail: "http://localhost:3000/products/productDetail/" + product.id
                     })
                 })
                 return res.status(200).json({
                     count: products.length,
                     countByCategory: {
-                        productosDestacados: productosDestacados,
-                        productosUltimaVisita: productosUltimaVisita
+                        resistencias: resistencias,
+                        medicion: medicion,
+                        conexion: conexion
                     },
-                    categories: 2,
+                    categories: 3,
                     products: finalproducts
                 })
             })

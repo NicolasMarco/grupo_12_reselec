@@ -1,6 +1,6 @@
 .ContenedorTotal-UltimoProducto {
-    max-width: 340px;
-    margin: auto;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .ContenedorInfo-UltimoProducto {
@@ -24,7 +24,6 @@
 }
 
 .TituloSeccionB-UltimoProducto {
-    color:  rgb(73, 70, 70);
     font-family: 'Raleway' , sans-serif;
     padding-left: 3px;
     color: #cc0000;
@@ -66,7 +65,7 @@
 }
 
 .ImagenProducto-UltimoProducto {
-    width: 70%;
+    width: 65%;
     padding: 10px;
 }
 
