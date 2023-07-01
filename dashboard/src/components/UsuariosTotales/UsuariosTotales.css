@@ -2,27 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,700;1,300;1,400&family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;700&family=Raleway&display=swap');
 
-.ContenedorTotal-PTotales {
+.ContenedorTotal-UTotales {
     border: 1px solid #ccc;
     width: 100%;
     margin-bottom: 10px;
     box-shadow: 0px 0px 10px rgb(207, 206, 206);
 }
 
-.ContenedorInfo-PTotales {
+.ContenedorInfo-UTotales {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
 }
 
-.TituloSeccion-PTotales {
+.TituloSeccion-UTotales {
     font-family: 'Raleway' , sans-serif;
     color: #cc0000;
     font-weight: bold;
 }
 
-.NumeroProductos-PTotales {
+.NumeroProductos-UTotales {
     font-family: 'Raleway' , sans-serif;
     font-weight: bold;
     color:  rgb(73, 70, 70);

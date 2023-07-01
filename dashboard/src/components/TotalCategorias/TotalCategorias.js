@@ -1,20 +1,20 @@
 import React, { Component } from "react";
-import './ProductosTotales.css';
+import './TotalCategorias.css';
 
-class ProductosTotales extends Component {
+class TotalCategorias extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        totalProductos: ""
+        totalCategorias: ""
       };
     }
-    
+
     componentDidMount() {
       fetch("http://localhost:3000/api/products")
         .then(response => (response.json()))
         .then(data => {
             this.setState({
-              totalProductos: data.count
+              totalCategorias: data.categories
             })
         })
         .catch(error => {
@@ -24,14 +24,14 @@ class ProductosTotales extends Component {
     
     render() {
       return (
-        <div class = "ContenedorTotal-PTotales">
-          <div class = "ContenedorInfo-PTotales">
-            <h3 class = "TituloSeccion-PTotales">Productos totales:</h3>
-            <h3 class = "NumeroProductos-PTotales">{this.state.totalProductos}</h3>
+        <div class = "ContenedorTotal-TCategorias">
+          <div class = "ContenedorInfo-TCategorias">
+            <h3 class = "TituloSeccion-TCategorias">Categorias totales:</h3>
+            <h3 class = "NumeroProductos-TCategorias">{this.state.totalCategorias}</h3>
           </div>
         </div>
       );
     }
   }
 
-export default ProductosTotales;
+export default TotalCategorias;

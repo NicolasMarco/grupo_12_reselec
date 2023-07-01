@@ -11,7 +11,7 @@ class Header extends Component {
     }
 
     render() {
-      //this.buscarProductos();
+      
       return (
         <div class = "login-Header-Contenedor">
             <div class = "login-ContenidoHeader">

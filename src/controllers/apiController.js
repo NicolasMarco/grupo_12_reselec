@@ -72,6 +72,7 @@ const apiController = {
                         productosDestacados: productosDestacados,
                         productosUltimaVisita: productosUltimaVisita
                     },
+                    categories: 2,
                     products: finalproducts
                 })
             })
