@@ -24,10 +24,10 @@ class TotalCategorias extends Component {
     
     render() {
       return (
-        <div class = "ContenedorTotal-TCategorias">
-          <div class = "ContenedorInfo-TCategorias">
-            <h3 class = "TituloSeccion-TCategorias">Categorias totales:</h3>
-            <h3 class = "NumeroProductos-TCategorias">{this.state.totalCategorias}</h3>
+        <div className = "ContenedorTotal-TCategorias">
+          <div className = "ContenedorInfo-TCategorias">
+            <h3 className = "TituloSeccion-TCategorias">Categorias totales:</h3>
+            <h3 className = "NumeroProductos-TCategorias">{this.state.totalCategorias}</h3>
           </div>
         </div>
       );

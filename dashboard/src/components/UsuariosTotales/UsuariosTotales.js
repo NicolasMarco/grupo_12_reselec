@@ -24,10 +24,10 @@ class UsuariosTotales extends Component {
 
     render() {
       return (
-        <div class = "ContenedorTotal-UTotales">
-          <div class = "ContenedorInfo-UTotales">
-            <h3 class = "TituloSeccion-UTotales">Usuarios totales:</h3>
-            <h3 class = "NumeroProductos-UTotales">{this.state.totalUsuarios}</h3>
+        <div className = "ContenedorTotal-UTotales">
+          <div className = "ContenedorInfo-UTotales">
+            <h3 className = "TituloSeccion-UTotales">Usuarios totales:</h3>
+            <h3 className = "NumeroProductos-UTotales">{this.state.totalUsuarios}</h3>
           </div>
         </div>
       );

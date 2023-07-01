@@ -1,0 +1,78 @@
+.ContenedorTotal-UltimoProducto {
+    max-width: 340px;
+    margin: auto;
+}
+
+.ContenedorInfo-UltimoProducto {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgb(207, 206, 206);
+    position: relative;
+}
+
+.TituloSeccionA-UltimoProducto {
+    color:  rgb(73, 70, 70);
+    font-family: 'Raleway' , sans-serif;
+    font-weight: normal;
+    padding-right: 3px;
+}
+
+.TituloSeccionB-UltimoProducto {
+    color:  rgb(73, 70, 70);
+    font-family: 'Raleway' , sans-serif;
+    padding-left: 3px;
+    color: #cc0000;
+    font-weight: bold;
+}
+
+.ContenedorTitulo-UltimoProducto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.LineaEstetica-UltimoProducto {
+    display: block;
+    border-top: 1px solid #eee;
+    width: 90%;
+    position: absolute;
+    top: 48px;
+    z-index: 1;
+    margin: auto;
+}
+
+.InfoProducto-UltimoProducto {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.NombreProducto-UltimoProducto {
+    color:  rgb(73, 70, 70);
+    font-family: 'Raleway' , sans-serif;
+    font-weight: bold;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.ImagenProducto-UltimoProducto {
+    width: 70%;
+    padding: 10px;
+}
+
+.Descripcion-UltimoProducto {
+    color:  rgb(73, 70, 70);
+    font-family: 'Raleway' , sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+}

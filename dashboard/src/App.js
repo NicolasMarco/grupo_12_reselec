@@ -7,6 +7,7 @@ import SeparadorSeccion from './components/SeparadorSeccion/SeparadorSeccion';
 import ProductosTotales from './components/ProductosTotales/ProductosTotales';
 import UsuariosTotales from './components/UsuariosTotales/UsuariosTotales';
 import TotalCategorias from './components/TotalCategorias/TotalCategorias';
+import UltimoProducto from './components/UltimoProducto/UltimoProducto';
 
 function App() {
   return (
@@ -17,11 +18,12 @@ function App() {
 
       <main>
         <SeparadorSeccion />
-        <div class = "ContenedorTotales-App">
+        <div className = "ContenedorTotales-App">
           <ProductosTotales />
           <UsuariosTotales />
           <TotalCategorias />
         </div>
+          <UltimoProducto />
       </main>
 
       <footer>

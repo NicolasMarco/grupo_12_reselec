@@ -12,33 +12,33 @@ class Footer extends Component {
     render() {
       
       return (
-        <div class = "contenidoFooter">
-            <div class = "datosContacto">
-                <h4 class = "tituloFooter">CONTACTANOS</h4>
+        <div className = "contenidoFooter">
+            <div className = "datosContacto">
+                <h4 className = "tituloFooter">CONTACTANOS</h4>
             
-                <div class = "lineaTextoFooter">
-                    <i class = "logoFooter"><FontAwesomeIcon icon={faWhatsapp} /></i>
-                    <p class = "textoLineaFooter">54 9 11 5661-0726</p>
+                <div className = "lineaTextoFooter">
+                    <i className = "logoFooter"><FontAwesomeIcon icon={faWhatsapp} /></i>
+                    <p className = "textoLineaFooter">54 9 11 5661-0726</p>
                 </div>
 
-                <div class = "lineaTextoFooter">
-                    <i class="logoFooter"><FontAwesomeIcon icon={faHouse} /></i>
-                    <p class = "textoLineaFooter">Ituzaingó - Buenos Aires</p>
+                <div className = "lineaTextoFooter">
+                    <i className="logoFooter"><FontAwesomeIcon icon={faHouse} /></i>
+                    <p className = "textoLineaFooter">Ituzaingó - Buenos Aires</p>
                 </div>
                 
-                <div class = "lineaTextoFooter">
-                    <i class="logoFooter"><FontAwesomeIcon icon={faEnvelope} /></i>
-                    <p class = "textoLineaFooter">contacto@reselec.com.ar</p>
+                <div className = "lineaTextoFooter">
+                    <i className="logoFooter"><FontAwesomeIcon icon={faEnvelope} /></i>
+                    <p className = "textoLineaFooter">contacto@reselec.com.ar</p>
                 </div>
             </div>
 
-            <div class = "logosRedesSociales">
-                <a href="#" class = "enlaceRedSocial"><i class="logoRedSocial"><FontAwesomeIcon icon={faFacebook} /></i></a>
-                <a href="#" class = "enlaceRedSocial"><i class="logoRedSocial"><FontAwesomeIcon icon={faInstagram} /></i></a>
-                <a href="#" class = "enlaceRedSocial"><i class="logoRedSocial"><FontAwesomeIcon icon={faYoutube} /></i></a>
+            <div className = "logosRedesSociales">
+                <a href="#" className = "enlaceRedSocial"><i class="logoRedSocial"><FontAwesomeIcon icon={faFacebook} /></i></a>
+                <a href="#" className = "enlaceRedSocial"><i class="logoRedSocial"><FontAwesomeIcon icon={faInstagram} /></i></a>
+                <a href="#" className = "enlaceRedSocial"><i class="logoRedSocial"><FontAwesomeIcon icon={faYoutube} /></i></a>
             </div>
 
-            <p class = "textoDerechosFooter"> Copyright © 2006-2023 Reselec S.A.S </p>
+            <p className = "textoDerechosFooter"> Copyright © 2006-2023 Reselec S.A.S </p>
         </div>
       );
     }

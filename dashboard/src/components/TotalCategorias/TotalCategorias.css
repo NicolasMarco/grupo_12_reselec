@@ -18,13 +18,13 @@
 
 .TituloSeccion-TCategorias {
     font-family: 'Raleway' , sans-serif;
-    color: #cc0000;
-    font-weight: bold;
+    font-weight: normal;
+    color:  rgb(73, 70, 70);
 }
 
 .NumeroProductos-TCategorias {
     font-family: 'Raleway' , sans-serif;
+    color: #cc0000;
     font-weight: bold;
-    color:  rgb(73, 70, 70);
     padding-left: 5px;
 }

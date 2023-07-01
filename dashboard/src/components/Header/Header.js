@@ -13,10 +13,10 @@ class Header extends Component {
     render() {
       
       return (
-        <div class = "login-Header-Contenedor">
-            <div class = "login-ContenidoHeader">
-                <a class = "login-LogoHeader" href="/">
-                    <img class = "login-ImagenLogoHeader" src={LogoReselec}></img>
+        <div className = "login-Header-Contenedor">
+            <div className = "login-ContenidoHeader">
+                <a className = "login-LogoHeader" href="/">
+                    <img className = "login-ImagenLogoHeader" src={LogoReselec}></img>
                 </a>
             </div>
         </div>

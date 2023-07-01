@@ -9,11 +9,11 @@ class SeparadorSeccion extends Component {
     render() {
       
       return (
-        <div class = "EncabezadoProductos-SeparadorSeccion">
-            <div class = "LineaEstetica-SeparadorSeccion"></div>
-            <div class = "ContenedorTitulo-SeparadorSeccion">
-                <h3 class = "TituloDestacadosA-SeparadorSeccion">Informacion </h3>
-                <h3 class = "TituloDestacadosB-SeparadorSeccion">Productos</h3>
+        <div className = "EncabezadoProductos-SeparadorSeccion">
+            <div className = "LineaEstetica-SeparadorSeccion"></div>
+            <div className = "ContenedorTitulo-SeparadorSeccion">
+                <h3 className = "TituloDestacadosA-SeparadorSeccion">Informacion</h3>
+                <h3 className = "TituloDestacadosB-SeparadorSeccion">Productos</h3>
             </div>
         </div>
       );

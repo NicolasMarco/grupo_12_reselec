@@ -62,8 +62,9 @@ const apiController = {
                         id: product.id,
                         name: product.name,
                         description: product.description,
+                        image: product.mainImage,
                         categoria: product.categoryProduct.name,
-                        detail: "http://localhost:3001/products/productDetail/" + product.id
+                        detail: "http://localhost:3000/products/productDetail/" + product.id
                     })
                 })
                 return res.status(200).json({
