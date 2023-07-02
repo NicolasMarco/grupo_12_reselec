@@ -44,9 +44,52 @@
     padding-left: 10px;
 }
 
+.CampoDescripcion-Producto {
+    display: none;
+}
+
+.CampoPrecio-Producto {
+    display: none;
+}
+
 .Info-Producto {
     color:  rgb(73, 70, 70);
     font-family: 'Raleway' , sans-serif;
     font-weight: normal;
     font-size: 16px;
+}
+
+@media (min-width: 992px) {
+
+    .CampoID-Producto {
+        width: 5%;
+        padding: 10px;
+    }
+    
+    .CampoNombre-Producto {
+        width: 30%;
+        padding: 10px;
+        border-right: 1px solid #ccc;
+    }
+    
+    .CampoDescripcion-Producto {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 45%;
+        padding: 10px;
+        padding-left: 10px;
+        border-right: 1px solid #ccc;
+    }
+    
+    .CampoPrecio-Producto {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 20%;
+        padding: 10px;
+        padding-left: 10px;
+    }
 }

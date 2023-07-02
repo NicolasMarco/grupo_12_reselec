@@ -10,6 +10,12 @@ function Producto(props) {
             <div className = "CampoNombre-Producto">
                 <h3 className = "Info-Producto">{props.name}</h3>
             </div>
+            <div className = "CampoDescripcion-Producto">
+                <h3 className = "Info-Producto">{props.description}</h3>
+            </div>
+            <div className = "CampoPrecio-Producto">
+                <h3 className = "Info-Producto">{props.price}</h3>
+            </div>
         </div>
     )
 }

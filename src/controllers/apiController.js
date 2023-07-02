@@ -54,8 +54,6 @@ const apiController = {
 
             .then(products => {
                 let finalproducts = [];
-                let productosDestacados = 0;
-                let productosUltimaVisita = 0;
                 let resistencias = 0;
                 let medicion = 0;
                 let conexion = 0;
@@ -73,11 +71,11 @@ const apiController = {
                         default:
                             break;
                     }
-                    //product.categoryProduct.id == 1 ? productosDestacados++ : productosUltimaVisita++;
                     finalproducts.push({
                         id: product.id,
                         name: product.name,
                         description: product.description,
+                        price: product.price,
                         image: product.mainImage,
                         categoria: product.typeProduct.name,
                         detail: "http://localhost:3000/products/productDetail/" + product.id

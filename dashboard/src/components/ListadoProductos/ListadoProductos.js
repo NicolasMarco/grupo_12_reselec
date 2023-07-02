@@ -40,6 +40,12 @@ class ListadoProductos extends Component {
                             <div className = "EncabezadoNombre-Producto">
                                 <h3 className = "InfoEncabezado-Producto">Nombre</h3>
                             </div>
+                            <div className = "EncabezadoDescripcion-Producto">
+                                <h3 className = "InfoEncabezado-Producto">Descripcion</h3>
+                            </div>
+                            <div className = "EncabezadoPrecio-Producto">
+                                <h3 className = "InfoEncabezado-Producto">Precio</h3>
+                            </div>
                         </div>
                         {this.state.productos.map((producto , index) => {
                             return <Producto {...producto} key={index}/>

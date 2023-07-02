@@ -62,7 +62,7 @@
     align-items: center;
     justify-content: center;
     padding: 5px;
-    padding-top: 5px;
+    padding-top: 10px;
     padding-bottom: 10px;
     width: 80%;
 }
@@ -119,9 +119,65 @@
     padding-left: 10px;
 }
 
+.EncabezadoDescripcion-Producto {
+    display: none;
+}
+
+.EncabezadoPrecio-Producto {
+    display: none;
+}
+
 .InfoEncabezado-Producto {
     font-family: 'Raleway' , sans-serif;
     color: #cc0000;
     font-weight: bold;
     font-size: 16px;
+}
+
+@media (min-width: 992px) {
+
+    .ContenedorInfo-LProductos {
+        width: 95%;
+    }
+
+    .EncabezadoID-Producto {
+        width: 5%;
+        padding: 10px;
+    }
+    
+    .EncabezadoNombre-Producto {
+        width: 30%;
+        border-right: 1px solid #ccc;
+        padding: 10px;
+    }
+    
+    .EncabezadoDescripcion-Producto {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 45%;
+        border-right: 1px solid #ccc;
+        padding: 10px;
+        padding-left: 10px;
+    }
+
+    .EncabezadoPrecio-Producto {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 20%;
+        border-right: 1px solid #ccc;
+        padding: 10px;
+        padding-left: 10px;
+    }
+
+    .ContenedorElementos-LProductos {
+        justify-content: flex-start
+    }
+
+    .LineaEstetica-LProductos {
+        top: 38px
+    }
 }

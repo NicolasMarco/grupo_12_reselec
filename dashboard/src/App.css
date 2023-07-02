@@ -1,11 +1,15 @@
-.ContenedorTotales-App {
+.ContenedorTotal-App {
+  margin: auto;
+  max-width: 340px;
+}
+
+.ContenedorA-App {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 340px;
-  margin: auto;
+  width: 100%;
 }
 
 .ContenedorB-App {
@@ -14,6 +18,59 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 340px;
-  margin: auto;
+  width: 100%;
+}
+
+@media (min-width: 460px) {
+
+  .ContenedorTotal-App {
+    max-width: 440px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .ContenedorTotal-App {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 740px;
+    margin: auto;
+  }
+
+  .ContenedorA-App {
+    width: 48%;
+  }
+
+  .ContenedorB-App {
+    width: 48%;
+  }
+}
+
+@media (min-width: 992px) {
+    
+  .ContenedorTotal-App {
+    max-width: 960px;
+    height: 526.11px;
+  }
+
+  .ContenedorA-App {
+    width: 30%;
+  }
+
+  .ContenedorB-App {
+    width: 68%;
+  }
+
+}
+
+@media (min-width: 1200px) {
+    
+  .ContenedorTotal-App {
+    max-width: 1140px;
+    height: 526.11px;
+    margin-bottom: 20px;
+  }
+
 }

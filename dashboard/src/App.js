@@ -20,15 +20,18 @@ function App() {
 
       <main>
         <SeparadorSeccion />
-        <div className = "ContenedorTotales-App">
-          <ProductosTotales />
-          <UsuariosTotales />
-          <TotalCategorias />
-        </div>
-        <div className = "ContenedorB-App">
-          <UltimoProducto />
-          <ProductosCategoria />
-          <ListadoProductos />
+        <div className = "ContenedorTotal-App">
+          <div className = "ContenedorA-App">
+            <ProductosTotales />
+            <UsuariosTotales />
+            <TotalCategorias />
+            <UltimoProducto />
+            <ProductosCategoria />
+          </div>
+          <div className = "ContenedorB-App">
+            
+            <ListadoProductos />
+          </div>
         </div>
       </main>
 
