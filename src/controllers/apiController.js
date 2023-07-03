@@ -77,6 +77,7 @@ const apiController = {
                         description: product.description,
                         price: product.price,
                         image: product.mainImage,
+                        //image: "http://localhost:3000/images/products/" + product.mainImage,
                         categoria: product.typeProduct.name,
                         detail: "http://localhost:3000/products/productDetail/" + product.id
                     })

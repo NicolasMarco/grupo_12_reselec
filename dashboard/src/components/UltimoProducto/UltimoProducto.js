@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './UltimoProducto.css';
 
-const productImage = require.context("../../assets/images/products")
+const productImage = "http://localhost:3000/images/products/";
 
 class UltimoProducto extends Component {
     constructor(props) {
@@ -31,7 +31,7 @@ class UltimoProducto extends Component {
       let descripcionProducto;
       let direccionProducto
 
-      if(this.state.lastProduct === "") {
+      if ( this.state.lastProduct === "" ) {
           imagenProducto = "default.jpg"
           nombreProducto = "Buscando..."
           descripcionProducto = "Buscando..."
@@ -53,7 +53,7 @@ class UltimoProducto extends Component {
               <div className = "LineaEstetica-UltimoProducto"></div>
               <a href = {direccionProducto} className = "InfoProducto-UltimoProducto">
                   <h3 className = "NombreProducto-UltimoProducto">{nombreProducto}</h3>
-                  <img className = "ImagenProducto-UltimoProducto" src = {productImage(`./${imagenProducto}`)}></img>
+                  <img className = "ImagenProducto-UltimoProducto" src = {productImage + imagenProducto}></img>
                   <p className = "Descripcion-UltimoProducto">{descripcionProducto}</p>
               </a>
               </div>

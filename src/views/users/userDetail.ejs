@@ -23,7 +23,24 @@
     
                 <div class = "Compras-UserDetail">
                     <h3 class = "TituloCompras-UserDetail">Compras</h3>
-                    <h3 class = "NoHayCompras-UserDetail">El usuario aun no realizo compras</h3>
+                    <% for(let i=0 ; i < 6; i++) { %>
+                        <a class = "enlaceCompra" href="#">
+                            <article class = "ContenedorCompra">
+                                <div class = ContendorFechaCompra>
+                                    <p class = "FechaCompra"> 2/6/2023 </p>
+                                </div>
+                                <div class = ContenedorNumeroCompra>
+                                    <h4 class = "NumeroCompra"> 0000000001 </h4>
+                                </div>
+                                <div class = ContenedorEstadoCompra>
+                                    <p class = "EstadoCompra"> ENTREGADO </p>
+                                </div>
+                                <div class = ContenedorPrecioCompra>
+                                    <p class = "PrecioCompra"> $15233 %> </p>
+                                </div>
+                            </article>
+                        </a>
+                    <% } %>
                 </div>
             </div>
         </div>
