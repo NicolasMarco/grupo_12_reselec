@@ -1,8 +1,11 @@
-
 <header>
     <div class = "Header-Contenedor-AnchoTotal">
         <div class = "contenidoHeader">
-            <a class = "burgerMenu" href="#"> <i class="logoBurger fa-sharp fa-solid fa-bars"></i> </a>
+            <% if (locals.isLogged) {%>
+                <a class = "burgerMenu" href="#" onclick="MostrarMenuLoggeado()"> <i class="logoBurger fa-sharp fa-solid fa-bars"></i> </a>
+            <% } else { %>
+                <a class = "burgerMenu" href="#" onclick="MostrarMenu()"> <i class="logoBurger fa-sharp fa-solid fa-bars"></i> </a>
+            <%  } %>
         
             <a class = "logoHeader" href="/">
                 <img class = "imagenLogoHeader" src="/images/home/Logo Reselec Sombra Blanca.png">
@@ -28,6 +31,20 @@
                 <a class = "enlaceCarritoCompras" href="/products/productCart"> <i class="logoCarrito fa-sharp fa-solid fa-cart-shopping"></i> </a>
             </div>
             
+            <% if( locals.isLogged) {%>
+                <div class = "contenedorDinamicoLogged">
+                    <a class = "containerUsuarioBurger" href="/users/detail/<%= locals.idUsuario %>">
+                        <div class = "containerIconoUsuarioBurger">
+                            <i class="logoUsuarioBurger fa-solid fa-user"></i>
+                        </div>
+                        <h3 class = "textoUsuarioBurger"><%= locals.nombreUsuario %></h3>
+                    </a>
+                    <a class = "enlaceNavBarBurger" href="/products">PRODUCTOS</a>
+                    <a class = "enlaceNavBarBurger" href="/users/logout">CERRAR SESION</a>
+                </div>
+            <% } %>
         </div>
     </div>
 </header>
+<script src = "/js/headerScript.js"></script>
+

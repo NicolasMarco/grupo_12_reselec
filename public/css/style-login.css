@@ -59,10 +59,6 @@ footer {
     margin: auto;
     box-shadow: 0px 0px 50px rgb(70, 69, 69);
  }
-
- .login-container:hover {
-    box-shadow: 0px 0px 50px #cc0000;
-}
  
  input[type="checkbox"] {
     display: inline-block;

@@ -52,8 +52,28 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
+    width: 100%;
     margin: auto;
+}
+
+.contenedorDinamico {
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     background-color:  white
+}
+
+.contenedorDinamicoLogged {
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color:  white
 }
 
 .logoHeader {
@@ -80,6 +100,18 @@ p {
 .logoCarrito {
     color: #ffffff;
     font-size: 20px;
+}
+
+.enlaceNavBarBurger {
+    display: block;
+    font-size: 14px;
+    padding: 5px;
+    font-family: 'Roboto' , sans-serif;
+    color:  rgb(73, 70, 70);
+    font-weight: bold;
+    border-bottom: solid 1px #eee;
+    min-width: 230px;
+    text-align: center;
 }
 
 .enlaceNavBar {
@@ -112,6 +144,16 @@ p {
     padding-right: 20px;
 }
 
+.containerUsuarioBurger {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-bottom: solid 1px #eee;
+    min-width: 230px;
+}
+
 .containerIconoUsuario {
     border: 1px solid #ffffff;
     border-radius: 50%;
@@ -124,9 +166,26 @@ p {
     margin-right: 5px;
 }
 
+.containerIconoUsuarioBurger {
+    border: 1px solid rgb(73, 70, 70);
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-right: 5px;
+}
+
 .logoUsuario {
     font-size: 14px;
-    color: #ffffff;
+    color: #ffffff
+}
+
+.logoUsuarioBurger {
+    font-size: 14px;
+    color: rgb(73, 70, 70);
 }
 
 .textoUsuario {
@@ -136,7 +195,22 @@ p {
     color: #ffffff;
 }
 
+.textoUsuarioBurger {
+    font-family: 'Roboto' , sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color:  rgb(73, 70, 70);
+}
+
 @media (min-width: 768px) {
+
+    .contenedorDinamico {
+        display: none;
+    }
+
+    .contenedorDinamicoLogged {
+        display: none;
+    }
 
     .containerUsuario {
         display: flex;
