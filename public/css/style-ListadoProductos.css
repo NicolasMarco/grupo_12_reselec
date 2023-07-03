@@ -291,6 +291,12 @@ p {
 
 @media (min-width: 768px) {
 
+    main {
+        background-image: url("/images/home/Fondo.png");
+        background-position: right 0px top -250px;
+        background-repeat: no-repeat;
+    }
+
     .encabezadoProductos {
         max-width: 720px;
         height: 50px;

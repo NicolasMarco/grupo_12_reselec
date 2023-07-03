@@ -52,13 +52,16 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 1px;
     max-width: 100%;
     margin: auto;
 }
 
+.logoHeader {
+    max-height: 60px;
+}
+
 .imagenLogoHeader {
-    height: 70px;
+    height: 60px;
 }
 
 .barraNavegacion {
@@ -96,6 +99,7 @@ p {
 }
 
 .enlaceBusqueda {
+    display: none;
     padding-right: 5px;
 }
 
@@ -119,8 +123,6 @@ p {
     padding: 5px;
     margin-right: 5px;
 }
-
-
 
 .logoUsuario {
     font-size: 14px;
@@ -183,10 +185,6 @@ p {
         font-family: 'Roboto' , sans-serif;
         font-size: 14px;
         color: #ffffff;
-    }
-
-    .imagenLogoHeader {
-        width: 170px;
     }
 
     .containerUsuario {
