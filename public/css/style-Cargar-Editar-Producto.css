@@ -2,6 +2,14 @@ header {
     border-bottom: 1px solid #eee;
 }
 
+.FondoMain {
+    background-image: url("/images/home/Fondo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
 .carga-edicion-containerForm {
     display: flex;
     flex-wrap: wrap;

@@ -11,6 +11,14 @@ body {
     position: relative;
 }
 
+.FondoMain {
+    background-image: url("/images/home/Fondo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
 footer {
     position: absolute;
     bottom: 0;

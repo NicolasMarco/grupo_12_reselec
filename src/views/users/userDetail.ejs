@@ -9,7 +9,7 @@
 
     <main>
         <div class = "ContenedorSeccion-UserDetail">
-            <h3 class = "InfoSeccion-UserDetail">Detalle del usuario</h3>
+            <h3 class = "InfoSeccion-UserDetail">Mis Datos</h3>
             <div class = "ContenedorTotal-UserDetail">
                 <div class = "InfoUsuario-UserDetail">
                     <div class = "ContenedorImagenUsuario-UserDetail">
@@ -22,7 +22,22 @@
                 </div>
     
                 <div class = "Compras-UserDetail">
-                    <h3 class = "TituloCompras-UserDetail">Compras</h3>
+                    <h3 class = "TituloCompras-UserDetail">Historial de Compras</h3>
+                    <article class = "Encabezado">
+                        <div class = ContenedorEncabezado>
+                            <p class = "EncabezadoFont"> FECHA </p>
+                        </div>
+                        <div class = ContenedorEncabezado>
+                            <h4 class = "EncabezadoFont"> NUMERO </h4>
+                        </div>
+                        <div class = ContenedorEncabezado>
+                            <p class = "EncabezadoFont"> ESTADO </p>
+                        </div>
+                        <div class = ContenedorEncabezado>
+                            <p class = "EncabezadoFont"> IMPORTE %> </p>
+                        </div>
+                    </article>
+
                     <% for(let i=0 ; i < 6; i++) { %>
                         <a class = "enlaceCompra" href="#">
                             <article class = "ContenedorCompra">
@@ -30,7 +45,7 @@
                                     <p class = "FechaCompra"> 2/6/2023 </p>
                                 </div>
                                 <div class = ContenedorNumeroCompra>
-                                    <h4 class = "NumeroCompra"> 0000000001 </h4>
+                                    <h4 class = "NumeroCompra"> 001 </h4>
                                 </div>
                                 <div class = ContenedorEstadoCompra>
                                     <p class = "EstadoCompra"> ENTREGADO </p>

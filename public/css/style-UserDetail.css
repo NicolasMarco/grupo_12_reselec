@@ -29,7 +29,7 @@ footer {
 
 .InfoSeccion-UserDetail {
     font-size: 18px;
-    color:  rgb(73, 70, 70);
+    color:  #cc0000;
     font-family: 'Roboto' , sans-serif;
 }
 
@@ -46,13 +46,18 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 10px rgb(207, 206, 206);
     width: 100%;
     height: 100%;
-    border: 1px solid #636363;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 15px;
+    border-radius: 0px;
     margin-top: 10px;
 }
+
+.InfoUsuario-UserDetail:hover {
+    box-shadow: 0px 0px 10px #cc0000;
+}
+
 
 .ImagenUsuario-UserDetail {
     width: 80px;
@@ -92,6 +97,10 @@ footer {
     padding-top: 5px;
 }
 
+.Compras-UserDetail:hover {
+    box-shadow: 0px 0px 10px #cc0000;
+}
+
 .Compras-UserDetail {
     display: flex;
     flex-direction: column;
@@ -99,15 +108,15 @@ footer {
     align-items: center;
     width: 100%;
     height: 100%;
-    border: 1px solid #636363;
-    padding: 10px;
-    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(207, 206, 206);
+    padding: 15px 5px;
+    border-radius: 0px;
     margin-top: 20px;
 }
 
 .TituloCompras-UserDetail {
     font-size: 18px;
-    color:  rgb(73, 70, 70);
+    color:  #cc0000;
     font-family: 'Roboto' , sans-serif;
 }
 
@@ -121,19 +130,17 @@ footer {
 
 .ContenedorCompra {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
-    border: 1px solid #636363;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 10px;
+    padding: 0px;
+    border-radius: 0px;
+    margin-top: 5px;
 }
 .ContendorFechaCompra {
-    width: 90%;
+    width: 25%;
     flex-direction: row;
+    vertical-align: middle;
     justify-content: center;
     align-items: center;
 }
@@ -145,7 +152,7 @@ footer {
     text-align: center;
 }
 .ContenedorNumeroCompra {
-    width: 90%;
+    width: 25%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -159,22 +166,23 @@ footer {
 }
 
 .ContenedorEstadoCompra {
-    width: 90%;
+    width: 25%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
 .EstadoCompra {
-    color: #636363;
+    color: #04aa04;
     font-size: 14px;
     font-weight: 400;
     font-family: 'Roboto' , sans-serif;
     text-align: center;
+
 }
 
 .ContenedorPrecioCompra {
-    width: 90%;
+    width: 25%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -188,15 +196,52 @@ footer {
     text-align: center;
 }
 
+.enlaceCompra {
+    width: 100%;
+}
+
+.ContenedorEncabezado {
+    width: 25%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.EncabezadoFont {
+    font-size: 10px;
+    color:  #cc0000;
+    font-family: 'Roboto' , sans-serif;
+    font-weight: bold;
+}
+
+.Encabezado {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 @media (min-width: 460px) {
 
     .ContenedorSeccion-UserDetail {
-        max-width: 360px;
+        max-width: 400px;
     }
 
 }
 
 @media (min-width: 768px) {
+
+    .Encabezado {
+        margin-top: 15px;
+    }
+    .EncabezadoFont {
+        font-size: 12px;
+        color:  #cc0000;
+        font-family: 'Roboto' , sans-serif;
+        font-weight: bold;
+    }
     
     .ContenedorSeccion-UserDetail {
         max-width: 740px;
@@ -212,12 +257,12 @@ footer {
 
     .InfoUsuario-UserDetail {
         width: 35%;
-        height: 100%;
+        min-height: 220px;
     }
 
     .Compras-UserDetail {
         width: 60%;
-        height: 100%;
+        min-height: 220px;
         margin-top: 10px;
     }
 
